@@ -48,7 +48,7 @@ public class ARPGCamera : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
         if(Input.GetAxis("Mouse ScrollWheel") > 0.0f)
         {
             if(ZoomAmount > ZoomMin)
