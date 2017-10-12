@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AllRoundSpray : MonoBehaviour {
+public class AimedAllRoundSpray : MonoBehaviour {
 
     [Header("Timing Vars")]
     [Tooltip("Time Between Sprays")]
@@ -19,6 +19,8 @@ public class AllRoundSpray : MonoBehaviour {
 
     [Header("Tags")]
     public string bulletBankTag = "Bullet Bank";
+    [Tooltip("Target Tag")]
+    public string targetTag = "Player";
 
     //script refs
     private BulletBank bank;
@@ -27,15 +29,20 @@ public class AllRoundSpray : MonoBehaviour {
     private float timeLastSprayFired = 0.0f; //the time last spray began
     private float currentAngleTotal = 0.0f; //the current angle the bullet is angled at in regards to owner
 
+    //target ref
+    private GameObject target;
+
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         //check if angle change per shot can cleanly divide by 360
         bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
-        //StartCoroutine(BulletSprayRoutine());
+        target = GameObject.FindGameObjectWithTag(targetTag);
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         if (Time.time > timeLastSprayFired + timeBetweenSprays)
         {
             StartCoroutine(BulletSprayRoutine());
@@ -48,11 +55,17 @@ public class AllRoundSpray : MonoBehaviour {
         //set time of last spray to now
         timeLastSprayFired = Time.time;
 
-        //get a random starting angle
-        float angle = Random.Range(0.0f, 360.0f);
+        //get direction to target
+        Vector3 directionToTarget = target.transform.position - transform.position;
+        //remove any changes in y
+        directionToTarget.y = 0;
+        //get quaternion
+        Quaternion targetedRotation = Quaternion.LookRotation(directionToTarget);
+        //set angle to start going towards target
+        float angle = targetedRotation.eulerAngles.y;
+
         //reset the angle total
         currentAngleTotal = 0.0f;
-
 
         //while current angle total not reached 360, keep spawning bullets
         while (currentAngleTotal < 360.0f)
@@ -76,7 +89,7 @@ public class AllRoundSpray : MonoBehaviour {
             currentAngleTotal += angleChangePerShot;
         }
 
-            //wait for next spray
-            yield return new WaitForSecondsRealtime(timeBetweenSprays);
+        //wait for next spray
+        yield return new WaitForSecondsRealtime(timeBetweenSprays);
     }
 }
