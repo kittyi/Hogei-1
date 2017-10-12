@@ -72,12 +72,12 @@ public class WallSpray : MonoBehaviour {
 
             //get rotation 90 degree from facing angle
             Quaternion alteredRotation = new Quaternion();
-            alteredRotation.eulerAngles = new Vector3(0.0f, facingAngle + 90.0f, 0.0f);
+            alteredRotation.eulerAngles = new Vector3(0.0f, transform.rotation.eulerAngles.y + facingAngle + 90.0f, 0.0f);
 
             bullet1.transform.rotation = alteredRotation;
 
             //setup the bullet
-            bullet1.GetComponent<SetupStraightBullet>().SetupVars(distanceToSetup, bulletSetupTime, bulletSetupTime + bulletStartMoveTimeDelay, 90.0f, patternBulletSpeed);
+            bullet1.GetComponent<SetupStraightBullet>().SetupVars(distanceToSetup, bulletSetupTime, bulletSetupTime + bulletStartMoveTimeDelay, 270.0f, patternBulletSpeed);
 
             //get a second bullet from the bank
             GameObject bullet2 = bank.GetSetupStraightBullet();
@@ -87,12 +87,12 @@ public class WallSpray : MonoBehaviour {
 
             //get rotation 270 degree from facing angle
             alteredRotation = new Quaternion();
-            alteredRotation.eulerAngles = new Vector3(0.0f, facingAngle + 270.0f, 0.0f);
+            alteredRotation.eulerAngles = new Vector3(0.0f, transform.rotation.eulerAngles.y + facingAngle + 270.0f, 0.0f);
 
             bullet2.transform.rotation = alteredRotation;
 
             //setup the bullet
-            bullet2.GetComponent<SetupStraightBullet>().SetupVars(distanceToSetup, bulletSetupTime, bulletSetupTime + bulletStartMoveTimeDelay, 270.0f, patternBulletSpeed);
+            bullet2.GetComponent<SetupStraightBullet>().SetupVars(distanceToSetup, bulletSetupTime, bulletSetupTime + bulletStartMoveTimeDelay, 90.0f, patternBulletSpeed);
         }
 
         yield return new WaitForSecondsRealtime(timeBetweenSprays);

@@ -50,6 +50,8 @@ public class RegularStraightBullet : MonoBehaviour {
     {
         //set active to false
         isActive = false;
+        //reset values
+        travelSpeed = 0;
         //return to queue
         bulletBank.ReturnRegularStraightBullet(gameObject);
         transform.position = bulletBank.transform.position;

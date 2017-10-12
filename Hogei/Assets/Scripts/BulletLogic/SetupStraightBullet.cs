@@ -84,6 +84,13 @@ public class SetupStraightBullet : MonoBehaviour {
     {
         //set active to false
         isActive = false;
+        //reset values
+        setupDestination = new Vector3(0, 0, 0);
+        setupDestinationDistance = 0.0f;
+        setupTime = 0.0f;
+        startDelay = 0.0f;
+        angleChange = 0.0f;
+        travelSpeed = 0;
         //return to queue
         bulletBank.ReturnSetupStraightBullet(gameObject);
         transform.position = bulletBank.transform.position;

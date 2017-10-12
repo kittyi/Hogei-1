@@ -123,20 +123,22 @@ GameObject:
   - component: {fileID: 129600897}
   - component: {fileID: 129600903}
   - component: {fileID: 129600904}
+  - component: {fileID: 129600905}
+  - component: {fileID: 129600906}
   m_Layer: 10
   m_Name: EnemyPivotWanderDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &129600897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 129600896}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 083a69e530dd0314b8c8a78ddb3b607c, type: 3}
   m_Name: 
@@ -223,7 +225,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 129600896}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.9, y: 1, z: -7.09}
+  m_LocalPosition: {x: 2.33, y: 1, z: 3.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1390624073}
@@ -235,7 +237,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 129600896}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c31e9e628060714890284ff059f3a59, type: 3}
   m_Name: 
@@ -259,6 +261,51 @@ MonoBehaviour:
   timeBetweenSprays: 0.2
   bulletSpeed: 10
   angleChangePerShot: 20
+  bulletBankTag: Bullet Bank
+--- !u!114 &129600905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 129600896}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 682a231459db5c6429ee02b0e1244c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenSprays: 0.2
+  numBulletWaves: 5
+  bulletBaseSetupDistance: 0.5
+  bulletStepDistanceIncrease: 0.5
+  bulletSetupTime: 0.5
+  bulletStartMoveTimeDelay: 0.2
+  bulletAngleChange: 90
+  patternBulletSpeed: 10
+  facingAngle: 0
+  bulletBankTag: Bullet Bank
+--- !u!114 &129600906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 129600896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cadf34767745854bb3d7068703aae78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenSprays: 3
+  timeBetweenWaves: 0.8
+  numBulletLayers: 5
+  numBulletWaves: 1
+  bulletBaseSetupDistance: 2
+  bulletStepDistanceIncrease: 2.5
+  bulletSetupTime: 1
+  bulletStartMoveTimeDelay: 0.5
+  bulletAngleChange: 90
+  patternBulletSpeed: 2
+  angleChangePerShot: 10
+  rotationDirection: 1
   bulletBankTag: Bullet Bank
 --- !u!1 &357377529
 GameObject:
@@ -656,13 +703,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 684982406}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.986002, y: 1, z: -12.745483}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 2.986002, y: 1, z: 9.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1390624073}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &684982408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,11 +813,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2c01dc400f4264ba77e5a2e2121526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenSprays: 2
+  timeBetweenSprays: 1
   numBulletLayers: 5
   numArcs: 2
-  firstLayerBulletSpeed: 1
-  layerSpeedIncrementValue: 0.5
+  firstLayerBulletSpeed: 5
+  layerSpeedIncrementValue: 1.5
   startingAngle: 0
   angleChangePerShot: 4
   bulletBankTag: Bullet Bank
@@ -873,7 +920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &772847848
 Transform:
   m_ObjectHideFlags: 0
@@ -2156,6 +2203,7 @@ GameObject:
   - component: {fileID: 1864162550}
   - component: {fileID: 1864162549}
   - component: {fileID: 1864162548}
+  - component: {fileID: 1864162554}
   m_Layer: 10
   m_Name: EnemySeek
   m_TagString: Untagged
@@ -2182,7 +2230,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1864162546}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de4be612f6a24e548ace634701d9b762, type: 3}
   m_Name: 
@@ -2276,6 +2324,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1864162546}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1864162554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1864162546}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbc66d58b045ab647974a3f28798158e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenSprays: 1.5
+  numSprays: 3
+  numBulletsPerSpray: 5
+  bulletSpeed: 2
+  angleChangePerShot: 1
+  angleChangePerSpray: 20
+  rotationDirection: 1
+  minimumAngle: 4
+  bulletBankTag: Bullet Bank
 --- !u!1 &2013801604
 GameObject:
   m_ObjectHideFlags: 0
