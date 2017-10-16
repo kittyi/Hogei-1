@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class PeaShooter : MonoBehaviour {
 
-    [Header("Player Bullet")]
-    [Tooltip("Player bullet ref")]
-    public GameObject peaBullet;
-
     [Header("Bullet vars")]
+    [Tooltip("Number of bullets fired in group when empowered")]
+    public int numBulletWaves = 3;
     [Tooltip("Bullet travel speed")]
     public float bulletTravelSpeedFast = 10.0f;
     [Tooltip("Bullet travel speed before empowering")]
@@ -19,6 +17,8 @@ public class PeaShooter : MonoBehaviour {
     [Header("Timing vars")]
     [Tooltip("The amount of time between shots")]
     public float timeBetweenShots = 2.0f;
+    [Tooltip("Time between bullets in wave")]
+    public float timeBetweenWaves = 0.1f;
 
     [Header("Tags")]
     [Tooltip("Bullet bank tag")]
@@ -41,11 +41,14 @@ public class PeaShooter : MonoBehaviour {
 	}
 
     //attack use logic
-    public void UseWeapon(bool empowered)
+    public IEnumerator UseWeapon(bool empowered)
     {
         //check if input 
         if (Time.time > lastShotTime + timeBetweenShots)
         {
+            //set last shot time to now
+            lastShotTime = Time.time;
+
             //get a bullet
             GameObject bullet = bank.GetPlayerStraightBullet();
             //set the bullets position to this pos
@@ -55,7 +58,12 @@ public class PeaShooter : MonoBehaviour {
             //setup the bullet and fire
             if (empowered)
             {
-                bullet.GetComponent<PlayerStraightBullet>().SetupVars(bulletTravelSpeedFast, bulletMaxTravelDist, false);
+                for (int i = 0; i < numBulletWaves; i++)
+                {
+                    bullet.GetComponent<PlayerStraightBullet>().SetupVars(bulletTravelSpeedFast, bulletMaxTravelDist, false);
+                    yield return new WaitForSecondsRealtime(timeBetweenWaves);
+                }
+                
             }
             else
             {

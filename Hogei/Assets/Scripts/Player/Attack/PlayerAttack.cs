@@ -12,12 +12,15 @@ public class PlayerAttack : MonoBehaviour {
     private int currentWeaponIndex = 0;
     public bool peaShootStrengthened = false;
 
+    //script refs
     private PeaShooter peaShooter;
+    private PlayerStreamShot streamShot;
 
     // Use this for initialization
     void Start () {
 		peaShooter = GetComponentInChildren<PeaShooter>();
-	}
+        streamShot = GetComponentInChildren<PlayerStreamShot>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -34,7 +37,8 @@ public class PlayerAttack : MonoBehaviour {
             switch (currentWeaponIndex)
             {
                 case 0:
-                    peaShooter.UseWeapon(peaShootStrengthened);
+                    //StartCoroutine(peaShooter.UseWeapon(peaShootStrengthened));
+                    streamShot.UseWeapon();
                     break;
 
                     
@@ -46,7 +50,7 @@ public class PlayerAttack : MonoBehaviour {
     private bool CheckKeyboardInputWeapon()
     {
         bool valid = false;
-        if (Input.GetMouseButtonDown(mouseInputKey))
+        if (Input.GetMouseButton(mouseInputKey))
         {
             valid = true;
         }

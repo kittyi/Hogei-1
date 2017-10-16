@@ -1995,6 +1995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608674776}
   - component: {fileID: 1608674777}
+  - component: {fileID: 1608674778}
   m_Layer: 12
   m_Name: WeaponStock
   m_TagString: Untagged
@@ -2026,11 +2027,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c58b06704a313a4b9f9ce941e85a7ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  peaBullet: {fileID: 0}
-  bulletTravelSpeedFast: 10
-  bulletTravelSpeedSlow: 5
+  numBulletWaves: 3
+  bulletTravelSpeedFast: 15
+  bulletTravelSpeedSlow: 10
   bulletMaxTravelDist: 8
-  timeBetweenShots: 2
+  timeBetweenShots: 4
+  timeBetweenWaves: 0.1
+  bankTag: Bullet Bank
+--- !u!114 &1608674778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1608674775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9507ed94ce395d41a763dec02cab295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletTravelSpeed: 20
+  timeBetweenShots: 0.1
+  distanceToStart: 0.1
   bankTag: Bullet Bank
 --- !u!1 &1688949857
 GameObject:

@@ -22,6 +22,5 @@ public class Aiming : MonoBehaviour {
         {
             transform.Rotate(0.0f, Vector3.Angle(transform.forward, Direction), 0.0f);
         }
-        print(MouseTarget.GetWorldMousePos());
     }
 }

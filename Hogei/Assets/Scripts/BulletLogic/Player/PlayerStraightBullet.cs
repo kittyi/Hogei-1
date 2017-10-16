@@ -77,7 +77,7 @@ public class PlayerStraightBullet : MonoBehaviour {
         doExpire = false;
         startPos = Vector3.zero;
         //return to queue
-        bulletBank.ReturnRegularStraightBullet(gameObject);
+        bulletBank.ReturnPlayerStraightBullet(gameObject);
         transform.position = bulletBank.transform.position;
     }
 
