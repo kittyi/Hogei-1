@@ -51,6 +51,7 @@ public class RegularStraightBullet : MonoBehaviour {
         //set active to false
         isActive = false;
         //reset values
+        myRigid.velocity = Vector3.zero;
         travelSpeed = 0;
         //return to queue
         bulletBank.ReturnRegularStraightBullet(gameObject);

@@ -16,10 +16,10 @@ TagManager:
   - 
   - 
   - Floor
-  - Bullet
+  - Enemy Bullet
   - Enemy
-  - 
-  - 
+  - Player Bullet
+  - Player
   - 
   - 
   - 

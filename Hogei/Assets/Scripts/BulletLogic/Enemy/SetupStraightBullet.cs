@@ -91,6 +91,7 @@ public class SetupStraightBullet : MonoBehaviour {
         startDelay = 0.0f;
         angleChange = 0.0f;
         travelSpeed = 0;
+        myRigid.velocity = Vector3.zero;
         //return to queue
         bulletBank.ReturnSetupStraightBullet(gameObject);
         transform.position = bulletBank.transform.position;

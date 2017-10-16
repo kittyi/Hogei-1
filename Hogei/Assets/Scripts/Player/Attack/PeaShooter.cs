@@ -10,15 +10,15 @@ public class PeaShooter : MonoBehaviour {
 
     [Header("Bullet vars")]
     [Tooltip("Bullet travel speed")]
-    public float bulletTravelSpeed = 5.0f;
+    public float bulletTravelSpeedFast = 10.0f;
+    [Tooltip("Bullet travel speed before empowering")]
+    public float bulletTravelSpeedSlow = 5.0f;
+    [Tooltip("Bullet max travel distance before empowering")]
+    public float bulletMaxTravelDist = 8.0f;
 
     [Header("Timing vars")]
     [Tooltip("The amount of time between shots")]
     public float timeBetweenShots = 2.0f;
-
-    [Header("Input")]
-    [Tooltip("Keyboard input key for weapon fire")]
-    public int mouseInputKey = 0;
 
     [Header("Tags")]
     [Tooltip("Bullet bank tag")]
@@ -41,23 +41,27 @@ public class PeaShooter : MonoBehaviour {
 	}
 
     //attack use logic
-    public void UseWeapon()
+    public void UseWeapon(bool empowered)
     {
         //check if input 
-        if (CheckKeyboardInputWeapon() && Time.time > lastShotTime + timeBetweenShots)
+        if (Time.time > lastShotTime + timeBetweenShots)
         {
             //get a bullet
+            GameObject bullet = bank.GetPlayerStraightBullet();
+            //set the bullets position to this pos
+            bullet.transform.position = transform.position;
+            //set the bullet's rotation to current rotation
+            bullet.transform.rotation = transform.rotation;
+            //setup the bullet and fire
+            if (empowered)
+            {
+                bullet.GetComponent<PlayerStraightBullet>().SetupVars(bulletTravelSpeedFast, bulletMaxTravelDist, false);
+            }
+            else
+            {
+                bullet.GetComponent<PlayerStraightBullet>().SetupVars(bulletTravelSpeedSlow, bulletMaxTravelDist, true);
+            }
+            
         }
-    }
-
-    //keyboard input check for firing weapon <- to avoid clunkiness in code
-    private bool CheckKeyboardInputWeapon()
-    {
-        bool valid = false;
-        if (Input.GetMouseButtonDown(mouseInputKey))
-        {
-            valid = true;
-        }
-        return valid;
     }
 }
