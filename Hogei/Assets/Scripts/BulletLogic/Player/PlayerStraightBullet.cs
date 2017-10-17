@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class PlayerStraightBullet : MonoBehaviour {
 
-    [Header("Speed")]
-    [Tooltip("Speed of bullet")]
-    public float travelSpeed = 3.0f;
-
     //script ref
     private BulletBank bulletBank;
 
@@ -15,6 +11,7 @@ public class PlayerStraightBullet : MonoBehaviour {
     private Rigidbody myRigid;
     private bool isActive = false;
     private bool doExpire = false;
+    private float travelSpeed = 3.0f;
     private float maxTravelDistance = 0;
     private Vector3 startPos = Vector3.zero;
 
@@ -54,6 +51,7 @@ public class PlayerStraightBullet : MonoBehaviour {
         bulletBank = bank;
     }
 
+    //check if bullet has reached it's max distance
     public void CheckExpire()
     {
         if (doExpire)

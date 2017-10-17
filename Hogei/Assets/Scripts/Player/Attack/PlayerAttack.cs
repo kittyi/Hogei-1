@@ -15,11 +15,13 @@ public class PlayerAttack : MonoBehaviour {
     //script refs
     private PeaShooter peaShooter;
     private PlayerStreamShot streamShot;
+    private PlayerHomingShot homingShot;
 
     // Use this for initialization
     void Start () {
 		peaShooter = GetComponentInChildren<PeaShooter>();
         streamShot = GetComponentInChildren<PlayerStreamShot>();
+        homingShot = GetComponentInChildren<PlayerHomingShot>();
     }
 	
 	// Update is called once per frame
@@ -38,7 +40,8 @@ public class PlayerAttack : MonoBehaviour {
             {
                 case 0:
                     //StartCoroutine(peaShooter.UseWeapon(peaShootStrengthened));
-                    streamShot.UseWeapon();
+                    //streamShot.UseWeapon();
+                    homingShot.UseWeapon();
                     break;
 
                     

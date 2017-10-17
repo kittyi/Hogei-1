@@ -7,6 +7,7 @@ public class BulletBank : MonoBehaviour {
     private Queue<GameObject> regularBulletQueue = new Queue<GameObject>();
     private Queue<GameObject> setupStraightBulletQueue = new Queue<GameObject>();
     private Queue<GameObject> playerStraightBulletQueue = new Queue<GameObject>();
+    private Queue<GameObject> playerHomingBulletQueue = new Queue<GameObject>();
 
     [Header("Bullet Objects")]
     [Tooltip("Prefab of regular straight bullet")]
@@ -15,6 +16,8 @@ public class BulletBank : MonoBehaviour {
     public GameObject setupStraightBulletObject;
     [Tooltip("Prefab of player straight bullet")]
     public GameObject playerStraightBullet;
+    [Tooltip("Prefab of player homing bullet")]
+    public GameObject playerHomingBullet;
 
     [Header("Number of bullets")]
     [Tooltip("Num of Regular Straight Bullets")]
@@ -24,9 +27,11 @@ public class BulletBank : MonoBehaviour {
 
     [Tooltip("Number of player straight bullets")]
     public int numPlayerStraightBullets = 2000;
+    [Tooltip("Number of player straight bullets")]
+    public int numPlayerHomingBullets = 2000;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		//fill queues
         for (int i = 0; i < numRegularStraightBullets; i++)
         {
@@ -53,6 +58,15 @@ public class BulletBank : MonoBehaviour {
             newBullet.transform.SetParent(gameObject.transform);
             newBullet.SetActive(false);
             playerStraightBulletQueue.Enqueue(newBullet);
+        }
+
+        for (int i = 0; i < numPlayerHomingBullets; i++)
+        {
+            GameObject newBullet = Instantiate(playerHomingBullet, transform.position, transform.rotation);
+            newBullet.GetComponent<PlayerHomingBullet>().SetBulletBank(this);
+            newBullet.transform.SetParent(gameObject.transform);
+            newBullet.SetActive(false);
+            playerHomingBulletQueue.Enqueue(newBullet);
         }
     }
 	
@@ -83,6 +97,13 @@ public class BulletBank : MonoBehaviour {
         return bullet;
     }
 
+    public GameObject GetPlayerHomingBullet()
+    {
+        GameObject bullet = playerHomingBulletQueue.Dequeue();
+        bullet.SetActive(true);
+        return bullet;
+    }
+
     //return bullet to queue
     public void ReturnRegularStraightBullet(GameObject regularBullet)
     {
@@ -100,5 +121,11 @@ public class BulletBank : MonoBehaviour {
     {
         playerBullet.SetActive(false);
         playerStraightBulletQueue.Enqueue(playerBullet);
+    }
+
+    public void ReturnPlayerHomingBullet(GameObject playerBullet)
+    {
+        playerBullet.SetActive(false);
+        playerHomingBulletQueue.Enqueue(playerBullet);
     }
 }
