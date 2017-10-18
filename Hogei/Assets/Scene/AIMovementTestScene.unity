@@ -138,7 +138,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 129600896}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 083a69e530dd0314b8c8a78ddb3b607c, type: 3}
   m_Name: 
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 129600896}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cadf34767745854bb3d7068703aae78, type: 3}
   m_Name: 
@@ -303,7 +303,7 @@ MonoBehaviour:
   bulletSetupTime: 1
   bulletStartMoveTimeDelay: 0.5
   bulletAngleChange: 90
-  patternBulletSpeed: 2
+  patternBulletSpeed: 10
   angleChangePerShot: 10
   rotationDirection: 1
   bulletBankTag: Bullet Bank
@@ -328,7 +328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &357377530
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1541,10 +1541,10 @@ MonoBehaviour:
     type: 2}
   playerHomingBullet: {fileID: 1383993044565024, guid: 9f34489d8bf419c4dbf297903a5be2ff,
     type: 2}
-  numRegularStraightBullets: 2000
-  numSetupStraightBullets: 2000
-  numPlayerStraightBullets: 2000
-  numPlayerHomingBullets: 2000
+  numRegularStraightBullets: 0
+  numSetupStraightBullets: 200
+  numPlayerStraightBullets: 0
+  numPlayerHomingBullets: 0
 --- !u!4 &1180625492
 Transform:
   m_ObjectHideFlags: 0
