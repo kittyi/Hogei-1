@@ -78,29 +78,65 @@ public class BulletBank : MonoBehaviour {
     //get bullet bullet from queue
     public GameObject GetRegularStraightBullet()
     {
-        GameObject bullet = regularBulletQueue.Dequeue();
-        bullet.SetActive(true);
+        GameObject bullet;
+        if (bullet = regularBulletQueue.Dequeue())
+        {
+            bullet.SetActive(true);
+        }
+        else
+        {
+            bullet = Instantiate(regularStraightBulletObject, transform.position, transform.rotation);
+            bullet.GetComponent<RegularStraightBullet>().SetBulletBank(this);
+            bullet.transform.SetParent(gameObject.transform);
+        }
         return bullet;
     }
 
     public GameObject GetSetupStraightBullet()
     {
-        GameObject bullet = setupStraightBulletQueue.Dequeue();
-        bullet.SetActive(true);
+        GameObject bullet;
+        if (bullet = setupStraightBulletQueue.Dequeue())
+        {
+            bullet.SetActive(true);
+        }
+        else
+        {
+            bullet = Instantiate(setupStraightBulletObject, transform.position, transform.rotation);
+            bullet.GetComponent<SetupStraightBullet>().SetBulletBank(this);
+            bullet.transform.SetParent(gameObject.transform);
+        }
         return bullet;
     }
 
     public GameObject GetPlayerStraightBullet()
     {
-        GameObject bullet = playerStraightBulletQueue.Dequeue();
-        bullet.SetActive(true);
+        GameObject bullet;
+        if (bullet = playerStraightBulletQueue.Dequeue())
+        {
+            bullet.SetActive(true);
+        }
+        else
+        {
+            bullet = Instantiate(playerStraightBullet, transform.position, transform.rotation);
+            bullet.GetComponent<PlayerStraightBullet>().SetBulletBank(this);
+            bullet.transform.SetParent(gameObject.transform);
+        }
         return bullet;
     }
 
     public GameObject GetPlayerHomingBullet()
     {
-        GameObject bullet = playerHomingBulletQueue.Dequeue();
-        bullet.SetActive(true);
+        GameObject bullet;
+        if (bullet = playerHomingBulletQueue.Dequeue())
+        {
+            bullet.SetActive(true);
+        }
+        else
+        {
+            bullet = Instantiate(playerHomingBullet, transform.position, transform.rotation);
+            bullet.GetComponent<PlayerHomingBullet>().SetBulletBank(this);
+            bullet.transform.SetParent(gameObject.transform);
+        }
         return bullet;
     }
 
