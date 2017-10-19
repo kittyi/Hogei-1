@@ -13,6 +13,8 @@ public class PlayerHomingShot : MonoBehaviour {
     public float timeBetweenShots = 0.2f;
     [Tooltip("Max time bullet has homing propeties")]
     public float maxHomingTime = 4.0f;
+    [Tooltip("Delay time before bullet begins homing propeties")]
+    public float homingStartDelay = 1.0f;
 
     [Header("Positioning vars")]
     [Tooltip("How far out to position bullet start from center")]
@@ -54,7 +56,7 @@ public class PlayerHomingShot : MonoBehaviour {
             //set the bullet's rotation to current rotation
             bullet.transform.rotation = transform.rotation;
             //set up bullet
-            bullet.GetComponent<PlayerHomingBullet>().SetupVars(bulletTravelSpeed, maxHomingTime);
+            bullet.GetComponent<PlayerHomingBullet>().SetupVars(bulletTravelSpeed, maxHomingTime, homingStartDelay);
 
             //get a second bullet
             GameObject bullet2 = bank.GetPlayerHomingBullet();
@@ -63,7 +65,7 @@ public class PlayerHomingShot : MonoBehaviour {
             //set the bullet's rotation to current rotation
             bullet2.transform.rotation = transform.rotation;
             //set up bullet
-            bullet2.GetComponent<PlayerHomingBullet>().SetupVars(bulletTravelSpeed, maxHomingTime);
+            bullet2.GetComponent<PlayerHomingBullet>().SetupVars(bulletTravelSpeed, maxHomingTime, homingStartDelay);
         }
     }
 }
