@@ -95,6 +95,7 @@ public class SetupStraightBullet : MonoBehaviour {
         //return to queue
         bulletBank.ReturnSetupStraightBullet(gameObject);
         transform.position = bulletBank.transform.position;
+        transform.rotation = Quaternion.identity;
     }
 
     //collision = deactivate
