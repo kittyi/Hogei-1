@@ -1,7 +1,7 @@
 ﻿//c# Example (LookAtPointEditor.cs)
 using UnityEngine;
 using UnityEditor;
-​
+
 [CustomEditor(typeof(CellularAutomata))]
 [CanEditMultipleObjects]
 public class LookAtPointEditor : Editor
@@ -12,7 +12,7 @@ public class LookAtPointEditor : Editor
     {
         lookAtPoint = serializedObject.FindProperty("lookAtPoint");
     }
-​
+
     public override void OnInspectorGUI()
     {
         serializedObject.Update();

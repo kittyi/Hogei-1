@@ -131,5 +131,6 @@ public class PlayerHomingBullet : MonoBehaviour {
     {
         //any collision
         Deactivate();
+        gameObject.GetComponent<EntityHealth>().DecreaseHealth(1.0f);
     }
 }
