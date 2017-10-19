@@ -101,6 +101,7 @@ public class BulletBank : MonoBehaviour {
         }
         else
         {
+            print("Making new bullet");
             bullet = Instantiate(setupStraightBulletObject, transform.position, transform.rotation);
             bullet.GetComponent<SetupStraightBullet>().SetBulletBank(this);
             bullet.transform.SetParent(gameObject.transform);
@@ -129,6 +130,7 @@ public class BulletBank : MonoBehaviour {
         GameObject bullet;
         if (bullet = playerHomingBulletQueue.Dequeue())
         {
+
             bullet.SetActive(true);
         }
         else

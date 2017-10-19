@@ -526,7 +526,7 @@ MonoBehaviour:
   bulletSetupTime: 1
   bulletStartMoveTimeDelay: 0.5
   bulletAngleChange: 90
-  patternBulletSpeed: 2
+  patternBulletSpeed: 20
   angleChangePerShot: 10
   rotationDirection: 1
   bulletBankTag: Bullet Bank
@@ -1214,10 +1214,10 @@ MonoBehaviour:
     type: 2}
   playerHomingBullet: {fileID: 1383993044565024, guid: 9f34489d8bf419c4dbf297903a5be2ff,
     type: 2}
-  numRegularStraightBullets: 2000
-  numSetupStraightBullets: 2000
-  numPlayerStraightBullets: 2000
-  numPlayerHomingBullets: 2000
+  numRegularStraightBullets: 50000
+  numSetupStraightBullets: 50000
+  numPlayerStraightBullets: 50000
+  numPlayerHomingBullets: 50000
 --- !u!4 &989661361
 Transform:
   m_ObjectHideFlags: 0
