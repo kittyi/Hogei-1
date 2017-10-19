@@ -303,7 +303,7 @@ MonoBehaviour:
   bulletSetupTime: 1
   bulletStartMoveTimeDelay: 0.5
   bulletAngleChange: 90
-  patternBulletSpeed: 2
+  patternBulletSpeed: 10
   angleChangePerShot: 10
   rotationDirection: 1
   bulletBankTag: Bullet Bank
@@ -2066,7 +2066,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletTravelSpeed: 15
   timeBetweenShots: 0.2
-  maxHomingTime: 2
+  maxHomingTime: 10
+  homingStartDelay: 0.5
   distanceToStart: 0.5
   bankTag: Bullet Bank
 --- !u!1 &1688949857

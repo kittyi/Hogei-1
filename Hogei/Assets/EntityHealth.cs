@@ -22,6 +22,10 @@ public class EntityHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if(CurrentHealth <= 0.0f)
+        {
+            Destroy(gameObject);
+        }
 		if(DOTActive)
         {
             CurrentHealth -= DOTDamage * Time.deltaTime;

@@ -22,6 +22,7 @@ public class PlayerHomingBullet : MonoBehaviour {
     private bool isActive = false;
     private float travelSpeed = 3.0f;
     private float maxHomingTime = 4.0f;
+    private float homingStartDelay = 1.0f;
     private float startTime = 0.0f;
     private float lastAdjustTime = 0.0f;
     private GameObject target;
@@ -45,11 +46,12 @@ public class PlayerHomingBullet : MonoBehaviour {
     }
 
     //set up func
-    public void SetupVars(float speed, float hominTime)
+    public void SetupVars(float speed, float hominTime, float hominStartDelay)
     {
         isActive = true;
         travelSpeed = speed;
         maxHomingTime = hominTime;
+        homingStartDelay = hominStartDelay;
         startTime = Time.time;
         lastAdjustTime = 0.0f;
     }
@@ -69,10 +71,9 @@ public class PlayerHomingBullet : MonoBehaviour {
     //movement logic
     private void MoveBullet()
     {
-        if (Time.time < startTime + maxHomingTime)
+        if (/*Time.time < startTime + maxHomingTime &&*/ Time.time > startTime + homingStartDelay)
         {
-            if (Time.time > lastAdjustTime + homingAdjustInterval)
-            {
+            
                 GetTargets();
 
                 if (targetArray.Length >= 1)
@@ -83,7 +84,12 @@ public class PlayerHomingBullet : MonoBehaviour {
                 {
                     myRigid.velocity = transform.forward * travelSpeed;
                 }
-            }
+
+        }
+        
+        else
+        {
+            myRigid.velocity = transform.forward * travelSpeed;
         }
     }
 
@@ -106,10 +112,16 @@ public class PlayerHomingBullet : MonoBehaviour {
         }
 
         //steer towards target
+        //get vector towards target
         Vector3 desireVelocity = target.transform.position - transform.position;
         float distance = desireVelocity.magnitude;
         desireVelocity = Vector3.Normalize(desireVelocity) * travelSpeed;
-        myRigid.velocity = desireVelocity /*- myRigid.velocity*/;
+        //get steering force
+        Vector3 steeringForce =  desireVelocity - myRigid.velocity;
+        //steeringForce /= adjustForce;
+        //adjust velocity
+        myRigid.velocity = Vector3.ClampMagnitude( myRigid.velocity + (steeringForce * Time.deltaTime), travelSpeed);
+        transform.rotation = Quaternion.LookRotation(myRigid.velocity);
     }
 
     //deactivate func
@@ -131,5 +143,6 @@ public class PlayerHomingBullet : MonoBehaviour {
     {
         //any collision
         Deactivate();
+        gameObject.GetComponent<EntityHealth>().DecreaseHealth(1.0f);
     }
 }
