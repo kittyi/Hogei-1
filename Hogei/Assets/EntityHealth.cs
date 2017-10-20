@@ -6,7 +6,7 @@ public class EntityHealth : MonoBehaviour {
 
     bool InvincibilityFrame = false; 
 
-    float CurrentHealth;
+    public float CurrentHealth;
     [Tooltip("Maximum health the entity can have")]
     public float MaxHealth = 10;
 

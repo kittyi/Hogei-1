@@ -54,6 +54,7 @@ public class PlayerHomingBullet : MonoBehaviour {
         homingStartDelay = hominStartDelay;
         startTime = Time.time;
         lastAdjustTime = 0.0f;
+        GetTargets();
     }
 
     //ref func
@@ -66,6 +67,19 @@ public class PlayerHomingBullet : MonoBehaviour {
     private void GetTargets()
     {
         targetArray = GameObject.FindGameObjectsWithTag(targetTag);
+
+        //set a large compare value
+        float closestDist = 5000.0f;
+
+        //for all in target array
+        for (int i = 0; i < targetArray.Length; i++)
+        {
+            //compare the distance, and if closer, make that object the target
+            if (closestDist > Vector3.Distance(transform.position, targetArray[i].transform.position))
+            {
+                target = targetArray[i];
+            }
+        }
     }
 
     //movement logic
@@ -74,9 +88,9 @@ public class PlayerHomingBullet : MonoBehaviour {
         if (/*Time.time < startTime + maxHomingTime &&*/ Time.time > startTime + homingStartDelay)
         {
             
-                GetTargets();
+                //GetTargets();
 
-                if (targetArray.Length >= 1)
+                if (targetArray.Length >= 1 && target != null)
                 {
                     SteerToTarget();
                 }
@@ -96,20 +110,20 @@ public class PlayerHomingBullet : MonoBehaviour {
     //find a target and steer
     private void SteerToTarget()
     {
-        lastAdjustTime = Time.time;
+        //lastAdjustTime = Time.time;
 
-        //set a large compare value
-        float closestDist = 5000.0f;
+        ////set a large compare value
+        //float closestDist = 5000.0f;
 
-        //for all in target array
-        for(int i = 0; i < targetArray.Length; i++)
-        {
-            //compare the distance, and if closer, make that object the target
-            if (closestDist > Vector3.Distance(transform.position, targetArray[i].transform.position))
-            {
-                target = targetArray[i];
-            }
-        }
+        ////for all in target array
+        //for(int i = 0; i < targetArray.Length; i++)
+        //{
+        //    //compare the distance, and if closer, make that object the target
+        //    if (closestDist > Vector3.Distance(transform.position, targetArray[i].transform.position))
+        //    {
+        //        target = targetArray[i];
+        //    }
+        //}
 
         //steer towards target
         //get vector towards target
@@ -142,7 +156,10 @@ public class PlayerHomingBullet : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         //any collision
-        Deactivate();
-        gameObject.GetComponent<EntityHealth>().DecreaseHealth(1.0f);
+        if(collision.gameObject.GetComponent<EntityHealth>())
+        {
+            collision.gameObject.GetComponent<EntityHealth>().DecreaseHealth(1.0f);            
+        }
+        Deactivate();        
     }
 }
