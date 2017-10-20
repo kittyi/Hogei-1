@@ -39,11 +39,13 @@ public class RoomGenerator : MonoBehaviour {
         RoomWidth = Random.Range(3, 10);
         RoomLength = Random.Range(3, 10);
         Tiles = new GameObject[RoomWidth, RoomLength];
+        
         for (int i = 0; i < RoomWidth; ++i)
         {
             for(int j = 0; j < RoomLength; ++j)
             {
-                Tiles[i,j] = Instantiate(Floor, new Vector3((float)i * 10, 0f, (float)j * 10), Quaternion.identity, this.transform);
+                Vector3 NewPos = transform.position + new Vector3((float)(i - RoomWidth/2) * 10, 0f, (float)(j - RoomLength/2)  * 10);
+                Tiles[i,j] = Instantiate(Floor, NewPos, Quaternion.identity, this.transform);
             }
         }
     }
