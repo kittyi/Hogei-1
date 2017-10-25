@@ -30,14 +30,27 @@ public class RoomGenerator : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        Tiles = new GameObject[0, 0];
+    }
+
+    public void Init(int _Width, int _Length)
+    {
+        RoomWidth = _Width;
+        RoomLength = _Length;
+        if (RoomWidth <= 0 && RoomLength <= 0)
+        {
+            RoomWidth = Random.Range(3, 10);
+            RoomLength = Random.Range(3, 10);
+        }
         Tiles = new GameObject[RoomWidth, RoomLength];
-	}
+
+        GenerateRoom();
+    }
 
     public void GenerateRoom()
     {
         DeleteRoom();
-        RoomWidth = Random.Range(3, 10);
-        RoomLength = Random.Range(3, 10);
+
         Tiles = new GameObject[RoomWidth, RoomLength];
         
         for (int i = 0; i < RoomWidth; ++i)

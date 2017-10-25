@@ -197,68 +197,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &641531101
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 641531103}
-  - component: {fileID: 641531102}
-  - component: {fileID: 641531104}
-  m_Layer: 0
-  m_Name: Room
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &641531102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 641531101}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf9d123ceac568041a0ca13a9447789d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DebugMode: 0
-  RoomWidth: 25
-  RoomHeight: 25
-  InitTileChance: 0.5
-  WallThreshold: 4
-  FloorThreshold: 5
-  Floor: {fileID: 1190424755945434, guid: ad83c9e2e826b144ca5bd4ab589b2f10, type: 2}
---- !u!4 &641531103
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 641531101}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &641531104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 641531101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d58c3261f9c95e4f95ca6eed05f5c82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Floor: {fileID: 1190424755945434, guid: ad83c9e2e826b144ca5bd4ab589b2f10, type: 2}
-  Wall: {fileID: 0}
-  Shape: 0
 --- !u!1 &741084087
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +224,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945e2615b687ef9458520cf4c8bd795e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FloorTile: {fileID: 1190424755945434, guid: ad83c9e2e826b144ca5bd4ab589b2f10, type: 2}
+  RoomAmount: 5
+  DungeonWidth: 25
+  DungeonLength: 50
+  RoomWidthMin: 3
+  RoomWidthMax: 10
+  RoomLengthMin: 3
+  RoomLengthMax: 10
 --- !u!4 &741084089
 Transform:
   m_ObjectHideFlags: 0
@@ -297,7 +243,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1622909787
 GameObject:
@@ -347,6 +293,20 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
+  m_FalloffTable:
+    m_Table[0]: 0
+    m_Table[1]: 0
+    m_Table[2]: 0
+    m_Table[3]: 0
+    m_Table[4]: 0
+    m_Table[5]: 0
+    m_Table[6]: 0
+    m_Table[7]: 0
+    m_Table[8]: 0
+    m_Table[9]: 0
+    m_Table[10]: 0
+    m_Table[11]: 0
+    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
