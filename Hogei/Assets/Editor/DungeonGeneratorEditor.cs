@@ -2,7 +2,8 @@
 using UnityEditor;
 
 [CustomEditor(typeof(DungeonGenerator))]
-public class DungeonGeneratorEditor : Editor {
+public class DungeonGeneratorEditor : Editor
+{
 
     public override void OnInspectorGUI()
     {
@@ -10,9 +11,17 @@ public class DungeonGeneratorEditor : Editor {
 
         DungeonGenerator Generator = (DungeonGenerator)target;
 
+
         if (GUILayout.Button("Generate Dungeon"))
         {
             Generator.GenerateRooms();
+        }
+
+        if (GUILayout.Button("Check Room Collisions"))
+        {
+
+            Generator.CheckRoomCollisions();
+
         }
 
     }
