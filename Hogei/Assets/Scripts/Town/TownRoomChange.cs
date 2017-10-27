@@ -13,9 +13,13 @@ public class TownRoomChange : MonoBehaviour {
     [Header("Tags")]
     [Tooltip("Fader tag")]
     public string fadeTag = "Fade";
+    [Tooltip("Player tag")]
+    public string playerTag = "Player";
 
     //script refs
     private FadeInFadeOut fader;
+
+    private GameObject player;
 
     //control vars
     private bool readyingMove = false;
@@ -24,6 +28,7 @@ public class TownRoomChange : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         fader = GameObject.FindGameObjectWithTag(fadeTag).GetComponent<FadeInFadeOut>();
+        player = GameObject.FindGameObjectWithTag(playerTag);
 	}
 	
 	// Update is called once per frame
@@ -45,9 +50,14 @@ public class TownRoomChange : MonoBehaviour {
     }
 
     //move the player and fade out after a delay
-    private IEnumerator MoveRooms(TownDoorCheck a, TownDoorCheck b)
+    private IEnumerator MoveRooms(TownDoorCheck otherDoor)
     {
+        //wait for fade in to complete
         yield return new WaitForSeconds(fader.fadeSpeed);
-        
+        //move the player to the the other location
+        player.transform.position = otherDoor.transform.position;
+        player.transform.rotation = otherDoor.transform.rotation;
+        //fade out
+        fader.StartFadeOut();
     }
 }
