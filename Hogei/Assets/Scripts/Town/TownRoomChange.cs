@@ -16,6 +16,10 @@ public class TownRoomChange : MonoBehaviour {
     [Tooltip("Player tag")]
     public string playerTag = "Player";
 
+    [Header("Inputs")]
+    [Tooltip("Keycode for room transfer")]
+    public KeyCode roomMoveKey = KeyCode.E;
+
     //script refs
     private FadeInFadeOut fader;
 
@@ -33,20 +37,32 @@ public class TownRoomChange : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        CheckMoveRooms();
 	}
 
     //Move between the two rooms, based on which room detects player
-    private void BeginMove()
+    private void CheckMoveRooms()
     {
-        //check two doors, if either detects player, move player to other door
-        if (doorA.isPlayerPresent)
+        //if recieve input
+        if (Input.GetKeyDown(roomMoveKey))
         {
-            //fade in
-            fader.StartFadeIn();
-            //move player to other room after fade in done
-            
+            //check two doors, if either detects player, move player to other door
+            if (doorA.isPlayerPresent)
+            {
+                //fade in
+                fader.StartFadeIn();
+                //move player to other room after fade in done
+                StartCoroutine(MoveRooms(doorB));
+            }
+            else if (doorB.isPlayerPresent)
+            {
+                //fade in
+                fader.StartFadeIn();
+                //move player to other room after fade in done
+                StartCoroutine(MoveRooms(doorA));
+            }
         }
+        
     }
 
     //move the player and fade out after a delay
