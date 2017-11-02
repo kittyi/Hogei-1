@@ -24,6 +24,13 @@ public class DungeonGeneratorEditor : Editor
 
         }
 
+        if (GUILayout.Button("Generate Corridors"))
+        {
+
+            Generator.GenerateCorridors();
+
+        }
+
     }
 
 }
