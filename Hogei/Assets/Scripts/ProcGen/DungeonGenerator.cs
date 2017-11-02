@@ -84,7 +84,6 @@ public class DungeonGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
     public void CheckRoomCollisions()
@@ -173,16 +172,16 @@ public class DungeonGenerator : MonoBehaviour
                 }
             }
 
-            //foreach (CorridorData cor in Corridors)
-            //{
-            //    print("Drawing Corridor");
-            //    print(Rooms[cor.Room1].transform.position.ToString() + " -> " + Rooms[cor.Room2].transform.position.ToString());
-            //    Gizmos.color = Color.red;
-            //    Gizmos.DrawLine(Rooms[cor.Room1].transform.position, Rooms[cor.Room2].transform.position);
+            foreach (CorridorData cor in Corridors)
+            {
+                print("Drawing Corridor");
+                print(Rooms[cor.Room1].transform.position.ToString() + " -> " + Rooms[cor.Room2].transform.position.ToString());
+                Gizmos.color = Color.red;
+                Debug.DrawLine(Rooms[cor.Room1].transform.position + transform.up, Rooms[cor.Room2].transform.position + transform.up, Color.red);              
 
-            //UnityEditor.Handles.Label(Rooms[cor.Room1].transform.position + transform.up, cor.Room1.ToString());
-            //UnityEditor.Handles.Label(Rooms[cor.Room2].transform.position + transform.up, cor.Room2.ToString());
-            //}
+                UnityEditor.Handles.Label(Rooms[cor.Room1].transform.position + transform.up, "Start");
+                UnityEditor.Handles.Label(Rooms[cor.Room2].transform.position + transform.up, "End");
+            }
         }
     }
 }
