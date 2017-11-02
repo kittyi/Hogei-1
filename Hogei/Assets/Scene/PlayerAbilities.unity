@@ -356,10 +356,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeScale: 0.5
   SlowTimerReset: 1
+  SlowTimeCooldownReset: 5
   ShieldDistance: 10
   Shield: {fileID: 1807168844085596, guid: 882f36eb113e4a34e8143d7c104ae152, type: 2}
-  ShieldCooldown: 0
-  ShieldCooldownReset: 4
+  ShieldResetTime: 4
+  ShieldCooldownReset: 10
 --- !u!1 &113919733
 GameObject:
   m_ObjectHideFlags: 0

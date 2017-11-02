@@ -5,84 +5,122 @@ using UnityEngine;
 public class PlayerAbilities : MonoBehaviour {
     
     public float TimeScale = 0.5f;
+    private GameObject Player;
+
+    // Slow Time Ability
     private bool SlowingTime = false;
     private float SlowTimer;
     public float SlowTimerReset = 1.0f;
-
+    public float SlowTimeCooldownReset = 0.0f;
+    private float SlowTimeCooldown;
+    private bool SlowOnCD = false;
+    // Shield Ability
     public float ShieldDistance = 1.0f;
     public GameObject Shield;
-    private GameObject Player;
-    public bool ShieldCooldown = false; //public for testing
-    public float ShieldCooldownReset = 4.0f;
-    private float ShieldCooldownTime;
-
-
+    private bool ShieldActive = false; 
+    public float ShieldResetTime = 4.0f;
+    private float ShieldActiveTime;
+    public float ShieldCooldownReset = 0.0f;
+    private float ShieldCooldown;
+    // CannonBall Ability
 
 
 	// Use this for initialization
 	void Start () {
         Player = this.gameObject;
         SlowTimer = SlowTimerReset;
-        ShieldCooldownTime = ShieldCooldownReset;
+        ShieldActiveTime = ShieldResetTime;
+        SlowTimeCooldown = SlowTimeCooldownReset;
+        ShieldCooldown = ShieldCooldownReset;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        //time ability
         SlowTime();
-        SlowSlowTimer();
+        SlowAbilityTimer();
+        SlowTimeAbilityCooldown();
+        //Shield ability
         DropShield();
-        ShieldTimer();       
+        ShieldTimer();
+        ShieldAbilityCooldown();       
     }
-
+    //Time ability functions
     void SlowTime()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.E) && SlowOnCD == false)
         {
             SlowingTime = true;
             Time.timeScale = TimeScale;
         }
     }
 
-    void SlowSlowTimer()
+    void SlowAbilityTimer()
     {
         if (SlowingTime == true)
         {
             SlowTimer -= 1.0f *Time.deltaTime;
+            SlowOnCD = true;
 
             if (SlowTimer <= 0.0f)
             {
-                SlowingTime = false;
                 Time.timeScale = 1.0f;
                 SlowTimer = SlowTimerReset;
-                print(SlowTimer);
+                SlowingTime = false;
             }
         }
     }
 
+    void SlowTimeAbilityCooldown()
+    {
+        if(SlowOnCD == true)
+        {
+            SlowTimeCooldown -= 1.0f * Time.deltaTime;
+            if(SlowTimeCooldown <= 0.0f)
+            {
+                SlowOnCD = false;
+                SlowTimeCooldown = SlowTimeCooldownReset;
+            } 
+        }
+    }
+    //shield ability functions
     void DropShield()
     {
         Vector3 SpawnPosition = Player.transform.position + (Player.transform.forward * ShieldDistance);
         Quaternion PlayerRotation = Player.transform.rotation;
 
-        if(Input.GetKeyDown(KeyCode.Q) && ShieldCooldown == false)
+        if(Input.GetKeyDown(KeyCode.Q) && ShieldActive == false)
         {
             Instantiate(Shield, SpawnPosition, PlayerRotation);
-            ShieldCooldown = true;                      
+            ShieldActive = true;                      
         }
     }
 
     void ShieldTimer()
     {
-        if(ShieldCooldown == true)
+        if(ShieldActive == true)
         {
+            ShieldActiveTime -= 1.0f * Time.deltaTime;
 
-            ShieldCooldownTime -= 1.0f * Time.deltaTime;
-
-            if(ShieldCooldownTime <= 0.0f)
+            if(ShieldActiveTime <= 0.0f)
             {
-                ShieldCooldown = false;
-                ShieldCooldownTime = ShieldCooldownReset;
+                ShieldActiveTime = ShieldResetTime;
+                Destroy(GameObject.FindGameObjectWithTag("Shield"));                
+            }
+        }
+    }
+
+    void ShieldAbilityCooldown()
+    {
+        if(ShieldActive == true)
+        {
+            ShieldCooldown -= 1.0f * Time.deltaTime;
+            if(ShieldCooldown <= 0.0f)
+            {
+                ShieldActive = false;
+                ShieldCooldown = ShieldCooldownReset;
             }
         }
     }
 }
+//
