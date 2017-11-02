@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour {
 
+    [Header("Remember to set the floor to the floor layor")]
     public float Speed = 0;
     Rigidbody Rigid;
     

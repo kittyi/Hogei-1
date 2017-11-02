@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FadeInFadeOut : MonoBehaviour {
+public class FadeInFadeOut : MonoBehaviour
+{
 
     [Header("Timing vars")]
     [Tooltip("Speed of one fade transition")]
@@ -17,13 +18,15 @@ public class FadeInFadeOut : MonoBehaviour {
     private bool isFadeOut = false;
     private float alphaLevel = 0.0f;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         FadeIn();
         FadeOut();
     }

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TownRoomChange : MonoBehaviour {
+public class TownRoomChange : MonoBehaviour
+{
 
     [Header("Door refs")]
     [Tooltip("Reference to door A")]
@@ -29,16 +30,18 @@ public class TownRoomChange : MonoBehaviour {
     private bool readyingMove = false;
     private float timeFadeStart = 0.0f;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         fader = GameObject.FindGameObjectWithTag(fadeTag).GetComponent<FadeInFadeOut>();
         player = GameObject.FindGameObjectWithTag(playerTag);
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         CheckMoveRooms();
-	}
+    }
 
     //Move between the two rooms, based on which room detects player
     private void CheckMoveRooms()
@@ -62,7 +65,7 @@ public class TownRoomChange : MonoBehaviour {
                 StartCoroutine(MoveRooms(doorA));
             }
         }
-        
+
     }
 
     //move the player and fade out after a delay
