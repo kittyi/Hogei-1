@@ -8,6 +8,7 @@ TagManager:
   - Bullet Bank
   - Enemy
   - Fade
+  - Shield
   layers:
   - Default
   - TransparentFX
