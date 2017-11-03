@@ -17,11 +17,15 @@ public class DungeonGenerator : MonoBehaviour
     [Tooltip("Minimum distance between the rooms (Will be rounded up to multiplies of 10)")]
     public int RoomPadding = 10;
 
+    public int RoomWidthMin = 3, RoomWidthMax = 10;
+    public int RoomLengthMin = 3, RoomLengthMax = 10;
+
+    [Header("Dungeon Settings")]
     public int DungeonWidth = 25;
     public int DungeonLength = 50;
 
-    public int RoomWidthMin = 3, RoomWidthMax = 10;
-    public int RoomLengthMin = 3, RoomLengthMax = 10;
+    [Header("Corridor Settings")]
+    public int MaximumCorridorDis = 10;
 
     GameObject[] Rooms;
     List<CorridorData> Corridors;
@@ -34,13 +38,18 @@ public class DungeonGenerator : MonoBehaviour
 
     public void GenerateCorridors()
     {
+        Corridors.Clear(); 
         for (int i = 0; i < Rooms.Length; ++i)
         {
             for (int j = 0; j < Rooms.Length; ++j)
             {
+                if(j == i)
+                {
+                    continue;
+                }
                 Vector3 Distance = Rooms[i].transform.localPosition - Rooms[j].transform.localPosition;
-                print(Distance.ToString());
-                if (Distance.magnitude < RoomWidthMax || Distance.magnitude < RoomLengthMax)
+                //print("Room" + i + " -> Room" + j + " Dist: " + Distance.ToString() + " Mag: " + Distance.magnitude + " Thres: " + RoomWidthMax * 3 + "/" + RoomLengthMax * 3);
+                if (Distance.magnitude < MaximumCorridorDis * 10)
                 {
                     print("Corridor Generated");
                     CorridorData NewCorridor;
@@ -174,13 +183,8 @@ public class DungeonGenerator : MonoBehaviour
 
             foreach (CorridorData cor in Corridors)
             {
-                print("Drawing Corridor");
-                print(Rooms[cor.Room1].transform.position.ToString() + " -> " + Rooms[cor.Room2].transform.position.ToString());
                 Gizmos.color = Color.red;
                 Debug.DrawLine(Rooms[cor.Room1].transform.position + transform.up, Rooms[cor.Room2].transform.position + transform.up, Color.red);              
-
-                UnityEditor.Handles.Label(Rooms[cor.Room1].transform.position + transform.up, "Start");
-                UnityEditor.Handles.Label(Rooms[cor.Room2].transform.position + transform.up, "End");
             }
         }
     }
