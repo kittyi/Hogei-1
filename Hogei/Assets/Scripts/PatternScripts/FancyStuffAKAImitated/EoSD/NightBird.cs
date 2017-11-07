@@ -42,6 +42,7 @@ public class NightBird : MonoBehaviour {
 
     //script refs
     private BulletBank bank;
+    private EnemyState enemyState;
 
     //control vars
     private int currentRotationDireciton = 1; //current rotation of spray
@@ -51,15 +52,19 @@ public class NightBird : MonoBehaviour {
     // Use this for initialization
     void Start () {
         bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
+        enemyState = GetComponent<EnemyState>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.time > timeLastSprayFired + timeBetweenSprays)
+        if (enemyState.GetIsActive())
         {
-            StartCoroutine(BulletSprayRoutine());
+            if (Time.time > timeLastSprayFired + timeBetweenSprays)
+            {
+                StartCoroutine(BulletSprayRoutine());
+            }
         }
-	}
+    }
 
     //bullet firing coroutine
     private IEnumerator BulletSprayRoutine()

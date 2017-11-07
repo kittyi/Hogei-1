@@ -22,6 +22,7 @@ public class AllRoundSpray : MonoBehaviour {
 
     //script refs
     private BulletBank bank;
+    private EnemyState enemyState;
 
     //control vars
     private float timeLastSprayFired = 0.0f; //the time last spray began
@@ -31,14 +32,17 @@ public class AllRoundSpray : MonoBehaviour {
     void Start () {
         //check if angle change per shot can cleanly divide by 360
         bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
-        //StartCoroutine(BulletSprayRoutine());
+        enemyState = GetComponent<EnemyState>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Time.time > timeLastSprayFired + timeBetweenSprays)
+        if (enemyState.GetIsActive())
         {
-            StartCoroutine(BulletSprayRoutine());
+            if (Time.time > timeLastSprayFired + timeBetweenSprays)
+            {
+                StartCoroutine(BulletSprayRoutine());
+            }
         }
     }
 

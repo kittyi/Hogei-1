@@ -31,6 +31,7 @@ public class LayeredProngSpray : MonoBehaviour {
 
     //script refs
     private BulletBank bank;
+    private EnemyState enemyState;
 
     private float timeLastSprayFired = 0.0f; //the time last spray began
     private float currentAngle = 0.0f; //the current angle the bullet is angled at in regards to owner
@@ -38,13 +39,17 @@ public class LayeredProngSpray : MonoBehaviour {
     // Use this for initialization
     void Start () {
         bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
+        enemyState = GetComponent<EnemyState>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Time.time > timeLastSprayFired + timeBetweenSprays)
+        if (enemyState.GetIsActive())
         {
-            StartCoroutine(BulletSprayRoutine());
+            if (Time.time > timeLastSprayFired + timeBetweenSprays)
+            {
+                StartCoroutine(BulletSprayRoutine());
+            }
         }
     }
 

@@ -24,6 +24,15 @@ public class RoomActivate : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-
+        //if other is the player
+        if (other.gameObject.CompareTag(playerTag))
+        {
+            //for all enemies
+            for (int i = 0; i < myEnemies.Length; i++)
+            {
+                //activate all enemies enemystate script
+                myEnemies[i].GetComponent<EnemyState>().SetIsActive(true);
+            }
+        }
     }
 }
