@@ -7588,7 +7588,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Floor: {fileID: 0}
   Wall: {fileID: 0}
-  Doors:
+  DoorTiles:
   - {fileID: 4196205186442558}
   - {fileID: 4888565020591364}
   Shape: 0
+  CorridorsTo: []
+  CornerRoom: 0

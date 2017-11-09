@@ -31,31 +31,34 @@ public class DungeonGenerator : MonoBehaviour
     [Header("Corridor Settings")]
     public int MaximumCorridorDis = 10;
 
-    GameObject[] Rooms;
+    public GameObject[] Rooms;
     List<CorridorData> Corridors;
 
     void Start()
     {
         Rooms = new GameObject[RoomAmount];
         Corridors = new List<CorridorData>();
+        //FloorTile.transform.localScale *= TileSize / 10;
     }
 
     //Generate Corridors between the rooms
     public void GenerateCorridors()
     {
-        Corridors.Clear(); 
+        Corridors.Clear();
+
+        //Figure out corridors
         for (int i = 0; i < Rooms.Length; ++i)
         {
             for (int j = 0; j < Rooms.Length; ++j)
             {
-                if(j == i)
+                if (j == i)
                 {
                     continue;
                 }
                 Vector3 Distance = Rooms[i].transform.localPosition - Rooms[j].transform.localPosition;
                 //print("Room" + i + " -> Room" + j + " Dist: " + Distance.ToString() + " Mag: " + Distance.magnitude + " Thres: " + RoomWidthMax * 3 + "/" + RoomLengthMax * 3);
                 //if (Distance.magnitude < MaximumCorridorDis * 10)
-                if(Mathf.Abs(Distance.x) + Mathf.Abs(Distance.z) < MaximumCorridorDis * TileSize)
+                if (Mathf.Abs(Distance.x) + Mathf.Abs(Distance.z) < MaximumCorridorDis * TileSize)
                 {
                     if (!CheckCorridorExists(i, j))// If the corridor doesn't already exist
                     {
@@ -65,20 +68,24 @@ public class DungeonGenerator : MonoBehaviour
                         NewCorridor.Room2 = j;
                         Corridors.Add(NewCorridor);
 
-                        Rooms[i].GetComponent<RoomGenerator>().Corridors.Add(j);
-                        Rooms[j].GetComponent<RoomGenerator>().Corridors.Add(i);
+                        Rooms[i].GetComponent<RoomGenerator>().CorridorsTo.Add(Rooms[j]);
+                        Rooms[j].GetComponent<RoomGenerator>().CorridorsTo.Add(Rooms[i]);
                     }
                 }
             }
         }
+        //Add the room models
+        ReplaceRooms();
+        //Align the room doors
+        AlignRoomDoors();
     }
 
     //Check a corridor between the two points don't already exist
     bool CheckCorridorExists(int _r1, int _r2)
     {
-        foreach(CorridorData cor in Corridors)
+        foreach (CorridorData cor in Corridors)
         {
-            if(cor.Room1 == _r1 && cor.Room2 == _r2 || cor.Room1 == _r2 && cor.Room2 == _r1)
+            if (cor.Room1 == _r1 && cor.Room2 == _r2 || cor.Room1 == _r2 && cor.Room2 == _r1)
             {
                 return true;
             }
@@ -89,14 +96,33 @@ public class DungeonGenerator : MonoBehaviour
     //Makes the room doors align with each other
     void AlignRoomDoors()
     {
+        foreach(GameObject Room in Rooms)
+        {
+            Room.GetComponent<RoomGenerator>().AlignDoorsToNeighbors();
+        }
         foreach (CorridorData cor in Corridors)
         {
-            Vector3 DistVec = Rooms[cor.Room1].transform.position - Rooms[cor.Room2].transform.position;
-            if(Mathf.Abs(DistVec.x) > Mathf.Abs(DistVec.z))
-            {
+            //Get closet doorTiles
+            RoomGenerator Room1 = Rooms[cor.Room1].GetComponent<RoomGenerator>();
+            RoomGenerator Room2 = Rooms[cor.Room2].GetComponent<RoomGenerator>();
 
+            Transform Room1Door;
+            Transform Room2Door;
+            float ClosestDoors = 100000;
+
+            foreach(Transform Door1 in Room1.DoorTiles)
+            {
+                foreach(Transform Door2 in Room2.DoorTiles)
+                {
+                     
+                }
             }
         }
+    }
+
+    void PlaceCorridor(GameObject Door1, GameObject Door2)
+    {
+
     }
 
     public void GenerateRooms()
@@ -130,27 +156,34 @@ public class DungeonGenerator : MonoBehaviour
         }
     }
 
-    void ReplaceRooms()
+    public void ReplaceRooms()
     {
         int[,] CorridorPerRoom = new int[Rooms.Length, 1];
-        foreach(CorridorData cor in Corridors)
+        foreach (CorridorData cor in Corridors)
         {
-            CorridorPerRoom[cor.Room1, 0] = CorridorPerRoom[cor.Room1, 0]++;
-            CorridorPerRoom[cor.Room2, 0] = CorridorPerRoom[cor.Room2, 0]++;
+            CorridorPerRoom[cor.Room1, 0] += 1;
+            CorridorPerRoom[cor.Room2, 0] += 1;
         }
-        for(int i = 0; i < Rooms.Length; ++i)
+        for (int i = 0; i < Rooms.Length; ++i)
         {
             GameObject oldRoom = Rooms[i];
-            switch(CorridorPerRoom[i, 0])
+            switch (CorridorPerRoom[i, 0])
             {
                 case 1:
-                    Rooms[i] = Instantiate(RoomPrefabs[0], oldRoom.transform.position, oldRoom.transform.rotation, this.gameObject.transform);
+                    Rooms[i] = Instantiate(RoomPrefabs[0], oldRoom.transform.position, oldRoom.transform.rotation, this.gameObject.transform);                    
                     break;
                 case 2:
-                    Rooms[i] = Instantiate(RoomPrefabs[1], oldRoom.transform.position, oldRoom.transform.rotation, this.gameObject.transform);
+                    if (Rooms[i].GetComponent<RoomGenerator>().IsCornerRoom())
+                    {
+                        Rooms[i] = Instantiate(RoomPrefabs[1], oldRoom.transform.position, oldRoom.transform.rotation, this.gameObject.transform);
+                    }
+                    else
+                    {
+                        Rooms[i] = Instantiate(RoomPrefabs[2], oldRoom.transform.position, oldRoom.transform.rotation, this.gameObject.transform);
+                    }
                     break;
                 case 3:
-                    Rooms[i] = Instantiate(RoomPrefabs[2], oldRoom.transform.position, oldRoom.transform.rotation, this.gameObject.transform);
+                    Rooms[i] = Instantiate(RoomPrefabs[3], oldRoom.transform.position, oldRoom.transform.rotation, this.gameObject.transform);
                     break;
                 case 4:
                     Rooms[i] = Instantiate(RoomPrefabs[3], oldRoom.transform.position, oldRoom.transform.rotation, this.gameObject.transform);
@@ -158,7 +191,16 @@ public class DungeonGenerator : MonoBehaviour
                 default:
                     break;
             }
+            Rooms[i].name = "Room_" + i;
+            Destroy(oldRoom);
         }
+        //Re-add Corridor data
+        foreach(CorridorData cor in Corridors)
+        {           
+            Rooms[cor.Room1].GetComponent<RoomGenerator>().AddCorridor(Rooms[cor.Room2]);
+            Rooms[cor.Room2].GetComponent<RoomGenerator>().AddCorridor(Rooms[cor.Room1]);
+        }
+        print("PIANO");
     }
 
     // Update is called once per frame
@@ -240,6 +282,18 @@ public class DungeonGenerator : MonoBehaviour
         Corridors.Clear();
     }
 
+    public GameObject GetRoom(int _Index)
+    {
+        if (_Index >= Rooms.Length)
+        {
+            return null;
+        }
+        else
+        {
+            return Rooms[_Index];
+        }
+    }
+
     private void OnDrawGizmos()
     {
         if (Application.isPlaying && this.enabled)
@@ -257,7 +311,7 @@ public class DungeonGenerator : MonoBehaviour
                 Gizmos.color = Color.red;
                 Debug.DrawLine(Rooms[cor.Room1].transform.position + transform.up, Rooms[cor.Room2].transform.position + transform.up, Color.red);
                 string vector = (Rooms[cor.Room1].transform.position - Rooms[cor.Room2].transform.position).ToString() + "\n" + (Rooms[cor.Room1].transform.position - Rooms[cor.Room2].transform.position).magnitude;
-                UnityEditor.Handles.Label((Rooms[cor.Room1].transform.position + Rooms[cor.Room2].transform.position) /2 + transform.up, vector);
+                UnityEditor.Handles.Label((Rooms[cor.Room1].transform.position + Rooms[cor.Room2].transform.position) / 2 + transform.up, vector);
             }
         }
     }

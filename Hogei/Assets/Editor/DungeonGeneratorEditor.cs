@@ -31,6 +31,13 @@ public class DungeonGeneratorEditor : Editor
 
         }
 
+        if (GUILayout.Button("Insert Prefab Rooms"))
+        {
+
+            Generator.ReplaceRooms();
+
+        }
+
     }
 
 }
