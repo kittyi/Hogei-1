@@ -35,6 +35,7 @@ public class PlayerAttack : MonoBehaviour {
         if (canDo.canShoot)
         {
             UseWeapon();
+            SwitchWeapon();
         }
 	}
 
