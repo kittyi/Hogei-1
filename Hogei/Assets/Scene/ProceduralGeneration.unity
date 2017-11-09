@@ -234,7 +234,7 @@ MonoBehaviour:
   - {fileID: 1592821829545418, guid: c9d3e836ec770984fbe8d16551dbd200, type: 2}
   - {fileID: 1276274366041746, guid: bf9704bd9c932514ea1bca1670f3b3ce, type: 2}
   - {fileID: 1283879743351186, guid: c4ec727d1c64bd34d922a188d4cd32ad, type: 2}
-  RoomAmount: 5
+  RoomAmount: 2
   RoomPadding: 10
   RoomWidthMin: 10
   RoomWidthMax: 15

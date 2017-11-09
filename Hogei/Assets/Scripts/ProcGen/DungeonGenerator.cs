@@ -96,10 +96,12 @@ public class DungeonGenerator : MonoBehaviour
     //Makes the room doors align with each other
     void AlignRoomDoors()
     {
-        foreach(GameObject Room in Rooms)
-        {
-            Room.GetComponent<RoomGenerator>().AlignDoorsToNeighbors();
-        }
+        //foreach(GameObject Room in Rooms)
+        //{
+        //    Room.GetComponent<RoomGenerator>().AlignDoorsToNeighbors();
+        //}
+        Rooms[0].GetComponent<RoomGenerator>().AlignDoorsToNeighbors();
+
         foreach (CorridorData cor in Corridors)
         {
             //Get closet doorTiles
@@ -150,7 +152,7 @@ public class DungeonGenerator : MonoBehaviour
             tempRoom.transform.localPosition = new Vector3(RandomX, transform.position.y, RandomZ);
             tempRoom.AddComponent<RoomGenerator>();
             tempRoom.GetComponent<RoomGenerator>().Floor = FloorTile;
-            tempRoom.GetComponent<RoomGenerator>().Init(RoomWidth, RoomLength, TileSize);
+            tempRoom.GetComponent<RoomGenerator>().Init(RoomWidth, RoomLength, TileSize, true);
 
             Rooms[i] = tempRoom;
         }
@@ -192,6 +194,7 @@ public class DungeonGenerator : MonoBehaviour
                     break;
             }
             Rooms[i].name = "Room_" + i;
+            Rooms[i].GetComponent<RoomGenerator>().Init(0, 0, TileSize, false);
             Destroy(oldRoom);
         }
         //Re-add Corridor data

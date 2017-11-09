@@ -6,6 +6,10 @@ public class Movement : MonoBehaviour {
 
     [Header("Remember to set the floor to the floor layor")]
     public float Speed = 0;
+
+    public float Hori = 0;
+    public float Vert = 0;
+
     Rigidbody Rigid;
     
 
@@ -17,7 +21,7 @@ public class Movement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector3 newPos = Vector3.zero;
-   
+        
         if (Input.GetAxisRaw("Horizontal") > 0f)
         {
             newPos.x += 1;
