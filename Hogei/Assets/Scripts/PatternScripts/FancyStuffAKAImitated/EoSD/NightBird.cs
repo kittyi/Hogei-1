@@ -23,10 +23,6 @@ public class NightBird : MonoBehaviour {
     public float firstLayerBulletSpeed = 1.0f;
     [Tooltip("Layer speed increment value")]
     public float layerSpeedIncrementValue = 0.5f;
-    [Tooltip("Color when going +ve")]
-    public Material positiveColourMaterial;
-    [Tooltip("Colour when goin -ve")]
-    public Material negativeColourMaterial;
 
     [Header("Angle Control")]
     [Tooltip("Angle change per shot in spray")]
@@ -101,15 +97,6 @@ public class NightBird : MonoBehaviour {
                     bulletClone.transform.position = transform.position;
                     //set the bullet's rotation to current rotation
                     bulletClone.transform.rotation = newRotation;
-                    //change the material of clone based on direction
-                    if (currentRotationDireciton == 1)
-                    {
-                        bulletClone.GetComponent<Renderer>().material.color = positiveColourMaterial.color;
-                    }
-                    else
-                    {
-                        bulletClone.GetComponent<Renderer>().material.color = negativeColourMaterial.color;
-                    }
 
                     //change angle between shots
                     angle -= angleChangePerShot * currentRotationDireciton;
