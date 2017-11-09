@@ -35,6 +35,7 @@ public class AdjustableCircularSpray : MonoBehaviour {
 
     //script refs
     private BulletBank bank;
+    private EnemyState enemyState;
 
     //control vars
     private float timeLastSprayFired = 0.0f; //the time last spray began
@@ -45,6 +46,7 @@ public class AdjustableCircularSpray : MonoBehaviour {
     // Use this for initialization
     void Start () {
         bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
+        enemyState = GetComponent<EnemyState>();
     }
 	
 	// Update is called once per frame
@@ -53,9 +55,12 @@ public class AdjustableCircularSpray : MonoBehaviour {
         {
             angleChangePerShot = minimumAngle;
         }
-        if (Time.time > timeLastSprayFired + timeBetweenSprays)
+        if (enemyState.GetIsActive())
         {
-            StartCoroutine(BulletSprayRoutine());
+            if (Time.time > timeLastSprayFired + timeBetweenSprays)
+            {
+                StartCoroutine(BulletSprayRoutine());
+            }
         }
     }
 

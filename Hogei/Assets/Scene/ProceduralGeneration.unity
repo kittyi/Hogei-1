@@ -77,15 +77,17 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -107,6 +109,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    debug:
+      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1 &415334563
 GameObject:
@@ -183,7 +187,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!4 &415334568
 Transform:
   m_ObjectHideFlags: 0
@@ -225,14 +228,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FloorTile: {fileID: 1190424755945434, guid: ad83c9e2e826b144ca5bd4ab589b2f10, type: 2}
+  TileSize: 10
+  RoomPrefabs:
+  - {fileID: 1063314450384466, guid: b6478a0fc078c884eb857e7388f52379, type: 2}
+  - {fileID: 1592821829545418, guid: c9d3e836ec770984fbe8d16551dbd200, type: 2}
+  - {fileID: 1276274366041746, guid: bf9704bd9c932514ea1bca1670f3b3ce, type: 2}
+  - {fileID: 1283879743351186, guid: c4ec727d1c64bd34d922a188d4cd32ad, type: 2}
   RoomAmount: 10
   RoomPadding: 20
-  DungeonWidth: 25
-  DungeonLength: 50
   RoomWidthMin: 3
   RoomWidthMax: 10
   RoomLengthMin: 3
   RoomLengthMax: 10
+  DungeonWidth: 25
+  DungeonLength: 50
+  MaximumCorridorDis: 12
 --- !u!4 &741084089
 Transform:
   m_ObjectHideFlags: 0

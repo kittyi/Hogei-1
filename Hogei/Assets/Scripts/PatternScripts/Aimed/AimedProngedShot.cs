@@ -34,6 +34,7 @@ public class AimedProngedShot : MonoBehaviour {
 
     //script refs
     private BulletBank bank;
+    private EnemyState enemyState;
 
     //target ref
     private GameObject target;
@@ -46,14 +47,18 @@ public class AimedProngedShot : MonoBehaviour {
     {
         bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
         target = GameObject.FindGameObjectWithTag(targetTag);
+        enemyState = GetComponent<EnemyState>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > timeLastSprayFired + timeBetweenSprays)
+        if (enemyState.GetIsActive())
         {
-            StartCoroutine(BulletSprayRoutine());
+            if (Time.time > timeLastSprayFired + timeBetweenSprays)
+            {
+                StartCoroutine(BulletSprayRoutine());
+            }
         }
     }
 

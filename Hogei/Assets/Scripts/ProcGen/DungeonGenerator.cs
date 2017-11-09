@@ -12,16 +12,24 @@ public class DungeonGenerator : MonoBehaviour
     };
 
     public GameObject FloorTile;
+    public float TileSize = 10;
+
+    public GameObject[] RoomPrefabs;
+
 
     public int RoomAmount = 5;
     [Tooltip("Minimum distance between the rooms (Will be rounded up to multiplies of 10)")]
-    public int RoomPadding = 10;
-
-    public int DungeonWidth = 25;
-    public int DungeonLength = 50;
+    public float RoomPadding = 10;
 
     public int RoomWidthMin = 3, RoomWidthMax = 10;
     public int RoomLengthMin = 3, RoomLengthMax = 10;
+
+    [Header("Dungeon Settings")]
+    public int DungeonWidth = 25;
+    public int DungeonLength = 50;
+
+    [Header("Corridor Settings")]
+    public int MaximumCorridorDis = 10;
 
     GameObject[] Rooms;
     List<CorridorData> Corridors;
@@ -32,22 +40,61 @@ public class DungeonGenerator : MonoBehaviour
         Corridors = new List<CorridorData>();
     }
 
+    //Generate Corridors between the rooms
     public void GenerateCorridors()
     {
+        Corridors.Clear(); 
         for (int i = 0; i < Rooms.Length; ++i)
         {
             for (int j = 0; j < Rooms.Length; ++j)
             {
-                Vector3 Distance = Rooms[i].transform.localPosition - Rooms[j].transform.localPosition;
-                print(Distance.ToString());
-                if (Distance.magnitude < RoomWidthMax || Distance.magnitude < RoomLengthMax)
+                if(j == i)
                 {
-                    print("Corridor Generated");
-                    CorridorData NewCorridor;
-                    NewCorridor.Room1 = i;
-                    NewCorridor.Room2 = j;
-                    Corridors.Add(NewCorridor);
+                    continue;
                 }
+                Vector3 Distance = Rooms[i].transform.localPosition - Rooms[j].transform.localPosition;
+                //print("Room" + i + " -> Room" + j + " Dist: " + Distance.ToString() + " Mag: " + Distance.magnitude + " Thres: " + RoomWidthMax * 3 + "/" + RoomLengthMax * 3);
+                //if (Distance.magnitude < MaximumCorridorDis * 10)
+                if(Mathf.Abs(Distance.x) + Mathf.Abs(Distance.z) < MaximumCorridorDis * TileSize)
+                {
+                    if (!CheckCorridorExists(i, j))// If the corridor doesn't already exist
+                    {
+                        print("Corridor Generated");
+                        CorridorData NewCorridor;
+                        NewCorridor.Room1 = i;
+                        NewCorridor.Room2 = j;
+                        Corridors.Add(NewCorridor);
+
+                        Rooms[i].GetComponent<RoomGenerator>().Corridors.Add(j);
+                        Rooms[j].GetComponent<RoomGenerator>().Corridors.Add(i);
+                    }
+                }
+            }
+        }
+    }
+
+    //Check a corridor between the two points don't already exist
+    bool CheckCorridorExists(int _r1, int _r2)
+    {
+        foreach(CorridorData cor in Corridors)
+        {
+            if(cor.Room1 == _r1 && cor.Room2 == _r2 || cor.Room1 == _r2 && cor.Room2 == _r1)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //Makes the room doors align with each other
+    void AlignRoomDoors()
+    {
+        foreach (CorridorData cor in Corridors)
+        {
+            Vector3 DistVec = Rooms[cor.Room1].transform.position - Rooms[cor.Room2].transform.position;
+            if(Mathf.Abs(DistVec.x) > Mathf.Abs(DistVec.z))
+            {
+
             }
         }
     }
@@ -64,11 +111,12 @@ public class DungeonGenerator : MonoBehaviour
             int RoomWidth = Random.Range(RoomWidthMin, RoomWidthMax);
             int RoomLength = Random.Range(RoomLengthMin, RoomLengthMax);
             //Get random room position
-            int RandomX = (int)Random.Range(transform.position.x - DungeonWidth, transform.position.x + DungeonWidth);
-            int RandomZ = (int)Random.Range(transform.position.z - DungeonLength, transform.position.z + DungeonLength);
+            float RandomX = (int)Random.Range(transform.position.x - DungeonWidth, transform.position.x + DungeonWidth);
+            float RandomZ = (int)Random.Range(transform.position.z - DungeonLength, transform.position.z + DungeonLength);
             //Round to the nearest multiple of 10
-            RandomX = (int)Mathf.Ceil(RandomX / 10) * 10;
-            RandomZ = (int)Mathf.Ceil(RandomZ / 10) * 10;
+            RandomX = Mathf.Ceil(RandomX / TileSize) * TileSize;
+            RandomZ = Mathf.Ceil(RandomZ / TileSize) * TileSize;
+
 
             GameObject tempRoom = new GameObject();
             tempRoom.name = "Room" + i.ToString();
@@ -76,15 +124,46 @@ public class DungeonGenerator : MonoBehaviour
             tempRoom.transform.localPosition = new Vector3(RandomX, transform.position.y, RandomZ);
             tempRoom.AddComponent<RoomGenerator>();
             tempRoom.GetComponent<RoomGenerator>().Floor = FloorTile;
-            tempRoom.GetComponent<RoomGenerator>().Init(RoomWidth, RoomLength);
+            tempRoom.GetComponent<RoomGenerator>().Init(RoomWidth, RoomLength, TileSize);
 
             Rooms[i] = tempRoom;
         }
     }
+
+    void ReplaceRooms()
+    {
+        int[,] CorridorPerRoom = new int[Rooms.Length, 1];
+        foreach(CorridorData cor in Corridors)
+        {
+            CorridorPerRoom[cor.Room1, 0] = CorridorPerRoom[cor.Room1, 0]++;
+            CorridorPerRoom[cor.Room2, 0] = CorridorPerRoom[cor.Room2, 0]++;
+        }
+        for(int i = 0; i < Rooms.Length; ++i)
+        {
+            GameObject oldRoom = Rooms[i];
+            switch(CorridorPerRoom[i, 0])
+            {
+                case 1:
+                    Rooms[i] = Instantiate(RoomPrefabs[0], oldRoom.transform.position, oldRoom.transform.rotation, this.gameObject.transform);
+                    break;
+                case 2:
+                    Rooms[i] = Instantiate(RoomPrefabs[1], oldRoom.transform.position, oldRoom.transform.rotation, this.gameObject.transform);
+                    break;
+                case 3:
+                    Rooms[i] = Instantiate(RoomPrefabs[2], oldRoom.transform.position, oldRoom.transform.rotation, this.gameObject.transform);
+                    break;
+                case 4:
+                    Rooms[i] = Instantiate(RoomPrefabs[3], oldRoom.transform.position, oldRoom.transform.rotation, this.gameObject.transform);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-
     }
 
     public void CheckRoomCollisions()
@@ -112,11 +191,11 @@ public class DungeonGenerator : MonoBehaviour
 
     bool CheckCollision(GameObject _Room1, GameObject _Room2)
     {
-        RoomPadding = (int)Mathf.Ceil(RoomPadding / 10) * 10;
-        RoomPadding = (int)Mathf.Ceil(RoomPadding / 10) * 10;
+        RoomPadding = Mathf.Ceil(RoomPadding / TileSize) * TileSize;
+        RoomPadding = Mathf.Ceil(RoomPadding / TileSize) * TileSize;
         Vector3 Between = _Room1.transform.localPosition - _Room2.transform.localPosition;
-        int MinimumX = Mathf.Abs(_Room1.GetComponent<RoomGenerator>().GetRoomWidth() + _Room2.GetComponent<RoomGenerator>().GetRoomWidth()) * 10 + RoomPadding;
-        int MinimumZ = Mathf.Abs(_Room1.GetComponent<RoomGenerator>().GetRoomLength() + _Room2.GetComponent<RoomGenerator>().GetRoomLength()) * 10 + RoomPadding;
+        float MinimumX = Mathf.Abs(_Room1.GetComponent<RoomGenerator>().GetRoomWidth() + _Room2.GetComponent<RoomGenerator>().GetRoomWidth()) * TileSize + RoomPadding;
+        float MinimumZ = Mathf.Abs(_Room1.GetComponent<RoomGenerator>().GetRoomLength() + _Room2.GetComponent<RoomGenerator>().GetRoomLength()) * TileSize + RoomPadding;
         MinimumX /= 2;
         MinimumZ /= 2;
 
@@ -128,7 +207,7 @@ public class DungeonGenerator : MonoBehaviour
             {
                 //print("Adjusting X");
                 //print(MinimumX * (Between / Between.magnitude).x);
-                int NewX = (int)Mathf.Ceil((MinimumX - Between.x) / 10) * 10;
+                float NewX = Mathf.Ceil((MinimumX - Between.x) / TileSize) * TileSize;
                 //_Room1.transform.localPosition = _Room1.transform.localPosition + new Vector3(MinimumX * (Between / Between.magnitude).x, 0, 0);
                 _Room1.transform.localPosition = _Room1.transform.localPosition + new Vector3(NewX, 0, 0);
             }
@@ -136,7 +215,7 @@ public class DungeonGenerator : MonoBehaviour
             {
                 //print("Adjusting Z");
                 //print(MinimumX * (Between / Between.magnitude).z);
-                int NewZ = (int)Mathf.Ceil((MinimumZ - Between.z) / 10) * 10;
+                float NewZ = Mathf.Ceil((MinimumZ - Between.z) / TileSize) * TileSize;
                 // _Room1.transform.localPosition = _Room1.transform.localPosition + new Vector3(0, 0, MinimumZ * (Between / Between.magnitude).z);
                 _Room1.transform.localPosition = _Room1.transform.localPosition + new Vector3(0, 0, NewZ);
             }
@@ -173,16 +252,13 @@ public class DungeonGenerator : MonoBehaviour
                 }
             }
 
-            //foreach (CorridorData cor in Corridors)
-            //{
-            //    print("Drawing Corridor");
-            //    print(Rooms[cor.Room1].transform.position.ToString() + " -> " + Rooms[cor.Room2].transform.position.ToString());
-            //    Gizmos.color = Color.red;
-            //    Gizmos.DrawLine(Rooms[cor.Room1].transform.position, Rooms[cor.Room2].transform.position);
-
-            //UnityEditor.Handles.Label(Rooms[cor.Room1].transform.position + transform.up, cor.Room1.ToString());
-            //UnityEditor.Handles.Label(Rooms[cor.Room2].transform.position + transform.up, cor.Room2.ToString());
-            //}
+            foreach (CorridorData cor in Corridors)
+            {
+                Gizmos.color = Color.red;
+                Debug.DrawLine(Rooms[cor.Room1].transform.position + transform.up, Rooms[cor.Room2].transform.position + transform.up, Color.red);
+                string vector = (Rooms[cor.Room1].transform.position - Rooms[cor.Room2].transform.position).ToString() + "\n" + (Rooms[cor.Room1].transform.position - Rooms[cor.Room2].transform.position).magnitude;
+                UnityEditor.Handles.Label((Rooms[cor.Room1].transform.position + Rooms[cor.Room2].transform.position) /2 + transform.up, vector);
+            }
         }
     }
 }
