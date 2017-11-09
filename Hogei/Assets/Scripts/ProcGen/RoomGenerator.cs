@@ -57,6 +57,7 @@ public class RoomGenerator : MonoBehaviour
         }
         Tiles = new GameObject[RoomWidth, RoomLength];
         if (DoorPairs == null || DoorPairs.Count == 0) DoorPairs = new Dictionary<Transform, Transform>();
+        if (CorridorsTo == null || CorridorsTo.Count == 0) CorridorsTo = new List<GameObject>();
 
         if (_Draw) GenerateRoom();
     }
@@ -121,7 +122,7 @@ public class RoomGenerator : MonoBehaviour
             if (Mathf.Abs(Dist.x) > Mathf.Abs(Dist.z) && Room1Door.position.z != (Room2Door.position + Room2Door.right * TileSize).z)
             {
                 print("X Difference Is Bigger\nTile Size: " + TileSize);
-                if (cor.GetComponent<RoomGenerator>().LockPos )
+                if (cor.GetComponent<RoomGenerator>().LockPos || cor.GetComponent<RoomGenerator>().LockPos && LockPos)
                 {
                     print("#Moving this room");
                     Vector3 Adjustment = (Room2Door.position + Room2Door.right * TileSize) - Room1Door.position;
@@ -133,7 +134,7 @@ public class RoomGenerator : MonoBehaviour
                 else
                 {
                     print("#Moving other room");
-                    Vector3 Adjustment = (Room1Door.position + Room1Door.right * TileSize) - (Room2Door.position );
+                    Vector3 Adjustment = (Room1Door.position + Room1Door.right * TileSize) - (Room2Door.position);
                     print(cor.transform.position.ToString());
                     Vector3 newPos = new Vector3(cor.transform.position.x, cor.transform.position.y, cor.transform.position.z + Adjustment.z);
                     cor.transform.position = newPos;
@@ -144,7 +145,7 @@ public class RoomGenerator : MonoBehaviour
             else if (Mathf.Abs(Dist.z) > Mathf.Abs(Dist.x) && Room1Door.position.x != (Room2Door.position + Room2Door.right * TileSize).x)
             {
                 print("Z Difference Is Bigger\nTile Size: " + TileSize);
-                if (cor.GetComponent<RoomGenerator>().LockPos)
+                if (cor.GetComponent<RoomGenerator>().LockPos || cor.GetComponent<RoomGenerator>().LockPos && LockPos)
                 {
                     print("#Moving this room");
                     Vector3 Adjustment = (Room2Door.position + Room2Door.right * TileSize) - Room1Door.position;
@@ -155,7 +156,7 @@ public class RoomGenerator : MonoBehaviour
                 }
                 else
                 {
-                    print("#Moving other room");               
+                    print("#Moving other room");
                     Vector3 Adjustment = (Room1Door.position + Room1Door.right * TileSize) - (Room2Door.position);
                     print(cor.transform.position.ToString());
                     Vector3 newPos = new Vector3(cor.transform.position.x + Adjustment.x, cor.transform.position.y, cor.transform.position.z);
@@ -193,18 +194,27 @@ public class RoomGenerator : MonoBehaviour
             print(Room1Door.position.ToString() + " / " + Room2Door.position.ToString());
             print("Corridor Length: " + CorridorLength);
             Vector3 newPos = Room1Door.position;
+            Vector3 newWallPos = Room1Door.position + (Room1Door.forward * TileSize) / 2 - (Room1Door.right * TileSize) / 2;
+            print(newPos.ToString() + " / " + newWallPos.ToString());
             for (int i = 0; i < (CorridorLength - 1) / TileSize; i++)
             {
                 newPos += Room1Door.forward * TileSize;
+                newWallPos += Room1Door.forward * TileSize;
+
                 GameObject newFloorTile = Instantiate(Floor, newPos, Quaternion.identity);
                 newFloorTile.transform.parent = transform;
-            }
+                newFloorTile.name = "CorridorFloor_" + i;
+
+                GameObject newWallTile = Instantiate(Wall, newWallPos, Quaternion.LookRotation(-Room1Door.right, Room1Door.up));
+                newWallTile.transform.parent = transform;
+                newWallTile.name = "CorridorWall_" + i;
+             }
         }
     }
 
     public void AlignDoorsToNeighbors()
     {
-                AlignmentRan = true;
+        AlignmentRan = true;
         int Tries = 0;
         while (!CheckDoorsFacing())
         {

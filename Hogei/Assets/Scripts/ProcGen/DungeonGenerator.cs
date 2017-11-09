@@ -12,6 +12,7 @@ public class DungeonGenerator : MonoBehaviour
     };
 
     public GameObject FloorTile;
+    public GameObject WallTile;
     public float TileSize = 10;
 
     public GameObject[] RoomPrefabs;
@@ -205,6 +206,7 @@ public class DungeonGenerator : MonoBehaviour
             Rooms[i].name = "Room_" + i;
             Rooms[i].GetComponent<RoomGenerator>().Init(0, 0, TileSize, false);
             Rooms[i].GetComponent<RoomGenerator>().Floor = FloorTile;
+            Rooms[i].GetComponent<RoomGenerator>().Wall = WallTile;
             Destroy(oldRoom);
         }
         //Re-add Corridor data

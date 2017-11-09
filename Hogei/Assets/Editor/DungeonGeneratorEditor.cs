@@ -15,6 +15,11 @@ public class DungeonGeneratorEditor : Editor
         if (GUILayout.Button("Generate Dungeon"))
         {
             Generator.GenerateRooms();
+            for(int i = 0; i < 10; ++i)
+            {
+                Generator.CheckRoomCollisions();
+            }
+            Generator.GenerateCorridors();
         }
 
         if (GUILayout.Button("Check Room Collisions"))

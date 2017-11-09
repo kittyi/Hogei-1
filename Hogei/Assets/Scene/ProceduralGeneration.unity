@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FloorTile: {fileID: 1190424755945434, guid: ad83c9e2e826b144ca5bd4ab589b2f10, type: 2}
+  WallTile: {fileID: 100000, guid: c5f08224259d68e4aa5f18f40d336ee1, type: 3}
   TileSize: 1
   RoomPrefabs:
   - {fileID: 1121675946719400, guid: 95b5500449d4d0e41b78d802d2f05d30, type: 2}
@@ -236,14 +237,14 @@ MonoBehaviour:
   - {fileID: 1663363699950720, guid: 9de9610140f885b4a9ba96224c28af78, type: 2}
   - {fileID: 1166821730395260, guid: 3e9a89629a80016498054a9f6ff3277f, type: 2}
   RoomAmount: 5
-  RoomPadding: 50
+  RoomPadding: 60
   RoomWidthMin: 12
   RoomWidthMax: 16
   RoomLengthMin: 12
   RoomLengthMax: 16
   DungeonWidth: 2
   DungeonLength: 5
-  MaximumCorridorDis: 50
+  MaximumCorridorDis: 55
   Rooms: []
 --- !u!4 &741084089
 Transform:
