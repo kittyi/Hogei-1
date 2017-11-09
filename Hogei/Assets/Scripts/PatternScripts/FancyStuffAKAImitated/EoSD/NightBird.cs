@@ -11,6 +11,8 @@ public class NightBird : MonoBehaviour {
     public float timeBetweenLayers = 0.5f;
 
     [Header("Bullet Vars")]
+    [Tooltip("Bullet object")]
+    public GameObject bulletObject;
     [Tooltip("Number of sprays")]
     public int numSpray = 5;
     [Tooltip("Number of bullet layers")]
@@ -41,7 +43,7 @@ public class NightBird : MonoBehaviour {
     public string bulletBankTag = "Bullet Bank";
 
     //script refs
-    private BulletBank bank;
+    //private BulletBank bank;
     private EnemyState enemyState;
 
     //control vars
@@ -51,7 +53,7 @@ public class NightBird : MonoBehaviour {
     
     // Use this for initialization
     void Start () {
-        bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
+        //bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
         enemyState = GetComponent<EnemyState>();
     }
 	
@@ -91,7 +93,10 @@ public class NightBird : MonoBehaviour {
                     Quaternion newRotation = new Quaternion();
                     newRotation.eulerAngles = new Vector3(0.0f, transform.eulerAngles.y + angle, 0.0f);
                     //create a bullet clone, and orient it using the current angle
-                    GameObject bulletClone = bank.GetRegularStraightBullet();
+                    GameObject bulletClone = Instantiate(bulletObject, transform.position, transform.rotation);
+
+                    //GameObject bulletClone = bank.GetRegularStraightBullet();
+
                     //set the bullets position to this pos
                     bulletClone.transform.position = transform.position;
                     //set the bullet's rotation to current rotation

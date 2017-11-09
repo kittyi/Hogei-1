@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4314476009517292}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Head_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4594164626038970}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Tail_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4948675409908094}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Skeleton_Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4531486293839194}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Left_Claw_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4430620841716900}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Left_Claw_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4372730737748162}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Tail_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4870392552430014}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4784942564125708}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Tail_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4172573555413484}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Right_Elbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4848498032460994}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Tail_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4438353545684640}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Right_Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4141960666353302}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Right_Claw_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4624564996990096}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Tail_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4422282592131920}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Front_Body_IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4920265619219410}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Tail_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4120958097523098}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Body_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4993112222555738}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Tail_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4666488679465638}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Tail_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4865345496068140}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Body_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4315828012222902}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Left_Clavical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4384896838977516}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Tail_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4366524856426278}
   - component: {fileID: 137945084849226230}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Shrimpy_Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +350,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4824892607932142}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Tail_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4121648315215966}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Tail_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,9 +381,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4113919578094398}
   - component: {fileID: 95201529909514248}
-  m_Layer: 0
+  - component: {fileID: 136969233651011956}
+  m_Layer: 10
   m_Name: Shrimp
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -396,7 +397,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4579883806196648}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Tail_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +412,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4686355395000766}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Left_Elbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +427,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4108727582566670}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Right_Wrist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +442,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4254582009409452}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Front_Body_Curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,7 +457,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4219939668278308}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:DNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +472,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4019780472662238}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Left_Wrist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +487,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4405317072189618}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Tail_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +502,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4004699472280214}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Right_Clavical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +517,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4100545525801078}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Tail_Curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +532,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4997600655050824}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Body_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -546,7 +547,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4499798449575736}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Left_Shoulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +562,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4038378349565190}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:imagePlane1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +577,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4243658999067896}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Head_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -591,7 +592,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4123296874691530}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Tail_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -606,7 +607,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4687067835130456}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Right_Claw_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +622,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4317993945688500}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Krill_Beast_Rigged:Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1210,7 +1211,7 @@ Animator:
   m_GameObject: {fileID: 1552858621752230}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: cefb0bd02a12dfc43bba6968d1d6664f, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 587c3d47883cb8449bae7ff51992721f, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1218,6 +1219,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!136 &136969233651011956
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1552858621752230}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!137 &137945084849226230
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -1227,6 +1241,7 @@ SkinnedMeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1242,6 +1257,7 @@ SkinnedMeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5

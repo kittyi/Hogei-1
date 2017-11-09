@@ -13,6 +13,8 @@ public class WallSpray : MonoBehaviour {
     public int numBulletWaves = 5;
 
     [Header("Bullet set up vars")]
+    [Tooltip("Bullet object")]
+    public GameObject bulletObject;
     [Tooltip("Bullet base setup distance")]
     public float bulletBaseSetupDistance = 0.5f;
     [Tooltip("Bullet step distance increase value")]
@@ -35,7 +37,7 @@ public class WallSpray : MonoBehaviour {
     public string bulletBankTag = "Bullet Bank";
 
     //script refs
-    private BulletBank bank;
+    //private BulletBank bank;
     private EnemyState enemyState;
 
     //control vars
@@ -43,7 +45,7 @@ public class WallSpray : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
+        //bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
         enemyState = GetComponent<EnemyState>();
     }
 	
@@ -70,7 +72,7 @@ public class WallSpray : MonoBehaviour {
             //get the distance to set up
             float distanceToSetup = bulletBaseSetupDistance + (bulletStepDistanceIncrease * i);
             //get a bullet from the bank
-            GameObject bullet1 = bank.GetSetupStraightBullet();
+            GameObject bullet1 = Instantiate(bulletObject, transform.position, transform.rotation);
 
             //set the bullets position to this pos
             bullet1.transform.position = transform.position;
@@ -85,7 +87,7 @@ public class WallSpray : MonoBehaviour {
             bullet1.GetComponent<SetupStraightBullet>().SetupVars(distanceToSetup, bulletSetupTime, bulletSetupTime + bulletStartMoveTimeDelay, 270.0f, patternBulletSpeed);
 
             //get a second bullet from the bank
-            GameObject bullet2 = bank.GetSetupStraightBullet();
+            GameObject bullet2 = Instantiate(bulletObject, transform.position, transform.rotation);
 
             //set the bullet's pos to this pos
             bullet2.transform.position = transform.position;

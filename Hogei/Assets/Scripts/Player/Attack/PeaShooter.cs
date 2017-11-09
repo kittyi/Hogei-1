@@ -5,6 +5,8 @@ using UnityEngine;
 public class PeaShooter : MonoBehaviour {
 
     [Header("Bullet vars")]
+    [Tooltip("Bullet object")]
+    public GameObject bulletObject;
     [Tooltip("Number of bullets fired in group when empowered")]
     public int numBulletWaves = 3;
     [Tooltip("Bullet travel speed")]
@@ -20,19 +22,19 @@ public class PeaShooter : MonoBehaviour {
     [Tooltip("Time between bullets in wave")]
     public float timeBetweenWaves = 0.1f;
 
-    [Header("Tags")]
-    [Tooltip("Bullet bank tag")]
-    public string bankTag = "Bullet Bank";
+    //[Header("Tags")]
+    //[Tooltip("Bullet bank tag")]
+    //public string bankTag = "Bullet Bank";
 
-    //bullet bank ref
-    private BulletBank bank;
+    ////bullet bank ref
+    //private BulletBank bank;
 
     //control vars
     private float lastShotTime = 0.0f; //time last bullet was fired
 
 	// Use this for initialization
 	void Start () {
-        bank = GameObject.FindGameObjectWithTag(bankTag).GetComponent<BulletBank>();
+        //bank = GameObject.FindGameObjectWithTag(bankTag).GetComponent<BulletBank>();
 	}
 	
 	// Update is called once per frame
@@ -50,7 +52,7 @@ public class PeaShooter : MonoBehaviour {
             lastShotTime = Time.time;
 
             //get a bullet
-            GameObject bullet = bank.GetPlayerStraightBullet();
+            GameObject bullet = Instantiate(bulletObject, transform.position, transform.rotation);
             //set the bullets position to this pos
             bullet.transform.position = transform.position;
             //set the bullet's rotation to current rotation

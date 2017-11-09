@@ -5,7 +5,17 @@ using DG.Tweening;
 
 public class SetupStraightBullet : MonoBehaviour {
 
+    [Header("Damage")]
+    [Tooltip("Damage dealt by bullet")]
+    public float bulletDamage = 1.0f;
+
+    [Header("Speed")]
+    [Tooltip("Travel speed of bullet")]
     public float travelSpeed = 2.0f;
+
+    [Header("Particle effect")]
+    [Tooltip("Particle emitted by bullet on impact")]
+    public GameObject particleObject;
 
     //set up vars
     public Vector3 setupDestination = new Vector3(0, 0, 0);
@@ -20,7 +30,7 @@ public class SetupStraightBullet : MonoBehaviour {
     private bool isActive = false;
 
     //script ref
-    private BulletBank bulletBank;
+    //private BulletBank bulletBank;
 
     private Rigidbody myRigid;
 
@@ -73,35 +83,41 @@ public class SetupStraightBullet : MonoBehaviour {
         myRigid.velocity = transform.forward * travelSpeed;
     }
 
-    //ref func
-    public void SetBulletBank(BulletBank bank)
-    {
-        bulletBank = bank;
-    }
+    ////ref func
+    //public void SetBulletBank(BulletBank bank)
+    //{
+    //    bulletBank = bank;
+    //}
 
-    //deactivate func
-    private void Deactivate()
-    {
-        //set active to false
-        isActive = false;
-        //reset values
-        setupDestination = new Vector3(0, 0, 0);
-        setupDestinationDistance = 0.0f;
-        setupTime = 0.0f;
-        startDelay = 0.0f;
-        angleChange = 0.0f;
-        travelSpeed = 0;
-        myRigid.velocity = Vector3.zero;
-        //return to queue
-        bulletBank.ReturnSetupStraightBullet(gameObject);
-        transform.position = bulletBank.transform.position;
-        transform.rotation = Quaternion.identity;
-    }
+    ////deactivate func
+    //private void Deactivate()
+    //{
+    //    //set active to false
+    //    isActive = false;
+    //    //reset values
+    //    setupDestination = new Vector3(0, 0, 0);
+    //    setupDestinationDistance = 0.0f;
+    //    setupTime = 0.0f;
+    //    startDelay = 0.0f;
+    //    angleChange = 0.0f;
+    //    travelSpeed = 0;
+    //    myRigid.velocity = Vector3.zero;
+    //    //return to queue
+    //    bulletBank.ReturnSetupStraightBullet(gameObject);
+    //    transform.position = bulletBank.transform.position;
+    //    transform.rotation = Quaternion.identity;
+    //}
 
     //collision = deactivate
     private void OnCollisionEnter(Collision collision)
     {
         //any collision
-        Deactivate();
+        if (collision.gameObject.GetComponent<EntityHealth>())
+        {
+            collision.gameObject.GetComponent<EntityHealth>().DecreaseHealth(bulletDamage);
+            GameObject particle = Instantiate(particleObject, transform.position, Quaternion.identity);
+        }
+        //Deactivate();
+        Destroy(gameObject);
     }
 }

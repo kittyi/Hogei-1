@@ -8,8 +8,16 @@ public class RegularStraightBullet : MonoBehaviour {
     [Tooltip("Speed of bullet")]
     public float travelSpeed = 3.0f;
 
+    [Header("Damage")]
+    [Tooltip("Damage dealt by bullet")]
+    public float bulletDamage = 1.0f;
+
+    [Header("Particle effect")]
+    [Tooltip("Particle emitted by bullet on impact")]
+    public GameObject particleObject;
+
     //script ref
-    private BulletBank bulletBank;
+    //private BulletBank bulletBank;
 
     private Rigidbody myRigid;
     private bool isActive = false;
@@ -39,29 +47,35 @@ public class RegularStraightBullet : MonoBehaviour {
         travelSpeed = speed;
     }
 
-    //ref func
-    public void SetBulletBank(BulletBank bank)
-    {
-        bulletBank = bank;
-    }
+    ////ref func
+    //public void SetBulletBank(BulletBank bank)
+    //{
+    //    bulletBank = bank;
+    //}
 
-    //deactivate func
-    private void Deactivate()
-    {
-        //set active to false
-        isActive = false;
-        //reset values
-        myRigid.velocity = Vector3.zero;
-        travelSpeed = 0;
-        //return to queue
-        bulletBank.ReturnRegularStraightBullet(gameObject);
-        transform.position = bulletBank.transform.position;
-    }
+    ////deactivate func
+    //private void Deactivate()
+    //{
+    //    //set active to false
+    //    isActive = false;
+    //    //reset values
+    //    myRigid.velocity = Vector3.zero;
+    //    travelSpeed = 0;
+    //    //return to queue
+    //    bulletBank.ReturnRegularStraightBullet(gameObject);
+    //    transform.position = bulletBank.transform.position;
+    //}
 
     //collision = deactivate
     private void OnCollisionEnter(Collision collision)
     {
         //any collision
-        Deactivate();
+        if (collision.gameObject.GetComponent<EntityHealth>())
+        {
+            collision.gameObject.GetComponent<EntityHealth>().DecreaseHealth(bulletDamage);
+            GameObject particle = Instantiate(particleObject, transform.position, Quaternion.identity);
+        }
+        //Deactivate();
+        Destroy(gameObject);
     }
 }

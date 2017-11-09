@@ -14,17 +14,21 @@ public class PlayerHomingBullet : MonoBehaviour {
     [Tooltip("Time between adjustments")]
     public float homingAdjustInterval = 0.1f;
 
-    //script ref
-    private BulletBank bulletBank;
+    [Header("Damage")]
+    [Tooltip("Damage dealt by bullet")]
+    public float bulletDamage = 1.0f;
+
+    ////script ref
+    //private BulletBank bulletBank;
 
     //control vars
     private Rigidbody myRigid;
     private bool isActive = false;
     private float travelSpeed = 3.0f;
-    private float maxHomingTime = 4.0f;
+    //private float maxHomingTime = 4.0f;
     private float homingStartDelay = 1.0f;
     private float startTime = 0.0f;
-    private float lastAdjustTime = 0.0f;
+    //private float lastAdjustTime = 0.0f;
     private GameObject target;
     private GameObject[] targetArray = new GameObject[0];
 
@@ -50,18 +54,18 @@ public class PlayerHomingBullet : MonoBehaviour {
     {
         isActive = true;
         travelSpeed = speed;
-        maxHomingTime = hominTime;
+        //maxHomingTime = hominTime;
         homingStartDelay = hominStartDelay;
         startTime = Time.time;
-        lastAdjustTime = 0.0f;
+        //lastAdjustTime = 0.0f;
         GetTargets();
     }
 
     //ref func
-    public void SetBulletBank(BulletBank bank)
-    {
-        bulletBank = bank;
-    }
+    //public void SetBulletBank(BulletBank bank)
+    //{
+    //    bulletBank = bank;
+    //}
 
     //find all possible targets active in scene
     private void GetTargets()
@@ -146,10 +150,12 @@ public class PlayerHomingBullet : MonoBehaviour {
         //reset values
         myRigid.velocity = Vector3.zero;
         travelSpeed = 0;
-        maxHomingTime = 0;
+        //maxHomingTime = 0;
         //return to queue
-        bulletBank.ReturnPlayerHomingBullet(gameObject);
-        transform.position = bulletBank.transform.position;
+        //bulletBank.ReturnPlayerHomingBullet(gameObject);
+        //transform.position = bulletBank.transform.position;
+        //destroy the object
+        Destroy(gameObject);
     }
 
     //collision = deactivate
@@ -158,7 +164,7 @@ public class PlayerHomingBullet : MonoBehaviour {
         //any collision
         if(collision.gameObject.GetComponent<EntityHealth>())
         {
-            collision.gameObject.GetComponent<EntityHealth>().DecreaseHealth(1.0f);            
+            collision.gameObject.GetComponent<EntityHealth>().DecreaseHealth(bulletDamage);            
         }
         Deactivate();        
     }
