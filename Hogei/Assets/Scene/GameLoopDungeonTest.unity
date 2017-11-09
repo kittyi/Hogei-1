@@ -142,10 +142,6 @@ MonoBehaviour:
   numBulletsPerLayer: 16
   firstLayerBulletSpeed: 5
   layerSpeedIncrementValue: 1.5
-  positiveColourMaterial: {fileID: 2100000, guid: 80d56ccbb87824241b297e55050658f4,
-    type: 2}
-  negativeColourMaterial: {fileID: 2100000, guid: 8a0d712274e85b140970c696742f2174,
-    type: 2}
   angleChangePerShot: 4
   startingAngle: 40
   slightAngleAlteration: 0.7
