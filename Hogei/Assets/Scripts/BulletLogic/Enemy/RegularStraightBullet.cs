@@ -12,6 +12,10 @@ public class RegularStraightBullet : MonoBehaviour {
     [Tooltip("Damage dealt by bullet")]
     public float bulletDamage = 1.0f;
 
+    [Header("Particle effect")]
+    [Tooltip("Particle emitted by bullet on impact")]
+    public GameObject particleObject;
+
     //script ref
     //private BulletBank bulletBank;
 
@@ -69,6 +73,7 @@ public class RegularStraightBullet : MonoBehaviour {
         if (collision.gameObject.GetComponent<EntityHealth>())
         {
             collision.gameObject.GetComponent<EntityHealth>().DecreaseHealth(bulletDamage);
+            GameObject particle = Instantiate(particleObject, transform.position, Quaternion.identity);
         }
         //Deactivate();
         Destroy(gameObject);

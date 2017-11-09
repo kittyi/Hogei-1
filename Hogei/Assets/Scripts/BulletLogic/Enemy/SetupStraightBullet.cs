@@ -13,6 +13,10 @@ public class SetupStraightBullet : MonoBehaviour {
     [Tooltip("Travel speed of bullet")]
     public float travelSpeed = 2.0f;
 
+    [Header("Particle effect")]
+    [Tooltip("Particle emitted by bullet on impact")]
+    public GameObject particleObject;
+
     //set up vars
     public Vector3 setupDestination = new Vector3(0, 0, 0);
     public float setupDestinationDistance = 0.0f;
@@ -111,6 +115,7 @@ public class SetupStraightBullet : MonoBehaviour {
         if (collision.gameObject.GetComponent<EntityHealth>())
         {
             collision.gameObject.GetComponent<EntityHealth>().DecreaseHealth(bulletDamage);
+            GameObject particle = Instantiate(particleObject, transform.position, Quaternion.identity);
         }
         //Deactivate();
         Destroy(gameObject);
