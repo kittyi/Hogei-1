@@ -11,22 +11,34 @@ public class Movement : MonoBehaviour {
     public float Vert = 0;
 
     Rigidbody Rigid;
+
+    private WhatCanIDO canDo;
     
 
 	// Use this for initialization
 	void Start () {
+        canDo = GetComponent<WhatCanIDO>();
         Rigid = GetComponent<Rigidbody>();
     }
 	
 	// Update is called once per frame
 	void Update () {
+        if (canDo.canMove)
+        {
+            MovePlayer();
+        }
+    }
+
+    //move player pos
+    private void MovePlayer()
+    {
         Vector3 newPos = Vector3.zero;
-        
+
         if (Input.GetAxisRaw("Horizontal") > 0f)
         {
             newPos.x += 1;
         }
-        else if(Input.GetAxisRaw("Horizontal") < 0f)
+        else if (Input.GetAxisRaw("Horizontal") < 0f)
         {
             newPos.x -= 1;
         }

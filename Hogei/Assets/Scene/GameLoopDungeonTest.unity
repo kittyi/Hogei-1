@@ -278,6 +278,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1626456016074720, guid: f0f969a35ba04ae489601c7585c48e25,
         type: 2}
+    - target: {fileID: 114285855849247614, guid: 93bddb56830ef2f45ac6092101caf84a,
+        type: 2}
+      propertyPath: mouseInputKey
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 54644532631969322, guid: 93bddb56830ef2f45ac6092101caf84a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 93bddb56830ef2f45ac6092101caf84a, type: 2}
