@@ -7,7 +7,18 @@ public class PlayerAbilities : MonoBehaviour {
     public float TimeScale = 0.5f;
     private GameObject Player;
 
+    [Header("Inputs")]
+    [Tooltip("Slow ability key")]
+    public KeyCode slowAbilityKey = KeyCode.F;
+    [Tooltip("Shield ablity key")]
+    public KeyCode shieldAbilityKey = KeyCode.G;
+
+    [Header("Tags")]
+    [Tooltip("Shield object tag")]
+    public string shieldTag = "Shield";
+
     // Slow Time Ability
+    [Header("Slow ability vars")]
     private bool SlowingTime = false;
     private float SlowTimer;
     public float SlowTimerReset = 1.0f;
@@ -15,6 +26,7 @@ public class PlayerAbilities : MonoBehaviour {
     private float SlowTimeCooldown;
     private bool SlowOnCD = false;
     // Shield Ability
+    [Header("Shield ability vars")]
     public float ShieldDistance = 1.0f;
     public GameObject Shield;
     private bool ShieldActive = false; 
@@ -48,7 +60,7 @@ public class PlayerAbilities : MonoBehaviour {
     //Time ability functions
     void SlowTime()
     {
-        if(Input.GetKeyDown(KeyCode.E) && SlowOnCD == false)
+        if(Input.GetKeyDown(slowAbilityKey) && SlowOnCD == false)
         {
             SlowingTime = true;
             Time.timeScale = TimeScale;
@@ -89,7 +101,7 @@ public class PlayerAbilities : MonoBehaviour {
         Vector3 SpawnPosition = Player.transform.position + (Player.transform.forward * ShieldDistance);
         Quaternion PlayerRotation = Player.transform.rotation;
 
-        if(Input.GetKeyDown(KeyCode.Q) && ShieldActive == false)
+        if(Input.GetKeyDown(shieldAbilityKey) && ShieldActive == false)
         {
             Instantiate(Shield, SpawnPosition, PlayerRotation);
             ShieldActive = true;                      
@@ -105,7 +117,7 @@ public class PlayerAbilities : MonoBehaviour {
             if(ShieldActiveTime <= 0.0f)
             {
                 ShieldActiveTime = ShieldResetTime;
-                Destroy(GameObject.FindGameObjectWithTag("Shield"));                
+                Destroy(GameObject.FindGameObjectWithTag(shieldTag));                
             }
         }
     }

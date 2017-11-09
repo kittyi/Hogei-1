@@ -18,10 +18,15 @@ public class SetupStraightBullet : MonoBehaviour {
     public GameObject particleObject;
 
     //set up vars
+    [HideInInspector]
     public Vector3 setupDestination = new Vector3(0, 0, 0);
+    [HideInInspector]
     public float setupDestinationDistance = 0.0f;
+    [HideInInspector]
     public float setupTime = 0.0f;
+    [HideInInspector]
     public float startDelay = 0.0f;
+    [HideInInspector]
     public float angleChange = 0.0f;
 
     //control vars
