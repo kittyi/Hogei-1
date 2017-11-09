@@ -16,7 +16,7 @@ public class DungeonGenerator : MonoBehaviour
 
     public GameObject[] RoomPrefabs;
 
-
+    [Header("Dungeon Settings")]
     public int RoomAmount = 5;
     [Tooltip("Minimum distance between the rooms (Will be rounded up to multiplies of 10)")]
     public float RoomPadding = 10;
@@ -77,7 +77,16 @@ public class DungeonGenerator : MonoBehaviour
         //Add the room models
         ReplaceRooms();
         //Align the room doors
-        AlignRoomDoors();
+        Rooms[0].GetComponent<RoomGenerator>().AlignDoorsToNeighbors();
+
+        foreach (GameObject room in Rooms)
+        {
+            room.GetComponent<RoomGenerator>().GenerateCorridors();
+        }
+        foreach (GameObject room in Rooms)
+        {
+            room.GetComponent<RoomGenerator>().PlaceCorridorHalf();
+        }
     }
 
     //Check a corridor between the two points don't already exist
@@ -100,7 +109,7 @@ public class DungeonGenerator : MonoBehaviour
         //{
         //    Room.GetComponent<RoomGenerator>().AlignDoorsToNeighbors();
         //}
-        Rooms[0].GetComponent<RoomGenerator>().AlignDoorsToNeighbors();
+        
 
         foreach (CorridorData cor in Corridors)
         {
@@ -188,13 +197,14 @@ public class DungeonGenerator : MonoBehaviour
                     Rooms[i] = Instantiate(RoomPrefabs[3], oldRoom.transform.position, oldRoom.transform.rotation, this.gameObject.transform);
                     break;
                 case 4:
-                    Rooms[i] = Instantiate(RoomPrefabs[3], oldRoom.transform.position, oldRoom.transform.rotation, this.gameObject.transform);
+                    Rooms[i] = Instantiate(RoomPrefabs[4], oldRoom.transform.position, oldRoom.transform.rotation, this.gameObject.transform);
                     break;
                 default:
                     break;
             }
             Rooms[i].name = "Room_" + i;
             Rooms[i].GetComponent<RoomGenerator>().Init(0, 0, TileSize, false);
+            Rooms[i].GetComponent<RoomGenerator>().Floor = FloorTile;
             Destroy(oldRoom);
         }
         //Re-add Corridor data

@@ -14,6 +14,12 @@ public class RoomGeneratorEditor : Editor {
         {
             Generator.GenerateRoom();
         }
+
+        if (GUILayout.Button("Generate Corridors"))
+        {
+            Generator.GenerateCorridors();
+            Generator.PlaceCorridorHalf();
+        }
     }
 
 }

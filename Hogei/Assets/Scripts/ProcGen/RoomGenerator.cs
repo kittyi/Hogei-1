@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoomGenerator : MonoBehaviour {
+public class RoomGenerator : MonoBehaviour
+{
 
     public struct Coordinates
     {
@@ -23,8 +24,10 @@ public class RoomGenerator : MonoBehaviour {
     public List<Transform> DoorTiles;
     public RoomShape Shape;
     public List<GameObject> CorridorsTo;
+    public Dictionary<Transform, Transform> DoorPairs;
     public bool CornerRoom = false;
     public bool LockPos = false;
+    public bool AlignmentRan = false;
 
     List<GameObject> FloorTiles;
     List<GameObject> WallTiles;
@@ -34,13 +37,15 @@ public class RoomGenerator : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         Tiles = new GameObject[0, 0];
-        if(CorridorsTo == null || CorridorsTo.Count == 0) CorridorsTo = new List<GameObject>();
+        if (DoorPairs == null || DoorPairs.Count == 0) DoorPairs = new Dictionary<Transform, Transform>();
+        if (CorridorsTo == null || CorridorsTo.Count == 0) CorridorsTo = new List<GameObject>();
     }
 
     public void Init(int _Width, int _Length, float _TileSize, bool _Draw)
-    {       
+    {
         RoomWidth = _Width;
         RoomLength = _Length;
         TileSize = _TileSize;
@@ -51,8 +56,9 @@ public class RoomGenerator : MonoBehaviour {
             RoomLength = Random.Range(3, 10);
         }
         Tiles = new GameObject[RoomWidth, RoomLength];
+        if (DoorPairs == null || DoorPairs.Count == 0) DoorPairs = new Dictionary<Transform, Transform>();
 
-        if(_Draw) GenerateRoom();
+        if (_Draw) GenerateRoom();
     }
 
     public void GenerateRoom()
@@ -60,95 +66,159 @@ public class RoomGenerator : MonoBehaviour {
         DeleteRoom();
 
         Tiles = new GameObject[RoomWidth, RoomLength];
-        
+
         for (int i = 0; i < RoomWidth; ++i)
         {
-            for(int j = 0; j < RoomLength; ++j)
+            for (int j = 0; j < RoomLength; ++j)
             {
-                Vector3 NewPos = transform.position + new Vector3((float)(i - RoomWidth/2) * TileSize, 0f, (float)(j - RoomLength/2)  * TileSize);
-                Tiles[i,j] = Instantiate(Floor, NewPos, Quaternion.identity, this.transform);
+                Vector3 NewPos = transform.position + new Vector3((float)(i - RoomWidth / 2) * TileSize, 0f, (float)(j - RoomLength / 2) * TileSize);
+                Tiles[i, j] = Instantiate(Floor, NewPos, Quaternion.identity, this.transform);
             }
         }
     }
 
-    public void AlignDoorsToNeighbors()
+    public void GenerateCorridors()
     {
+
+        print("\n####" + name + "####");
         LockPos = true;
-        int Tries = 0;
-        while(!CheckDoorsFacing())
+
+
+        if (CorridorsTo.Count == 0)
         {
-            transform.Rotate(new Vector3(0f, 90f, 0f));
-            Tries++;
-            if(Tries > 8)
-            {
-                break;
-            }
+            Debug.LogError("No corridor connections to this room");
         }
-        
+
+        print("##Checking Corridors##");
+        print("Corridor List Data: " + CorridorsTo.ToString() + " Count: " + CorridorsTo.Count);
         foreach (GameObject cor in CorridorsTo)
         {
+            float ClosestDoors = 100000;
+            Transform Room1Door = null;
+            Transform Room2Door = null;
             //Figure out the closest door 
             foreach (Transform door in DoorTiles)
             {
-                float ClosestDoors = 100000;
-                Transform Room1Door = null;
-                Transform Room2Door = null;
+                print(door.name + " DoorTiles Count: " + DoorTiles.Count);
 
+                print("##Getting Closest Doors##");
                 foreach (Transform otherDoor in cor.GetComponent<RoomGenerator>().DoorTiles)
                 {
-                    if((otherDoor.position - door.position).magnitude < ClosestDoors)
+                    if ((otherDoor.position - door.position).magnitude < ClosestDoors)
                     {
                         Room1Door = door;
                         Room2Door = otherDoor;
                         ClosestDoors = (otherDoor.position - door.position).magnitude;
                     }
                 }
+            }
 
-                Vector3 Dist = Room2Door.position - Room1Door.position;
-                print("Dist: " + Dist.ToString());
-                print("Room1Door: " + Room1Door.position.ToString() + " Room2Door: " + Room2Door.position.ToString());
-                //Align the doors on the same axis
-                if (Mathf.Abs(Dist.x) > Mathf.Abs(Dist.z) && Room1Door.position.z != Room2Door.position.z)
+            Vector3 Dist = Room2Door.position - Room1Door.position;
+            print("Dist: " + Dist.ToString());
+            print(this.name + Room1Door.name + ": " + Room1Door.position.ToString() + cor.name + Room2Door + ": " + Room2Door.position.ToString());
+            print("##Entering Alignment##");
+            //Align the doors on the same axis
+            if (Mathf.Abs(Dist.x) > Mathf.Abs(Dist.z) && Room1Door.position.z != (Room2Door.position + Room2Door.right * TileSize).z)
+            {
+                print("X Difference Is Bigger\nTile Size: " + TileSize);
+                if (cor.GetComponent<RoomGenerator>().LockPos )
                 {
-                    print("X Difference Is Bigger\nTile Size: " + TileSize);
-                    if (cor.GetComponent<RoomGenerator>().LockPos) 
-                    {
-                        print("Moving this room");
-                        Vector3 Adjustment = (Room2Door.position + Room2Door.right * TileSize) - Room1Door.position;
-                        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + Adjustment.z);
-                        print(transform.position.ToString());
-                    }
-                    else
-                    {
-                        print("Moving other room");
-                        Vector3 Adjustment = (Room1Door.position + Room2Door.right * TileSize) - Room2Door.position;
-                        cor.transform.position = new Vector3(cor.transform.position.x, cor.transform.position.y, cor.transform.position.z + Adjustment.z);
-                        print(cor.transform.position.ToString());
-                    }
+                    print("#Moving this room");
+                    Vector3 Adjustment = (Room2Door.position + Room2Door.right * TileSize) - Room1Door.position;
+                    print(transform.position.ToString());
+                    Vector3 newPos = new Vector3(transform.position.x, transform.position.y, transform.position.z + Adjustment.z);
+                    transform.position = newPos;
+                    print(transform.position.ToString());
                 }
-                else if (Mathf.Abs(Dist.z) > Mathf.Abs(Dist.x) && Room1Door.position.x != Room2Door.position.x)
+                else
                 {
-                    print("Z Difference Is Bigger\nTile Size: " + TileSize);
-                    if (cor.GetComponent<RoomGenerator>().LockPos)
-                    {
-                        print("Moving this room");
-                        Vector3 Adjustment = (Room2Door.position + Room2Door.right * TileSize) - Room1Door.position;
-                        transform.position = new Vector3(transform.position.x + Adjustment.x, transform.position.y, transform.position.z);
-                        print(transform.position.ToString());
-                    }
-                    else
-                    {
-                        print("Moving other room");
-                        Vector3 Adjustment = (Room1Door.position + Room2Door.right * TileSize) - Room2Door.position;
-                        cor.transform.position = new Vector3(cor.transform.position.x + Adjustment.x, cor.transform.position.y, cor.transform.position.z);
-                        print(cor.transform.position.ToString());
-                    }
+                    print("#Moving other room");
+                    Vector3 Adjustment = (Room1Door.position + Room1Door.right * TileSize) - (Room2Door.position );
+                    print(cor.transform.position.ToString());
+                    Vector3 newPos = new Vector3(cor.transform.position.x, cor.transform.position.y, cor.transform.position.z + Adjustment.z);
+                    cor.transform.position = newPos;
+                    print(cor.transform.position.ToString());
+                    cor.GetComponent<RoomGenerator>().LockPos = true;
                 }
-            }           
+            }
+            else if (Mathf.Abs(Dist.z) > Mathf.Abs(Dist.x) && Room1Door.position.x != (Room2Door.position + Room2Door.right * TileSize).x)
+            {
+                print("Z Difference Is Bigger\nTile Size: " + TileSize);
+                if (cor.GetComponent<RoomGenerator>().LockPos)
+                {
+                    print("#Moving this room");
+                    Vector3 Adjustment = (Room2Door.position + Room2Door.right * TileSize) - Room1Door.position;
+                    print(transform.position.ToString());
+                    Vector3 newPos = new Vector3(transform.position.x + Adjustment.x, transform.position.y, transform.position.z);
+                    transform.position = newPos;
+                    print(transform.position.ToString());
+                }
+                else
+                {
+                    print("#Moving other room");               
+                    Vector3 Adjustment = (Room1Door.position + Room1Door.right * TileSize) - (Room2Door.position);
+                    print(cor.transform.position.ToString());
+                    Vector3 newPos = new Vector3(cor.transform.position.x + Adjustment.x, cor.transform.position.y, cor.transform.position.z);
+                    print(newPos.ToString());
+                    cor.transform.position = newPos;
+                    print(cor.transform.position.ToString());
+                    cor.GetComponent<RoomGenerator>().LockPos = true;
+                }
+            }
+            print("##Exiting Alignment##\n");
+
+            DoorPairs.Add(Room1Door, Room2Door);
         }
+    }
+
+    public void PlaceCorridorHalf()
+    {
+        foreach (Transform door in DoorTiles)
+        {
+            Transform Room1Door = door;
+            Transform Room2Door = null;
+            DoorPairs.TryGetValue(door, out Room2Door);
+
+            //Create the corridor models
+            float CorridorLength = 0.0f;
+            Vector3 Dist = Room2Door.position - Room1Door.position;
+            if (Mathf.Abs(Dist.x) > Mathf.Abs(Dist.z))
+            {
+                CorridorLength = Mathf.Abs((Room2Door.position - Room1Door.position).x);
+            }
+            else if (Mathf.Abs(Dist.z) > Mathf.Abs(Dist.x))
+            {
+                CorridorLength = Mathf.Abs((Room2Door.position - Room1Door.position).z);
+            }
+            print(Room1Door.position.ToString() + " / " + Room2Door.position.ToString());
+            print("Corridor Length: " + CorridorLength);
+            Vector3 newPos = Room1Door.position;
+            for (int i = 0; i < (CorridorLength - 1) / TileSize; i++)
+            {
+                newPos += Room1Door.forward * TileSize;
+                GameObject newFloorTile = Instantiate(Floor, newPos, Quaternion.identity);
+                newFloorTile.transform.parent = transform;
+            }
+        }
+    }
+
+    public void AlignDoorsToNeighbors()
+    {
+                AlignmentRan = true;
+        int Tries = 0;
+        while (!CheckDoorsFacing())
+        {
+            transform.Rotate(new Vector3(0f, 90f, 0f));
+            Tries++;
+            if (Tries > 8)
+            {
+                break;
+            }
+        }
+
         foreach (GameObject room in CorridorsTo)
         {
-            if (!room.GetComponent<RoomGenerator>().LockPos)
+            if (!room.GetComponent<RoomGenerator>().AlignmentRan)
             {
                 room.GetComponent<RoomGenerator>().AlignDoorsToNeighbors();
             }
@@ -158,7 +228,7 @@ public class RoomGenerator : MonoBehaviour {
     bool CheckDoorsFacing()
     {
         int DoorsAligned = 0;
-        if(DoorTiles == null || DoorTiles.Count == 0)
+        if (DoorTiles == null || DoorTiles.Count == 0)
         {
             return true;
         }
@@ -175,7 +245,7 @@ public class RoomGenerator : MonoBehaviour {
                 }
             }
         }
-        if(DoorsAligned == DoorTiles.Count)
+        if (DoorsAligned == DoorTiles.Count)
         {
             return true;
         }
@@ -188,7 +258,7 @@ public class RoomGenerator : MonoBehaviour {
     //Return if the room is a corner room and needs a special room model
     public bool IsCornerRoom()
     {
-        if(CorridorsTo.Count != 2)
+        if (CorridorsTo.Count != 2)
         {
             return false;
         }
@@ -198,12 +268,20 @@ public class RoomGenerator : MonoBehaviour {
             Vector3 p2 = CorridorsTo[1].transform.position - this.transform.position;
             float Angle = Vector3.Angle(p1, p2);
             print(name + ": " + Angle);
-            if(Mathf.Abs(Angle) > 45f && Mathf.Abs(Angle) < 135)
+            if (Mathf.Abs(Angle) > 45f && Mathf.Abs(Angle) < 135)
             {
-                CornerRoom = true;                
+                CornerRoom = true;
             }
             return CornerRoom;
         }
+    }
+
+    //realigns the room with the grid
+    void RealignRoom()
+    {
+        Vector3 newPos = Vector3.zero;
+        newPos = new Vector3(TileSize * Mathf.Ceil(transform.position.x / TileSize), transform.position.y, TileSize * Mathf.Ceil(transform.position.z / TileSize));
+        transform.position = newPos;
     }
 
 
@@ -217,11 +295,12 @@ public class RoomGenerator : MonoBehaviour {
             }
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     public void AddCorridor(GameObject _Room)
     {

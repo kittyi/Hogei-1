@@ -230,19 +230,20 @@ MonoBehaviour:
   FloorTile: {fileID: 1190424755945434, guid: ad83c9e2e826b144ca5bd4ab589b2f10, type: 2}
   TileSize: 1
   RoomPrefabs:
-  - {fileID: 1063314450384466, guid: b6478a0fc078c884eb857e7388f52379, type: 2}
-  - {fileID: 1592821829545418, guid: c9d3e836ec770984fbe8d16551dbd200, type: 2}
-  - {fileID: 1276274366041746, guid: bf9704bd9c932514ea1bca1670f3b3ce, type: 2}
-  - {fileID: 1283879743351186, guid: c4ec727d1c64bd34d922a188d4cd32ad, type: 2}
-  RoomAmount: 2
-  RoomPadding: 10
-  RoomWidthMin: 10
-  RoomWidthMax: 15
-  RoomLengthMin: 10
-  RoomLengthMax: 15
+  - {fileID: 1121675946719400, guid: 95b5500449d4d0e41b78d802d2f05d30, type: 2}
+  - {fileID: 1368495243631370, guid: f963db49ae3dd9c47a439686d3ffbc39, type: 2}
+  - {fileID: 1846846867699802, guid: 7e29d37f2c78a2b4791c6c6444bbd01c, type: 2}
+  - {fileID: 1663363699950720, guid: 9de9610140f885b4a9ba96224c28af78, type: 2}
+  - {fileID: 1166821730395260, guid: 3e9a89629a80016498054a9f6ff3277f, type: 2}
+  RoomAmount: 5
+  RoomPadding: 50
+  RoomWidthMin: 12
+  RoomWidthMax: 16
+  RoomLengthMin: 12
+  RoomLengthMax: 16
   DungeonWidth: 2
   DungeonLength: 5
-  MaximumCorridorDis: 20
+  MaximumCorridorDis: 50
   Rooms: []
 --- !u!4 &741084089
 Transform:
