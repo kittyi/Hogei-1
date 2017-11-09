@@ -9,6 +9,8 @@ public class AimedProngedShot : MonoBehaviour {
     public float timeBetweenSprays = 5.0f;
 
     [Header("Bullet Vars")]
+    [Tooltip("Bullet object")]
+    public GameObject bulletObject;
     [Tooltip("Number of bullet layers")]
     public int numBulletLayers = 5;
     [Tooltip("Number of arcs")]
@@ -33,7 +35,7 @@ public class AimedProngedShot : MonoBehaviour {
     public string targetTag = "Player";
 
     //script refs
-    private BulletBank bank;
+    //private BulletBank bank;
     private EnemyState enemyState;
 
     //target ref
@@ -45,7 +47,7 @@ public class AimedProngedShot : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
+        //bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
         target = GameObject.FindGameObjectWithTag(targetTag);
         enemyState = GetComponent<EnemyState>();
     }
@@ -88,8 +90,12 @@ public class AimedProngedShot : MonoBehaviour {
                 //get a rotation
                 Quaternion alteredRotation = transform.rotation;
                 alteredRotation.eulerAngles = new Vector3(0.0f, targetedRotation.eulerAngles.y + (startingAngle + (angleChangePerShot * j)), 0.0f);
-                //get a bullet from the bank
-                GameObject bullet = bank.GetRegularStraightBullet();
+
+                /*get a bullet from the bank
+                GameObject bullet = bank.GetRegularStraightBullet();*/
+
+                //create a bullet
+                GameObject bullet = Instantiate(bulletObject, transform.position, transform.rotation);
                 //set the bullets position to this pos
                 bullet.transform.position = transform.position;
                 //set the bullet's rotation to current rotation
@@ -103,8 +109,12 @@ public class AimedProngedShot : MonoBehaviour {
                     //get a rotation
                     alteredRotation = transform.rotation;
                     alteredRotation.eulerAngles = new Vector3(0.0f, targetedRotation.eulerAngles.y + (startingAngle + (-angleChangePerShot * j)), 0.0f);
-                    //get a bullet from the bank
-                    GameObject bullet2 = bank.GetRegularStraightBullet();
+
+                    /*get a bullet from the bank
+                    GameObject bullet2 = bank.GetRegularStraightBullet();*/
+
+                    GameObject bullet2 = Instantiate(bulletObject, transform.position, transform.rotation);
+
                     //set the bullets position to this pos
                     bullet2.transform.position = transform.position;
                     //set the bullet's rotation to current rotation

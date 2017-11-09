@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerHomingShot : MonoBehaviour {
 
     [Header("Bullet vars")]
+    [Tooltip("Bullet object")]
+    public GameObject bulletObject;
     [Tooltip("Bullet travel speed")]
     public float bulletTravelSpeed = 10.0f;
 
@@ -20,19 +22,19 @@ public class PlayerHomingShot : MonoBehaviour {
     [Tooltip("How far out to position bullet start from center")]
     public float distanceToStart = 0.1f;
 
-    [Header("Tags")]
-    [Tooltip("Bullet bank tag")]
-    public string bankTag = "Bullet Bank";
+    //[Header("Tags")]
+    //[Tooltip("Bullet bank tag")]
+    //public string bankTag = "Bullet Bank";
 
-    //bullet bank ref
-    private BulletBank bank;
+    ////bullet bank ref
+    //private BulletBank bank;
 
     //control vars
     private float lastShotTime = 0.0f; //time last bullet was fired
 
     // Use this for initialization
     void Start () {
-        bank = GameObject.FindGameObjectWithTag(bankTag).GetComponent<BulletBank>();
+        //bank = GameObject.FindGameObjectWithTag(bankTag).GetComponent<BulletBank>();
     }
 	
 	// Update is called once per frame
@@ -50,7 +52,7 @@ public class PlayerHomingShot : MonoBehaviour {
             lastShotTime = Time.time;
 
             //get a bullet
-            GameObject bullet = bank.GetPlayerHomingBullet();
+            GameObject bullet = Instantiate(bulletObject, transform.position, transform.rotation);
             //set the bullets position to this pos
             bullet.transform.position = transform.position + (transform.right * distanceToStart);
             //set the bullet's rotation to current rotation
@@ -59,7 +61,7 @@ public class PlayerHomingShot : MonoBehaviour {
             bullet.GetComponent<PlayerHomingBullet>().SetupVars(bulletTravelSpeed, maxHomingTime, homingStartDelay);
 
             //get a second bullet
-            GameObject bullet2 = bank.GetPlayerHomingBullet();
+            GameObject bullet2 = Instantiate(bulletObject, transform.position, transform.rotation);
             //set the bullets position to this pos
             bullet2.transform.position = transform.position + (-transform.right * distanceToStart);
             //set the bullet's rotation to current rotation

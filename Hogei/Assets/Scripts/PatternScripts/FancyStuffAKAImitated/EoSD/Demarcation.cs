@@ -11,6 +11,8 @@ public class Demarcation : MonoBehaviour {
     public float timeBetweenWaves = 0.8f;
 
     [Header("Bullet Vars")]
+    [Tooltip("Bullet object")]
+    public GameObject bulletObject;
     [Tooltip("Number of bullet layers")]
     public int numBulletLayers = 2;
     [Tooltip("Number of bullet waves")]
@@ -42,7 +44,7 @@ public class Demarcation : MonoBehaviour {
     public string bulletBankTag = "Bullet Bank";
 
     //script refs
-    private BulletBank bank;
+    //private BulletBank bank;
     private EnemyState enemyState;
 
     //control vars
@@ -51,7 +53,7 @@ public class Demarcation : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
+        //bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
         enemyState = GetComponent<EnemyState>();
     }
 	
@@ -91,8 +93,12 @@ public class Demarcation : MonoBehaviour {
                     //get the current angle as a quaternion
                     Quaternion currentRotation = new Quaternion();
                     currentRotation.eulerAngles = new Vector3(0.0f, angle, 0.0f);
+
                     //create a bullet clone, and orient it using the current angle
-                    GameObject bulletClone = bank.GetSetupStraightBullet();
+
+                    //GameObject bulletClone = bank.GetSetupStraightBullet();
+
+                    GameObject bulletClone = Instantiate(bulletObject, transform.position, transform.rotation);
 
                     //get distance to travel forward for setup based on layer
                     float distanceToSetup = bulletBaseSetupDistance + (bulletStepDistanceIncrease * j);
@@ -113,7 +119,7 @@ public class Demarcation : MonoBehaviour {
                     currentRotation.eulerAngles = new Vector3(0.0f, angle, 0.0f);
 
                     //create a bullet clone, and orient it using the current angle
-                    GameObject bulletClone2 = bank.GetSetupStraightBullet();
+                    GameObject bulletClone2 = Instantiate(bulletObject, transform.position, transform.rotation);
 
                     //get distance to travel forward for setup based on layer
                     distanceToSetup = bulletBaseSetupDistance + (bulletStepDistanceIncrease * j);

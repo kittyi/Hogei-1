@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStraightBullet : MonoBehaviour {
 
     //script ref
-    private BulletBank bulletBank;
+    //private BulletBank bulletBank;
 
     //control vars
     private Rigidbody myRigid;
@@ -45,11 +45,11 @@ public class PlayerStraightBullet : MonoBehaviour {
         startPos = transform.position;
     }
 
-    //ref func
-    public void SetBulletBank(BulletBank bank)
-    {
-        bulletBank = bank;
-    }
+    ////ref func
+    //public void SetBulletBank(BulletBank bank)
+    //{
+    //    bulletBank = bank;
+    //}
 
     //check if bullet has reached it's max distance
     public void CheckExpire()
@@ -66,23 +66,25 @@ public class PlayerStraightBullet : MonoBehaviour {
     //deactivate func
     private void Deactivate()
     {
-        //set active to false
-        isActive = false;
-        //reset values
-        myRigid.velocity = Vector3.zero;
-        travelSpeed = 0;
-        maxTravelDistance = 0;
-        doExpire = false;
-        startPos = Vector3.zero;
-        //return to queue
-        bulletBank.ReturnPlayerStraightBullet(gameObject);
-        transform.position = bulletBank.transform.position;
+        ////set active to false
+        //isActive = false;
+        ////reset values
+        //myRigid.velocity = Vector3.zero;
+        //travelSpeed = 0;
+        //maxTravelDistance = 0;
+        //doExpire = false;
+        //startPos = Vector3.zero;
+        ////return to queue
+        //bulletBank.ReturnPlayerStraightBullet(gameObject);
+        //transform.position = bulletBank.transform.position;
+        Destroy(gameObject);
     }
 
     //collision = deactivate
     private void OnCollisionEnter(Collision collision)
     {
         //any collision
-        Deactivate();
+        //Deactivate();
+        Destroy(gameObject);
     }
 }

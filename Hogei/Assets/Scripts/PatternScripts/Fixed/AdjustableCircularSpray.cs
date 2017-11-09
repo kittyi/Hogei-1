@@ -9,6 +9,8 @@ public class AdjustableCircularSpray : MonoBehaviour {
     public float timeBetweenSprays = 1.5f;
 
     [Header("Bullet Vars")]
+    [Tooltip("Bullet object")]
+    public GameObject bulletObject;
     [Tooltip("Num of sprays")]
     public int numSprays = 3;
     [Tooltip("Number of bullets in each spray")]
@@ -34,7 +36,7 @@ public class AdjustableCircularSpray : MonoBehaviour {
     public string bulletBankTag = "Bullet Bank";
 
     //script refs
-    private BulletBank bank;
+    //private BulletBank bank;
     private EnemyState enemyState;
 
     //control vars
@@ -45,7 +47,7 @@ public class AdjustableCircularSpray : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
+        //bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
         enemyState = GetComponent<EnemyState>();
     }
 	
@@ -90,7 +92,7 @@ public class AdjustableCircularSpray : MonoBehaviour {
                 Quaternion alteredRotation = new Quaternion();
                 alteredRotation.eulerAngles = new Vector3(0.0f, alteredAngle, 0.0f);
                 //get a bullet from the bank
-                GameObject bullet = bank.GetRegularStraightBullet();
+                GameObject bullet = Instantiate(bulletObject, transform.position, transform.rotation);
                 //set the bullets position to this pos
                 bullet.transform.position = transform.position;
                 //set the bullet's rotation to current rotation

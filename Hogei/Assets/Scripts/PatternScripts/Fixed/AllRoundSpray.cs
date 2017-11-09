@@ -9,6 +9,8 @@ public class AllRoundSpray : MonoBehaviour {
     public float timeBetweenSprays = 1.5f;
 
     [Header("Bullet Vars")]
+    [Tooltip("Bullet object")]
+    public GameObject bulletObject;
     [Tooltip("Speed of bullet")]
     public float bulletSpeed = 2.0f;
 
@@ -21,7 +23,7 @@ public class AllRoundSpray : MonoBehaviour {
     public string bulletBankTag = "Bullet Bank";
 
     //script refs
-    private BulletBank bank;
+    //private BulletBank bank;
     private EnemyState enemyState;
 
     //control vars
@@ -31,7 +33,7 @@ public class AllRoundSpray : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //check if angle change per shot can cleanly divide by 360
-        bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
+        //bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
         enemyState = GetComponent<EnemyState>();
     }
 	
@@ -66,7 +68,7 @@ public class AllRoundSpray : MonoBehaviour {
             Quaternion currentRotation = new Quaternion();
             currentRotation.eulerAngles = new Vector3(0.0f, angle, 0.0f);
             //get a bullet from the bank
-            GameObject bullet = bank.GetRegularStraightBullet();
+            GameObject bullet = Instantiate(bulletObject, transform.position, transform.rotation);
             //set the bullets position to this pos
             bullet.transform.position = transform.position;
             //set the bullet's rotation to current rotation

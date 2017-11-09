@@ -34,6 +34,7 @@ public class Movement : MonoBehaviour {
         {
             newPos.z -= 1;
         }
-        Rigid.MovePosition(transform.position + newPos * Speed * Time.deltaTime);
+        //Rigid.MovePosition(transform.position + newPos * Speed * Time.deltaTime);
+        transform.position = transform.position + newPos * Speed * Time.deltaTime;
     }
 }
