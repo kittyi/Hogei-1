@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 95358403484065360}
   - component: {fileID: 136855948413228672}
   - component: {fileID: 114341232899264876}
+  - component: {fileID: 114886414694502106}
   m_Layer: 10
   m_Name: CircleShrimp
   m_TagString: Enemy
@@ -1231,17 +1232,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc66d58b045ab647974a3f28798158e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenSprays: 0.2
+  timeBetweenSprays: 0.5
+  minTimeBetweenSprays: 0.1
   bulletObject: {fileID: 1324714931859808, guid: dbed68e095856564aa98102c59597ea6,
     type: 2}
-  numSprays: 2
+  numSprays: 1
+  maxNumSprays: 6
   numBulletsPerSpray: 2
-  bulletSpeed: 5
+  maxNumBulletsPerSpray: 6
+  bulletSpeed: 3
+  maxBulletSpeed: 10
   angleChangePerShot: 5
+  minAngleChangePerShot: 1
   angleChangePerSpray: 60
+  minAngleChangePerSpray: 15
   rotationDirection: 1
-  minimumAngle: 4
-  bulletBankTag: Bullet Bank
+--- !u!114 &114886414694502106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273770039992876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f5581e11a255f48ac8207220a9a987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
 --- !u!136 &136855948413228672
 CapsuleCollider:
   m_ObjectHideFlags: 1
