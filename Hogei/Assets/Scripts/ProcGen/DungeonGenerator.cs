@@ -13,26 +13,28 @@ public class DungeonGenerator : MonoBehaviour
 
     public GameObject FloorTile;
     public GameObject WallTile;
-    public float TileSize = 10;
+    public float TileSize = 1;
 
     public GameObject[] RoomPrefabs;
 
     [Header("Dungeon Settings")]
     public int RoomAmount = 5;
     [Tooltip("Minimum distance between the rooms (Will be rounded up to multiplies of 10)")]
-    public float RoomPadding = 10;
+    public float RoomPadding = 60;
 
-    public int RoomWidthMin = 3, RoomWidthMax = 10;
-    public int RoomLengthMin = 3, RoomLengthMax = 10;
+    public int RoomWidthMin = 12, RoomWidthMax = 16;
+    public int RoomLengthMin = 12, RoomLengthMax = 16;
 
     [Header("Dungeon Settings")]
-    public int DungeonWidth = 25;
-    public int DungeonLength = 50;
+    public int DungeonWidth = 2;
+    public int DungeonLength = 5;
 
     [Header("Corridor Settings")]
     public int MaximumCorridorDis = 10;
 
-    public GameObject[] Rooms;
+    private GameObject StartRoom;
+
+    GameObject[] Rooms;
     List<CorridorData> Corridors;
 
     void Start()
@@ -166,6 +168,7 @@ public class DungeonGenerator : MonoBehaviour
 
             Rooms[i] = tempRoom;
         }
+        StartRoom = Rooms[0];
     }
 
     public void ReplaceRooms()
