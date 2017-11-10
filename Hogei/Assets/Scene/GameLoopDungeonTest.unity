@@ -357,6 +357,92 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 470551d9accf246498101bc582f7ba3d, type: 3}
+--- !u!1001 &328128021
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4113919578094398, guid: a7d5383a0842cba46a9ce792f8d6c2c5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113919578094398, guid: a7d5383a0842cba46a9ce792f8d6c2c5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113919578094398, guid: a7d5383a0842cba46a9ce792f8d6c2c5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113919578094398, guid: a7d5383a0842cba46a9ce792f8d6c2c5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113919578094398, guid: a7d5383a0842cba46a9ce792f8d6c2c5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113919578094398, guid: a7d5383a0842cba46a9ce792f8d6c2c5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113919578094398, guid: a7d5383a0842cba46a9ce792f8d6c2c5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113919578094398, guid: a7d5383a0842cba46a9ce792f8d6c2c5, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552858621752230, guid: a7d5383a0842cba46a9ce792f8d6c2c5, type: 2}
+      propertyPath: m_Name
+      value: WallShrimp
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a7d5383a0842cba46a9ce792f8d6c2c5, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &328128022 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1552858621752230, guid: a7d5383a0842cba46a9ce792f8d6c2c5,
+    type: 2}
+  m_PrefabInternal: {fileID: 328128021}
+--- !u!114 &328128023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 328128022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 682a231459db5c6429ee02b0e1244c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenSprays: 1.5
+  numBulletWaves: 5
+  bulletObject: {fileID: 1857529508437080, guid: ae712c6fafc3af14697e9b336d235922,
+    type: 2}
+  bulletBaseSetupDistance: 0.5
+  bulletStepDistanceIncrease: 0.5
+  bulletSetupTime: 0.5
+  bulletStartMoveTimeDelay: 0.2
+  bulletAngleChange: 90
+  patternBulletSpeed: 2
+  facingAngle: 0
+  bulletBankTag: Bullet Bank
+--- !u!114 &328128024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 328128022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f5581e11a255f48ac8207220a9a987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
 --- !u!1 &573608296 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100068, guid: 470551d9accf246498101bc582f7ba3d, type: 3}
@@ -2956,12 +3042,15 @@ MonoBehaviour:
   bulletObject: {fileID: 1324714931859808, guid: dbed68e095856564aa98102c59597ea6,
     type: 2}
   numBulletLayers: 5
+  maxNumBulletLayers: 5
   numArcs: 2
+  maxNumArcs: 4
   firstLayerBulletSpeed: 5
+  maxBulletSpeed: 10
   layerSpeedIncrementValue: 0.5
   startingAngle: 0
   angleChangePerShot: 8
-  bulletBankTag: Bullet Bank
+  minAngleChangePerShot: 1
   targetTag: Player
 --- !u!114 &1185111088
 MonoBehaviour:
@@ -3452,12 +3541,15 @@ MonoBehaviour:
   bulletObject: {fileID: 1324714931859808, guid: dbed68e095856564aa98102c59597ea6,
     type: 2}
   numBulletLayers: 5
+  maxNumBulletLayers: 5
   numArcs: 2
+  maxNumArcs: 4
   firstLayerBulletSpeed: 5
+  maxBulletSpeed: 10
   layerSpeedIncrementValue: 0.5
   startingAngle: 0
   angleChangePerShot: 8
-  bulletBankTag: Bullet Bank
+  minAngleChangePerShot: 1
   targetTag: Player
 --- !u!114 &1385299006
 MonoBehaviour:

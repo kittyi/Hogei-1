@@ -443,6 +443,7 @@ GameObject:
   - component: {fileID: 95716838051517358}
   - component: {fileID: 136139825152737864}
   - component: {fileID: 114091232821050376}
+  - component: {fileID: 114352632881862104}
   m_Layer: 10
   m_Name: DemarcationShrimp
   m_TagString: Enemy
@@ -1246,6 +1247,18 @@ MonoBehaviour:
   angleChangePerShot: 20
   rotationDirection: 1
   bulletBankTag: Bullet Bank
+--- !u!114 &114352632881862104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1734617168083640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f5581e11a255f48ac8207220a9a987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
 --- !u!136 &136139825152737864
 CapsuleCollider:
   m_ObjectHideFlags: 1

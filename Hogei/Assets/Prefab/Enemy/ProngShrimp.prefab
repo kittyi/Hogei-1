@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 95214440451509312}
   - component: {fileID: 136168950880094810}
   - component: {fileID: 114064524553170526}
+  - component: {fileID: 114889226429047782}
   m_Layer: 10
   m_Name: ProngShrimp
   m_TagString: Enemy
@@ -1235,13 +1236,28 @@ MonoBehaviour:
   bulletObject: {fileID: 1324714931859808, guid: dbed68e095856564aa98102c59597ea6,
     type: 2}
   numBulletLayers: 1
+  maxNumBulletLayers: 5
   numArcs: 2
+  maxNumArcs: 4
   firstLayerBulletSpeed: 1
+  maxBulletSpeed: 10
   layerSpeedIncrementValue: 0.5
   startingAngle: 0
   angleChangePerShot: 16
-  bulletBankTag: Bullet Bank
+  minAngleChangePerShot: 1
   targetTag: Player
+--- !u!114 &114889226429047782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1541064058968632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f5581e11a255f48ac8207220a9a987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
 --- !u!136 &136168950880094810
 CapsuleCollider:
   m_ObjectHideFlags: 1

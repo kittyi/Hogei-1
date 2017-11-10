@@ -11,12 +11,27 @@ public class AimedProngedShot : MonoBehaviour {
     [Header("Bullet Vars")]
     [Tooltip("Bullet object")]
     public GameObject bulletObject;
+
     [Tooltip("Number of bullet layers")]
-    public int numBulletLayers = 5;
+    public int numBulletLayers = 1;
+    [Tooltip("Max num of bullet layers")]
+    public int maxNumBulletLayers = 5;
+    //scaled num of layers
+    private int scaledNumLayers = 0;
+
     [Tooltip("Number of arcs")]
     public int numArcs = 2;
+    [Tooltip("Max num of arcs")]
+    public int maxNumArcs = 4;
+    //scaled num of arcs
+    private int scaledNumArcs = 0;
+
     [Tooltip("First layer speed")]
     public float firstLayerBulletSpeed = 1.0f;
+    [Tooltip("Max speed of bullet")]
+    public float maxBulletSpeed = 10.0f;
+    //scaled speed of bullet
+    private float scaledBulletSpeed = 0.0f;
     [Tooltip("Layer speed increment value")]
     public float layerSpeedIncrementValue = 0.5f;
 
@@ -24,13 +39,19 @@ public class AimedProngedShot : MonoBehaviour {
     [Tooltip("Starting angle")]
     [Range(0.0f, 360.0f)]
     public float startingAngle = 0.0f;
+
     [Tooltip("Angle change per shot in spray")]
     [Range(0.0f, 360.0f)]
     public float angleChangePerShot = 4.0f;
+    [Tooltip("Minimum angle change per shot in spray")]
+    [Range(0.0f, 360.0f)]
+    public float minAngleChangePerShot = 1.0f;
+    //scaled angle change per shot
+    private float scaledAngleChangePerShot = 0.0f;
 
     [Header("Tags")]
-    [Tooltip("Bullet bank tag")]
-    public string bulletBankTag = "Bullet Bank";
+    //[Tooltip("Bullet bank tag")]
+    //public string bulletBankTag = "Bullet Bank";
     [Tooltip("Target Tag")]
     public string targetTag = "Player";
 

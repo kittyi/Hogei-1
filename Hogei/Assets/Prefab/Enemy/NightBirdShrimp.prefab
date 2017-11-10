@@ -548,6 +548,7 @@ GameObject:
   - component: {fileID: 95859294934895426}
   - component: {fileID: 136596422682281366}
   - component: {fileID: 114533726061254162}
+  - component: {fileID: 114738374351570428}
   m_Layer: 10
   m_Name: NightBirdShrimp
   m_TagString: Enemy
@@ -1244,6 +1245,18 @@ MonoBehaviour:
   startingAngle: 40
   slightAngleAlteration: 0.7
   bulletBankTag: Bullet Bank
+--- !u!114 &114738374351570428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1817670115808592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f5581e11a255f48ac8207220a9a987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 0
 --- !u!136 &136596422682281366
 CapsuleCollider:
   m_ObjectHideFlags: 1
