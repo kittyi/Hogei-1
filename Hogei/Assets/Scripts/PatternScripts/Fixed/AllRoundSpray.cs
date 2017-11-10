@@ -36,9 +36,14 @@ public class AllRoundSpray : MonoBehaviour {
         //bank = GameObject.FindGameObjectWithTag(bulletBankTag).GetComponent<BulletBank>();
         enemyState = GetComponent<EnemyState>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Awake()
+    {
+        enemyState = GetComponent<EnemyState>();
+    }
+
+    // Update is called once per frame
+    void Update () {
         if (enemyState.GetIsActive())
         {
             if (Time.time > timeLastSprayFired + timeBetweenSprays)

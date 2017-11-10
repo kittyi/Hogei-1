@@ -112,6 +112,82 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &153926223
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4755557013880862, guid: dadbc4eb17beec54db6edf0a0806d9d3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755557013880862, guid: dadbc4eb17beec54db6edf0a0806d9d3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755557013880862, guid: dadbc4eb17beec54db6edf0a0806d9d3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755557013880862, guid: dadbc4eb17beec54db6edf0a0806d9d3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755557013880862, guid: dadbc4eb17beec54db6edf0a0806d9d3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755557013880862, guid: dadbc4eb17beec54db6edf0a0806d9d3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755557013880862, guid: dadbc4eb17beec54db6edf0a0806d9d3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755557013880862, guid: dadbc4eb17beec54db6edf0a0806d9d3, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070533447401342, guid: dadbc4eb17beec54db6edf0a0806d9d3, type: 2}
+      propertyPath: m_Name
+      value: Dungeon
+      objectReference: {fileID: 0}
+    - target: {fileID: 114444645569393024, guid: dadbc4eb17beec54db6edf0a0806d9d3,
+        type: 2}
+      propertyPath: RoomPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1121675946719400, guid: f36e3bee23e163049baa79a5718932f2,
+        type: 2}
+    - target: {fileID: 114444645569393024, guid: dadbc4eb17beec54db6edf0a0806d9d3,
+        type: 2}
+      propertyPath: RoomPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1368495243631370, guid: e42a7b64acf872f4e97aa0689a27f0e7,
+        type: 2}
+    - target: {fileID: 114444645569393024, guid: dadbc4eb17beec54db6edf0a0806d9d3,
+        type: 2}
+      propertyPath: RoomPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1846846867699802, guid: 6b3700de125c07445a15c8f85f794846,
+        type: 2}
+    - target: {fileID: 114444645569393024, guid: dadbc4eb17beec54db6edf0a0806d9d3,
+        type: 2}
+      propertyPath: RoomPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1663363699950720, guid: f52ad533801d3dc4381c126ffcdc1df9,
+        type: 2}
+    - target: {fileID: 114444645569393024, guid: dadbc4eb17beec54db6edf0a0806d9d3,
+        type: 2}
+      propertyPath: RoomPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1166821730395260, guid: b095ce8c6f10a154882790d33ad5b9a5,
+        type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: dadbc4eb17beec54db6edf0a0806d9d3, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &415334563
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,65 +275,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &741084087
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 741084089}
-  - component: {fileID: 741084088}
-  m_Layer: 0
-  m_Name: Dungeon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &741084088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 741084087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 945e2615b687ef9458520cf4c8bd795e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FloorTile: {fileID: 1190424755945434, guid: ad83c9e2e826b144ca5bd4ab589b2f10, type: 2}
-  WallTile: {fileID: 100000, guid: c5f08224259d68e4aa5f18f40d336ee1, type: 3}
-  TileSize: 1
-  RoomPrefabs:
-  - {fileID: 1121675946719400, guid: 95b5500449d4d0e41b78d802d2f05d30, type: 2}
-  - {fileID: 1368495243631370, guid: f963db49ae3dd9c47a439686d3ffbc39, type: 2}
-  - {fileID: 1846846867699802, guid: 7e29d37f2c78a2b4791c6c6444bbd01c, type: 2}
-  - {fileID: 1663363699950720, guid: 9de9610140f885b4a9ba96224c28af78, type: 2}
-  - {fileID: 1166821730395260, guid: 3e9a89629a80016498054a9f6ff3277f, type: 2}
-  RoomAmount: 5
-  RoomPadding: 60
-  RoomWidthMin: 12
-  RoomWidthMax: 16
-  RoomLengthMin: 12
-  RoomLengthMax: 16
-  DungeonWidth: 2
-  DungeonLength: 5
-  MaximumCorridorDis: 55
-  Rooms: []
---- !u!4 &741084089
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 741084087}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1622909787
 GameObject:

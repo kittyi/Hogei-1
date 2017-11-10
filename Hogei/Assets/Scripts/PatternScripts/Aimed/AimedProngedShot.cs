@@ -73,6 +73,12 @@ public class AimedProngedShot : MonoBehaviour {
         enemyState = GetComponent<EnemyState>();
     }
 
+    private void Awake()
+    {
+        target = GameObject.FindGameObjectWithTag(targetTag);
+        enemyState = GetComponent<EnemyState>();
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -21,28 +21,6 @@ public class DungeonGeneratorEditor : Editor
             }
             Generator.GenerateCorridors();
         }
-
-        if (GUILayout.Button("Check Room Collisions"))
-        {
-
-            Generator.CheckRoomCollisions();
-
-        }
-
-        if (GUILayout.Button("Generate Corridors"))
-        {
-
-            Generator.GenerateCorridors();
-
-        }
-
-        if (GUILayout.Button("Insert Prefab Rooms"))
-        {
-
-            Generator.ReplaceRooms();
-
-        }
-
     }
 
 }
