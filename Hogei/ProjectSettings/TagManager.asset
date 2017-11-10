@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Fade
   - Shield
+  - Enemy Spawn
   layers:
   - Default
   - TransparentFX
