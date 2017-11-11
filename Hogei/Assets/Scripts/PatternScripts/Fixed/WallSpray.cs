@@ -7,10 +7,18 @@ public class WallSpray : MonoBehaviour {
     [Header("Timing Vars")]
     [Tooltip("Time Between Sprays")]
     public float timeBetweenSprays = 1.5f;
+    [Tooltip("Minimum time between sprays")]
+    public float minTimeBetweenSprays = 0.1f;
+    //scaled time between sprays
+    private float scaledTimeBetweenSprays = 0.0f;
 
     [Header("Bullet Vars")]
-    [Tooltip("Number of bullet waves")]
-    public int numBulletWaves = 5;
+    [Tooltip("Number of bullet per waves")]
+    public int numBulletWaves = 2;
+    [Tooltip("Max number of bullets per wave")]
+    public int maxNumBulletWaves = 5;
+    //scaled number of bullets per wave
+    private int scaledNumBulletWaves = 0;
 
     [Header("Bullet set up vars")]
     [Tooltip("Bullet object")]
@@ -25,8 +33,13 @@ public class WallSpray : MonoBehaviour {
     public float bulletStartMoveTimeDelay = 0.2f;
     [Tooltip("Bullet angle change")]
     public float bulletAngleChange = 90.0f;
+
     [Tooltip("Pattern bullet set speed")]
     public float patternBulletSpeed = 2.0f;
+    [Tooltip("Max speed of bullet")]
+    public float maxBulletSpeed = 10.0f;
+    //scaled speed of bullet
+    private float scaledBulletSpeed = 0.0f;
 
     [Header("Angle Control")]
     [Tooltip("Facing angle")]
@@ -57,6 +70,33 @@ public class WallSpray : MonoBehaviour {
             {
                 StartCoroutine(BulletSprayRoutine());
             }
+        }
+    }
+
+    //scales values based on how deep player is
+    public void ScaleShotValues(int level)
+    {
+        //time between sprays
+        scaledTimeBetweenSprays = timeBetweenSprays - level;
+        //check not below min
+        if (scaledTimeBetweenSprays < minTimeBetweenSprays)
+        {
+            scaledTimeBetweenSprays = minTimeBetweenSprays;
+        }
+
+        //num bullets
+        scaledNumBulletWaves = numBulletWaves + level;
+        if (scaledNumBulletWaves > maxNumBulletWaves)
+        {
+            scaledNumBulletWaves = maxNumBulletWaves;
+        }
+
+        //bullet speed
+        scaledBulletSpeed = bulletSpeed + level;
+        //check not above max
+        if (scaledBulletSpeed > maxBulletSpeed)
+        {
+            scaledBulletSpeed = maxBulletSpeed;
         }
     }
 

@@ -7,6 +7,10 @@ public class AimedProngedShot : MonoBehaviour {
     [Header("Timing Vars")]
     [Tooltip("Time Between Sprays")]
     public float timeBetweenSprays = 5.0f;
+    [Tooltip("Minimum time between sprays")]
+    public float minTimeBetweenSprays = 0.1f;
+    //scaled time between sprays
+    private float scaledTimeBetweenSprays = 0.0f;
 
     [Header("Bullet Vars")]
     [Tooltip("Bullet object")]
@@ -84,10 +88,54 @@ public class AimedProngedShot : MonoBehaviour {
     {
         if (enemyState.GetIsActive())
         {
-            if (Time.time > timeLastSprayFired + timeBetweenSprays)
+            if (Time.time > timeLastSprayFired + scaledTimeBetweenSprays)
             {
                 StartCoroutine(BulletSprayRoutine());
             }
+        }
+    }
+
+    //scales the values based on how deep player is
+    public void ScaledShotVars(int level)
+    {
+        //time between sprays
+        scaledTimeBetweenSprays = timeBetweenSprays - level;
+        //check not below min
+        if (scaledTimeBetweenSprays < minTimeBetweenSprays)
+        {
+            scaledTimeBetweenSprays = minTimeBetweenSprays;
+        }
+
+        //num of layers
+        scaledNumLayers = numBulletLayers + level;
+        //check not above max
+        if (scaledNumLayers > maxNumBulletLayers)
+        {
+            scaledNumLayers = maxNumBulletLayers;
+        }
+
+        //num of arcs
+        scaledNumArcs = numArcs + (level / 4);
+        //check if above max
+        if (scaledNumArcs > maxNumArcs)
+        {
+            scaledNumArcs = maxNumArcs;
+        }
+
+        //bullet speed
+        scaledBulletSpeed = firstLayerBulletSpeed + level;
+        //check not above max
+        if (scaledBulletSpeed > maxBulletSpeed)
+        {
+            scaledBulletSpeed = maxBulletSpeed;
+        }
+
+        //angle per shot
+        scaledAngleChangePerShot = angleChangePerShot - (level * 1.5f);
+        //check not below min
+        if (scaledAngleChangePerShot < minAngleChangePerShot)
+        {
+            scaledAngleChangePerShot = minAngleChangePerShot;
         }
     }
 
@@ -98,10 +146,10 @@ public class AimedProngedShot : MonoBehaviour {
         timeLastSprayFired = Time.time;
 
         //speed var
-        float speed = firstLayerBulletSpeed;
+        float speed = scaledBulletSpeed;
 
         //for all layers
-        for (int i = 0; i < numBulletLayers; i++)
+        for (int i = 0; i < scaledNumLayers; i++)
         {
             //get direction to target
             Vector3 directionToTarget = target.transform.position - transform.position;
@@ -112,11 +160,11 @@ public class AimedProngedShot : MonoBehaviour {
 
 
             //for all arcs
-            for (int j = 0; j < numArcs; j++)
+            for (int j = 0; j < scaledNumArcs; j++)
             {
                 //get a rotation
                 Quaternion alteredRotation = transform.rotation;
-                alteredRotation.eulerAngles = new Vector3(0.0f, targetedRotation.eulerAngles.y + (startingAngle + (angleChangePerShot * j)), 0.0f);
+                alteredRotation.eulerAngles = new Vector3(0.0f, targetedRotation.eulerAngles.y + (startingAngle + (scaledAngleChangePerShot * j)), 0.0f);
 
                 /*get a bullet from the bank
                 GameObject bullet = bank.GetRegularStraightBullet();*/
@@ -135,7 +183,7 @@ public class AimedProngedShot : MonoBehaviour {
                 {
                     //get a rotation
                     alteredRotation = transform.rotation;
-                    alteredRotation.eulerAngles = new Vector3(0.0f, targetedRotation.eulerAngles.y + (startingAngle + (-angleChangePerShot * j)), 0.0f);
+                    alteredRotation.eulerAngles = new Vector3(0.0f, targetedRotation.eulerAngles.y + (startingAngle + (-scaledAngleChangePerShot * j)), 0.0f);
 
                     /*get a bullet from the bank
                     GameObject bullet2 = bank.GetRegularStraightBullet();*/
@@ -149,13 +197,11 @@ public class AimedProngedShot : MonoBehaviour {
                     //setup the bullet and fire
                     bullet2.GetComponent<RegularStraightBullet>().SetupVars(speed);
                 }
-
             }
             //increment the speed between layers
             speed += layerSpeedIncrementValue;
         }
-
         //wait for next spray
-        yield return new WaitForSecondsRealtime(timeBetweenSprays);
+        yield return new WaitForSecondsRealtime(scaledTimeBetweenSprays);
     }
 }

@@ -82,7 +82,7 @@ public class AdjustableCircularSpray : MonoBehaviour {
 	void Update () {
         if (enemyState.GetIsActive())
         {
-            if (Time.time > timeLastSprayFired + timeBetweenSprays)
+            if (Time.time > timeLastSprayFired + scaledTimeBetweenSprays)
             {
                 StartCoroutine(BulletSprayRoutine());
             }
@@ -156,10 +156,10 @@ public class AdjustableCircularSpray : MonoBehaviour {
         timeLastSprayFired = Time.time;
 
         //for the number of shots in a spray
-        for (int i = 0; i < numBulletsPerSpray; i++)
+        for (int i = 0; i < scaledNumBulletsPerSpray; i++)
         {
             //for the number of sprays per call
-            for (int j = 0; j < numSprays; j++)
+            for (int j = 0; j < scaledNumSprays; j++)
             {
                 //get an altered angle based on which spray
                 float alteredAngle = currentAngle + (angleChangeBetweenSprays * j);
@@ -173,15 +173,15 @@ public class AdjustableCircularSpray : MonoBehaviour {
                 //set the bullet's rotation to current rotation
                 bullet.transform.rotation = alteredRotation;
                 //setup the bullet and fire
-                bullet.GetComponent<RegularStraightBullet>().SetupVars(bulletSpeed);
+                bullet.GetComponent<RegularStraightBullet>().SetupVars(scaledBulletSpeed);
             }
             //change the angle between shots
-            currentAngle += angleChangePerShot * rotationDirection;
+            currentAngle += scaledAngleChangePerShot * rotationDirection;
         }
         //wait for the next spray
-        yield return new WaitForSecondsRealtime(timeBetweenSprays);
+        yield return new WaitForSecondsRealtime(scaledTimeBetweenSprays);
 
         //increase angle in prep of next spray
-        currentAngle += angleChangePerSpray * rotationDirection;
+        currentAngle += scaledAngleChangePerSpray * rotationDirection;
     }
 }
