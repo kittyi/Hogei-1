@@ -7,20 +7,46 @@ public class NightBird : MonoBehaviour {
     [Header("Timing Vars")]
     [Tooltip("Time Between Sprays")]
     public float timeBetweenSprays = 5.0f;
+    [Tooltip("Minimum time between sprays")]
+    public float minTimeBetweenSprays = 1.0f;
+    //scaled time between sprays
+    private float scaledTimeBetweenSprays = 0.0f;
+
     [Tooltip("Time between layers")]
     public float timeBetweenLayers = 0.5f;
 
     [Header("Bullet Vars")]
     [Tooltip("Bullet object")]
     public GameObject bulletObject;
+
     [Tooltip("Number of sprays")]
-    public int numSpray = 5;
+    public int numSpray = 2;
+    [Tooltip("Max num of sprays")]
+    public int maxNumSprays = 6;
+    //scaled num of sprays
+    private int scaledNumSprays = 0;
+
     [Tooltip("Number of bullet layers")]
-    public int numBulletLayers = 3;
+    public int numBulletLayers = 1;
+    [Tooltip("Max num of bullet layers")]
+    public int maxNumBulletLayers = 3;
+    //scaled num bullet layers
+    private int scaledNumBulletLayers = 0;
+
     [Tooltip("Number of bullets per layer")]
     public int numBulletsPerLayer = 16;
+    [Tooltip("Max num of bullets per layer")]
+    public int maxNumBulletsPerLayer = 8;
+    //scaled num of bullets per layer
+    private int scaledNumBulletsPerLayer = 0;
+
+
     [Tooltip("First layer speed")]
     public float firstLayerBulletSpeed = 1.0f;
+    [Tooltip("Max speed of bullet")]
+    public float maxBulletSpeed = 10.0f;
+    //scaled speed of bullet
+    private float scaledBulletSpeed = 0.0f;
     [Tooltip("Layer speed increment value")]
     public float layerSpeedIncrementValue = 0.5f;
 
@@ -64,6 +90,49 @@ public class NightBird : MonoBehaviour {
         }
     }
 
+    //scales the values based on how deep the player is
+    public void ScaleShotValues(int level)
+    {
+        //num of layers
+        scaledNumBulletLayers = numBulletLayers + (level / 2);
+        //check not above max
+        if(scaledNumBulletLayers > maxNumBulletLayers)
+        {
+            scaledNumBulletLayers = maxNumBulletLayers;
+        }
+
+        //time between sprays
+        scaledTimeBetweenSprays = timeBetweenSprays - level + (scaledNumBulletLayers * timeBetweenLayers) + 0.5f;
+        //check not below min
+        if (scaledTimeBetweenSprays < minTimeBetweenSprays)
+        {
+            scaledTimeBetweenSprays = minTimeBetweenSprays + (scaledNumBulletLayers * timeBetweenLayers) + 0.5f;
+        }
+
+        //num of sprays
+        scaledNumSprays = numSpray + level;
+        //check not above max
+        if(scaledNumSprays > maxNumSprays){
+            scaledNumSprays = maxNumSprays;
+        }
+
+        //bullet speed
+        scaledBulletSpeed = firstLayerBulletSpeed + level;
+        //check not above max
+        if (scaledBulletSpeed > maxBulletSpeed)
+        {
+            scaledBulletSpeed = maxBulletSpeed;
+        }
+
+        //bullets per layer
+        scaledNumBulletsPerLayer = numBulletsPerLayer + (level * 2);
+        //check not above max
+        if (scaledNumBulletsPerLayer > maxNumBulletsPerLayer)
+        {
+            scaledNumBulletsPerLayer = maxNumBulletsPerLayer;
+        }
+    }
+
     //bullet firing coroutine
     private IEnumerator BulletSprayRoutine()
     {
@@ -71,18 +140,18 @@ public class NightBird : MonoBehaviour {
         timeLastSprayFired = Time.time;
 
         //for the total num of sprays
-        for (int i = 0; i < numSpray; i++)
+        for (int i = 0; i < scaledNumSprays; i++)
         {
             //speed var for layers
-            float speed = firstLayerBulletSpeed;
+            float speed = scaledBulletSpeed;
             //for all layers
-            for (int j = 0; j < numBulletLayers; j++)
+            for (int j = 0; j < scaledNumBulletLayers; j++)
             {
                 //make a storage angle
                 float angle = (startingAngle * currentRotationDireciton) + (slightAngleAlteration * currentRotationDireciton * j);
 
                 //for all bullets in the layer
-                for (int k = 0; k < numBulletsPerLayer; k++)
+                for (int k = 0; k < scaledNumBulletsPerLayer; k++)
                 {
                     //create a shot
                     //get the current angle as a quaternion

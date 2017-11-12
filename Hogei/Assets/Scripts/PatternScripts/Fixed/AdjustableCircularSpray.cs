@@ -84,7 +84,7 @@ public class AdjustableCircularSpray : MonoBehaviour {
         {
             if (Time.time > timeLastSprayFired + scaledTimeBetweenSprays)
             {
-                StartCoroutine(BulletSprayRoutine());
+                BulletSprayRoutine();
             }
         }
     }
@@ -148,7 +148,7 @@ public class AdjustableCircularSpray : MonoBehaviour {
     }
 
     //coroutine version of bullet spray
-    private IEnumerator BulletSprayRoutine()
+    private void BulletSprayRoutine()
     {
         GetAngleBetweenSprays();
 
@@ -179,7 +179,7 @@ public class AdjustableCircularSpray : MonoBehaviour {
             currentAngle += scaledAngleChangePerShot * rotationDirection;
         }
         //wait for the next spray
-        yield return new WaitForSecondsRealtime(scaledTimeBetweenSprays);
+        //yield return new WaitForSecondsRealtime(scaledTimeBetweenSprays);
 
         //increase angle in prep of next spray
         currentAngle += scaledAngleChangePerSpray * rotationDirection;

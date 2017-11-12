@@ -62,7 +62,7 @@ public class AllRoundSpray : MonoBehaviour {
         {
             if (Time.time > timeLastSprayFired + scaledTimeBetweenSprays)
             {
-                StartCoroutine(BulletSprayRoutine());
+                BulletSprayRoutine();
             }
         }
     }
@@ -96,7 +96,7 @@ public class AllRoundSpray : MonoBehaviour {
     }
 
     //bullet firing coroutine
-    private IEnumerator BulletSprayRoutine()
+    private void BulletSprayRoutine()
     {
         //set time of last spray to now
         timeLastSprayFired = Time.time;
@@ -130,6 +130,6 @@ public class AllRoundSpray : MonoBehaviour {
         }
 
             //wait for next spray
-            yield return new WaitForSecondsRealtime(scaledTimeBetweenSprays);
+            //yield return new WaitForSecondsRealtime(scaledTimeBetweenSprays);
     }
 }

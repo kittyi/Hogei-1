@@ -6,17 +6,21 @@ public class Demarcation : MonoBehaviour {
 
     [Header("Timing Vars")]
     [Tooltip("Time Between Sprays")]
-    public float timeBetweenSprays = 1.5f;
+    public float timeBetweenSprays = 4.5f;
+    [Tooltip("Min time between sprays")]
+    public float minTimeBetweenSprays = 1.5f;
     [Tooltip("Time between waves")]
-    public float timeBetweenWaves = 0.8f;
+    public float timeBetweenWaves = 0.5f;
 
     [Header("Bullet Vars")]
     [Tooltip("Bullet object")]
     public GameObject bulletObject;
     [Tooltip("Number of bullet layers")]
-    public int numBulletLayers = 2;
-    [Tooltip("Number of bullet waves")]
-    public int numBulletWaves = 3;
+    public int numBulletLayers = 1;
+    [Tooltip("Max number of layers")]
+    public int maxNumBulletLayers = 2;
+    //scaled num of layers
+    private int scaledNumBulletLayers = 0;
 
     [Header("Bullet set up vars")]
     [Tooltip("Bullet base setup distance")]
@@ -29,8 +33,13 @@ public class Demarcation : MonoBehaviour {
     public float bulletStartMoveTimeDelay = 0.2f;
     [Tooltip("Bullet angle change")]
     public float bulletAngleChange = 90.0f;
+
     [Tooltip("Pattern bullet set speed")]
     public float patternBulletSpeed = 2.0f;
+    [Tooltip("Bullet max speed")]
+    public float maxBulletSpeed = 10.0f;
+    //scaled bullet speed
+    private float scaledBulletSpeed = 0.0f;
 
     [Header("Angle Control")]
     [Tooltip("Angle change per shot in spray")]
@@ -63,20 +72,38 @@ public class Demarcation : MonoBehaviour {
         {
             if (Time.time > timeLastSprayFired + timeBetweenSprays)
             {
-                StartCoroutine(BulletSprayRoutine());
+               BulletSprayRoutine();
             }
         }
     }
 
+    //scales the values based on how deep the player is
+    public void ScaleShotValues(int level)
+    {
+        //num of layers
+        scaledNumBulletLayers = numBulletLayers + (level / 4);
+        //check not above max
+        if (scaledNumBulletLayers > maxNumBulletLayers)
+        {
+            scaledNumBulletLayers = maxNumBulletLayers;
+        }
+
+        //bullet speed
+        scaledBulletSpeed = patternBulletSpeed + level;
+        //check not above max
+        if (scaledBulletSpeed > maxBulletSpeed)
+        {
+            scaledBulletSpeed = maxBulletSpeed;
+        }
+    }
+
     //bullet firing coroutine
-    private IEnumerator BulletSprayRoutine()
+    private void BulletSprayRoutine()
     {
         //set time of last spray to now
         timeLastSprayFired = Time.time;
 
-        //for each waves
-        for (int i = 0; i < numBulletWaves; i++)
-        {
+
             //get a random starting angle
             //float angle = Random.Range(0.0f, 360.0f);
             float angle = 0.0f;
@@ -144,8 +171,6 @@ public class Demarcation : MonoBehaviour {
                     currentAngleTotal += angleChangePerShot;
                 }
             }
-            //wait between waves
-            yield return new WaitForSecondsRealtime(timeBetweenWaves);
-        }
     }
+
 }

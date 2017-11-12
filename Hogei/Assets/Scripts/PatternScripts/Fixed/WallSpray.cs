@@ -66,9 +66,9 @@ public class WallSpray : MonoBehaviour {
 	void Update () {
         if (enemyState.GetIsActive())
         {
-            if (Time.time > timeLastSprayFired + timeBetweenSprays)
+            if (Time.time > timeLastSprayFired + scaledTimeBetweenSprays)
             {
-                StartCoroutine(BulletSprayRoutine());
+                BulletSprayRoutine();
             }
         }
     }
@@ -92,7 +92,7 @@ public class WallSpray : MonoBehaviour {
         }
 
         //bullet speed
-        scaledBulletSpeed = bulletSpeed + level;
+        scaledBulletSpeed = patternBulletSpeed + level;
         //check not above max
         if (scaledBulletSpeed > maxBulletSpeed)
         {
@@ -101,13 +101,13 @@ public class WallSpray : MonoBehaviour {
     }
 
     //bullet firing coroutine
-    private IEnumerator BulletSprayRoutine()
+    private void BulletSprayRoutine()
     {
         //set time of last spray to now
         timeLastSprayFired = Time.time;
 
         //for each wave
-        for (int i = 0; i < numBulletWaves; i++)
+        for (int i = 0; i < scaledNumBulletWaves; i++)
         {
             //get the distance to set up
             float distanceToSetup = bulletBaseSetupDistance + (bulletStepDistanceIncrease * i);
@@ -124,7 +124,7 @@ public class WallSpray : MonoBehaviour {
             bullet1.transform.rotation = alteredRotation;
 
             //setup the bullet
-            bullet1.GetComponent<SetupStraightBullet>().SetupVars(distanceToSetup, bulletSetupTime, bulletSetupTime + bulletStartMoveTimeDelay, 270.0f, patternBulletSpeed);
+            bullet1.GetComponent<SetupStraightBullet>().SetupVars(distanceToSetup, bulletSetupTime, bulletSetupTime + bulletStartMoveTimeDelay, 270.0f, scaledBulletSpeed);
 
             //get a second bullet from the bank
             GameObject bullet2 = Instantiate(bulletObject, transform.position, transform.rotation);
@@ -139,9 +139,9 @@ public class WallSpray : MonoBehaviour {
             bullet2.transform.rotation = alteredRotation;
 
             //setup the bullet
-            bullet2.GetComponent<SetupStraightBullet>().SetupVars(distanceToSetup, bulletSetupTime, bulletSetupTime + bulletStartMoveTimeDelay, 90.0f, patternBulletSpeed);
+            bullet2.GetComponent<SetupStraightBullet>().SetupVars(distanceToSetup, bulletSetupTime, bulletSetupTime + bulletStartMoveTimeDelay, 90.0f, scaledBulletSpeed);
         }
 
-        yield return new WaitForSecondsRealtime(timeBetweenSprays);
+        //yield return new WaitForSecondsRealtime(scaledTimeBetweenSprays);
     }
 }
