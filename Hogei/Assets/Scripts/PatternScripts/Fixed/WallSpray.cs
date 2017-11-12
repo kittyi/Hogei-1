@@ -74,7 +74,7 @@ public class WallSpray : MonoBehaviour {
     }
 
     //scales values based on how deep player is
-    public void ScaleShotValues(int level)
+    public void ScaleShotVars(int level)
     {
         //time between sprays
         scaledTimeBetweenSprays = timeBetweenSprays - level;

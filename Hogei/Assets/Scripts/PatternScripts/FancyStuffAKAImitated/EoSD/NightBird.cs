@@ -91,7 +91,7 @@ public class NightBird : MonoBehaviour {
     }
 
     //scales the values based on how deep the player is
-    public void ScaleShotValues(int level)
+    public void ScaleShotVars(int level)
     {
         //num of layers
         scaledNumBulletLayers = numBulletLayers + (level / 2);

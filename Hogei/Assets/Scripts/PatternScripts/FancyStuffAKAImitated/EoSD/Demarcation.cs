@@ -44,7 +44,13 @@ public class Demarcation : MonoBehaviour {
     [Header("Angle Control")]
     [Tooltip("Angle change per shot in spray")]
     [Range(0.0f, 360.0f)]
-    public float angleChangePerShot = 1.0f;
+    public float angleChangePerShot = 60.0f;
+    [Tooltip("Minimum angle change per shot in spray")]
+    [Range(0.0f, 360.0f)]
+    public float minAngleChangePerShot = 20.0f;
+    //scaled angle change per shot
+    private float scaledAngleChangePerShot = 0.0f;
+
     [Tooltip("Positive or negative (1 or -1)")]
     [Range(-1, 1)]
     public float rotationDirection = 1.0f;
@@ -78,7 +84,7 @@ public class Demarcation : MonoBehaviour {
     }
 
     //scales the values based on how deep the player is
-    public void ScaleShotValues(int level)
+    public void ScaleShotVars(int level)
     {
         //num of layers
         scaledNumBulletLayers = numBulletLayers + (level / 4);
@@ -95,6 +101,14 @@ public class Demarcation : MonoBehaviour {
         {
             scaledBulletSpeed = maxBulletSpeed;
         }
+
+        //angle per shot
+        scaledAngleChangePerShot = angleChangePerShot - (level * 2f);
+        //check not below min
+        if (scaledAngleChangePerShot < minAngleChangePerShot)
+        {
+            scaledAngleChangePerShot = minAngleChangePerShot;
+        }
     }
 
     //bullet firing coroutine
@@ -108,7 +122,7 @@ public class Demarcation : MonoBehaviour {
             //float angle = Random.Range(0.0f, 360.0f);
             float angle = 0.0f;
             //for each wave
-            for (int j = 0; j < numBulletLayers; j++)
+            for (int j = 0; j < scaledNumBulletLayers; j++)
             {
                 
                 //reset current angle total between bullet rings
@@ -139,7 +153,7 @@ public class Demarcation : MonoBehaviour {
                     float setupRotationChange = transform.eulerAngles.y + bulletAngleChange;
 
                     //set up first bullet variables
-                    bulletClone.GetComponent<SetupStraightBullet>().SetupVars(distanceToSetup, bulletSetupTime, bulletSetupTime + bulletStartMoveTimeDelay, setupRotationChange, patternBulletSpeed);
+                    bulletClone.GetComponent<SetupStraightBullet>().SetupVars(distanceToSetup, bulletSetupTime, bulletSetupTime + bulletStartMoveTimeDelay, setupRotationChange, scaledBulletSpeed);
 
                     //create second shot
                     //get the current angle as a quaternion
@@ -163,12 +177,12 @@ public class Demarcation : MonoBehaviour {
                     setupRotationChange = transform.eulerAngles.y - bulletAngleChange;
 
                     //set up second bullet variables <- angle change negative of first
-                    bulletClone2.GetComponent<SetupStraightBullet>().SetupVars(distanceToSetup, bulletSetupTime, bulletSetupTime + bulletStartMoveTimeDelay, setupRotationChange, patternBulletSpeed);
+                    bulletClone2.GetComponent<SetupStraightBullet>().SetupVars(distanceToSetup, bulletSetupTime, bulletSetupTime + bulletStartMoveTimeDelay, setupRotationChange, scaledBulletSpeed);
 
                     //change the angle between shots
-                    angle += angleChangePerShot;
+                    angle += scaledAngleChangePerShot;
                     //add the amount angle changed to current angle total
-                    currentAngleTotal += angleChangePerShot;
+                    currentAngleTotal += scaledAngleChangePerShot;
                 }
             }
     }
