@@ -3,7 +3,7 @@ guid: 542d2e4707158c9429980fd8d5f46cff
 timeCreated: 1510464914
 licenseType: Free
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: Gun_Rig:Gun_Joint_1
     100002: Gun_Rig:Gun_Joint_2
@@ -132,15 +132,47 @@ ModelImporter:
     4300000: Main_Character_Rig:Main_Character1:Main_Body
     4300002: Main_Character_Rig:Main_Character1:Main_Body_Clothes
     4300004: Gun_Rig:Gun_Model
-    7400000: Take 001
+    7400000: MainRun
     9500000: //RootNode
     13700000: Gun_Rig:Gun_Model
     13700002: Main_Character_Rig:Main_Character1:Main_Body
     13700004: Main_Character_Rig:Main_Character1:Main_Body_Clothes
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main_Character_Rig_Main_Character1_lambert10
+    second: {fileID: 2100000, guid: 414444ab48b252d458d0527483c47739, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main_Character_Rig_Main_Character1_lambert6
+    second: {fileID: 2100000, guid: e8ef92e444843594089cd35dc7569fb9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main_Character_Rig_Main_Character1_lambert7
+    second: {fileID: 2100000, guid: 6ec241632cd983049812c108ea3b28d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main_Character_Rig_Main_Character1_lambert8
+    second: {fileID: 2100000, guid: 414444ab48b252d458d0527483c47739, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main_Character_Rig_Main_Character1_lambert9
+    second: {fileID: 2100000, guid: 6c435a1ac8e83404aa693dee570b3e2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 18123f7459fb0d145861dfa7745e39a4, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -153,6 +185,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -160,7 +193,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: MainRun
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

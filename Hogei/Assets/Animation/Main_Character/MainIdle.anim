@@ -1,0 +1,3146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: MainIdle
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.49193913, y: -0.50793296, z: -0.49193913, w: 0.50793296}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.49193913, y: -0.50793296, z: -0.49193913, w: 0.50793296}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.99909335, y: -0.042573757, z: -1.08396255e-16, w: 5.6668886e-17}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.99909335, y: -0.042573757, z: -1.08396255e-16, w: 5.6668886e-17}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.9992798, y: -0.037946686, z: 1.0252774e-16, w: 6.5169875e-17}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.9992798, y: -0.037946686, z: 1.0252774e-16, w: 6.5169875e-17}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1.3052602e-17, y: 1.0041309e-16, z: 0.03851542, w: 0.99925804}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1.3052602e-17, y: 1.0041309e-16, z: 0.03851542, w: 0.99925804}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -3.798121e-18, y: 9.6428534e-17, z: 0.024612615, w: 0.9996971}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -3.798121e-18, y: 9.6428534e-17, z: 0.024612615, w: 0.9996971}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 7.917303e-18, y: 9.602774e-17, z: 0.002587631, w: 0.99999666}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 7.917303e-18, y: 9.602774e-17, z: 0.002587631, w: 0.99999666}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.9998208, y: -0.01893008, z: -1.0007265e-16, w: 5.9348594e-17}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.9998208, y: -0.01893008, z: -1.0007265e-16, w: 5.9348594e-17}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -1.1556322e-24, y: -1.343647e-16, z: 0.12161923, w: 0.99257684}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -1.1556322e-24, y: -1.343647e-16, z: 0.12161923, w: 0.99257684}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 5.4118073e-17, y: -1.8601103e-16, z: -0.019192314, w: 0.9998158}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 5.4118073e-17, y: -1.8601103e-16, z: -0.019192314, w: 0.9998158}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7/Main_Character_Rig:Neck
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -6.171156e-25, y: -1.1015396e-16, z: -0.08867393, w: 0.9960607}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -6.171156e-25, y: -1.1015396e-16, z: -0.08867393, w: 0.9960607}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7/Main_Character_Rig:Neck/Main_Character_Rig:Head
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 3.602705e-27, y: -1.1126859e-16, z: 0.006440895, w: 0.99997926}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 3.602705e-27, y: -1.1126859e-16, z: 0.006440895, w: 0.99997926}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7/Main_Character_Rig:Neck/Main_Character_Rig:Head/Main_Character_Rig:Head_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.7070326, y: -0.010240428, z: -0.00715575, w: 0.7070706}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.7070326, y: -0.010240428, z: -0.00715575, w: 0.7070706}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7/Main_Character_Rig:Neck/Main_Character_Rig:Head/Main_Character_Rig:Head_2/Main_Character_Rig:Head_Top
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.00824316, y: -0.0082072755, z: 0.7055149, w: 0.7085996}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -0.00824316, y: -0.0082072755, z: 0.7055149, w: 0.7085996}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7/Main_Character_Rig:Neck/Main_Character_Rig:Head/Main_Character_Rig:Head_2/Main_Character_Rig:Head_Top/Main_Character_Rig:Hat
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.4376249, y: -0.54956007, z: 0.5626696, w: 0.43574205}
+        inSlope: {x: 0.026515245, y: 0.021213055, z: 0.006018162, w: -0.0077068806}
+        outSlope: {x: 0.026515245, y: 0.021213055, z: 0.006018162, w: -0.0077068806}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.5416667
+        value: {x: 0.51823795, y: -0.47968897, z: 0.57801825, w: 0.4089289}
+        inSlope: {x: 0.08897997, y: 0.0834539, z: 0.013484718, w: -0.033574466}
+        outSlope: {x: 0.08897997, y: 0.0834539, z: 0.013484718, w: -0.033574466}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.2083334
+        value: {x: 0.47009704, y: -0.52276194, z: 0.56959033, w: 0.42578816}
+        inSlope: {x: -0.12462002, y: -0.10619755, z: -0.024714936, w: 0.04030858}
+        outSlope: {x: -0.12462002, y: -0.10619755, z: -0.024714936, w: 0.04030858}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.4376249, y: -0.54956007, z: 0.5626696, w: 0.43574205}
+        inSlope: {x: -0.010537842, y: -0.008425697, z: -0.0023946716, w: 0.003059143}
+        outSlope: {x: -0.010537842, y: -0.008425697, z: -0.0023946716, w: 0.003059143}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.59824467, y: -0.48255557, z: -0.0009827672, w: 0.6397206}
+        inSlope: {x: -0.0070466995, y: 0.0003168583, z: 0.033252038, w: -0.0063385963}
+        outSlope: {x: -0.0070466995, y: 0.0003168583, z: 0.033252038, w: -0.0063385963}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.5416667
+        value: {x: -0.6157569, y: -0.46929827, z: 0.09933043, w: 0.6250888}
+        inSlope: {x: -0.002842422, y: 0.054073706, z: 0.09987295, w: 0.022084963}
+        outSlope: {x: -0.002842422, y: 0.054073706, z: 0.09987295, w: 0.022084963}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.0000001
+        value: {x: -0.6039292, y: -0.46228397, z: 0.06683086, w: 0.6458302}
+        inSlope: {x: 0.02152418, y: -0.03604351, z: -0.14246932, w: 0.0090443995}
+        outSlope: {x: 0.02152418, y: -0.03604351, z: -0.14246932, w: 0.0090443995}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -0.59824467, y: -0.48255557, z: -0.0009827672, w: 0.6397206}
+        inSlope: {x: 0.00037050177, y: -0.003526204, z: -0.011823088, w: -0.0023260072}
+        outSlope: {x: 0.00037050177, y: -0.003526204, z: -0.011823088, w: -0.0023260072}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1.2648294e-15, y: -1.0493405e-15, z: 0.7735496, w: 0.6337357}
+        inSlope: {x: -1.3864235e-17, y: -3.6337713e-19, z: -0.0035219193, w: 0.004298687}
+        outSlope: {x: -1.3864235e-17, y: -3.6337713e-19, z: -0.0035219193, w: 0.004298687}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.8333333
+        value: {x: 1.2221187e-15, y: -1.0498911e-15, z: 0.76254195, w: 0.6469388}
+        inSlope: {x: 5.2595674e-17, y: -2.9222666e-20, z: 0.013750079, w: -0.01620913}
+        outSlope: {x: 5.2595674e-17, y: -2.9222666e-20, z: 0.013750079, w: -0.01620913}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1.2648294e-15, y: -1.0493405e-15, z: 0.7735496, w: 0.6337357}
+        inSlope: {x: 5.2371948e-18, y: 1.3721908e-19, z: 0.0013303731, w: -0.0016250579}
+        outSlope: {x: 5.2371948e-18, y: 1.3721908e-19, z: 0.0013303731, w: -0.0016250579}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.3879967, y: -0.0034485871, z: 0.008191512, w: 0.9216179}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -0.3879967, y: -0.0034485871, z: 0.008191512, w: 0.9216179}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.27707046, y: -0.061332993, z: -0.37877882, w: 0.8809069}
+        inSlope: {x: -0.0047135353, y: 0.0062069, z: 0.0061411858, w: 0.0045518875}
+        outSlope: {x: -0.0047135353, y: 0.0062069, z: 0.0061411858, w: 0.0045518875}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.7916667
+        value: {x: 0.23778899, y: -0.032759584, z: -0.34700322, w: 0.9066267}
+        inSlope: {x: -0.01602852, y: -0.00078960136, z: -0.005780345, w: 0.0019683808}
+        outSlope: {x: -0.01602852, y: -0.00078960136, z: -0.005780345, w: 0.0019683808}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.27707046, y: -0.061332993, z: -0.37877882, w: 0.8809069}
+        inSlope: {x: 0.0068592895, y: -0.0047665443, z: -0.0047492892, w: -0.00452756}
+        outSlope: {x: 0.0068592895, y: -0.0047665443, z: -0.0047492892, w: -0.00452756}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.077139094, y: 0.05687838, z: 0.5374333, w: 0.83784235}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -0.077139094, y: 0.05687838, z: 0.5374333, w: 0.83784235}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist/Main_Character_Rig:Left_Finger
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0, y: -0, z: -0.38956684, w: 0.9209982}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0, y: -0, z: -0.38956684, w: 0.9209982}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist/Main_Character_Rig:Left_Finger/Main_Character_Rig:Left_Finger_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.21110107, y: 0.30894735, z: 0.102541685, w: 0.92166865}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.21110107, y: 0.30894735, z: 0.102541685, w: 0.92166865}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist/Main_Character_Rig:Left_Thumb_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.0424826, y: -0.15699498, z: -0.06796069, w: 0.98434204}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -0.0424826, y: -0.15699498, z: -0.06796069, w: 0.98434204}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist/Main_Character_Rig:Left_Thumb_1/Main_Character_Rig:Left_Thumb_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0, y: -0, z: -0.30658168, w: 0.95184433}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0, y: -0, z: -0.30658168, w: 0.95184433}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist/Main_Character_Rig:Left_Thumb_1/Main_Character_Rig:Left_Thumb_2/Main_Character_Rig:Left_Thumb_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.5495604, y: -0.43762472, z: -0.4357426, w: 0.5626689}
+        inSlope: {x: 0.021211624, y: -0.02651167, z: 0.0076868534, w: 0.006005287}
+        outSlope: {x: 0.021211624, y: -0.02651167, z: 0.0076868534, w: 0.006005287}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.5416667
+        value: {x: -0.47970665, y: -0.518222, z: -0.4090062, w: 0.57796323}
+        inSlope: {x: 0.0834303, y: -0.08896423, z: 0.03348649, w: 0.013428213}
+        outSlope: {x: 0.0834303, y: -0.08896423, z: 0.03348649, w: 0.013428213}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.2083334
+        value: {x: -0.5227682, y: -0.47009027, z: -0.4258184, w: 0.56956756}
+        inSlope: {x: -0.10617538, y: 0.12459856, z: -0.040191635, w: -0.02463125}
+        outSlope: {x: -0.10617538, y: 0.12459856, z: -0.040191635, w: -0.02463125}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -0.5495604, y: -0.43762472, z: -0.4357426, w: 0.5626689}
+        inSlope: {x: -0.008422836, y: 0.010536412, z: -0.0030498446, w: -0.002387519}
+        outSlope: {x: -0.008422836, y: 0.010536412, z: -0.0030498446, w: -0.002387519}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.47140607, y: -0.2236384, z: 0.30369884, w: 0.79720086}
+        inSlope: {x: -0.014033318, y: 0.016506314, z: 0.03490162, w: -0.017015934}
+        outSlope: {x: -0.014033318, y: 0.016506314, z: 0.03490162, w: -0.017015934}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.45833334
+        value: {x: -0.5049486, y: -0.17010677, z: 0.39870048, w: 0.7464104}
+        inSlope: {x: -0.056629654, y: 0.14889386, z: 0.21505736, w: -0.118881926}
+        outSlope: {x: -0.056629654, y: 0.14889386, z: 0.21505736, w: -0.118881926}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.0416667
+        value: {x: -0.4852965, y: -0.17494728, z: 0.375948, w: 0.7697687}
+        inSlope: {x: 0.043897793, y: -0.11338888, z: -0.16726916, w: 0.08356913}
+        outSlope: {x: 0.043897793, y: -0.11338888, z: -0.16726916, w: 0.08356913}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -0.47140607, y: -0.2236384, z: 0.30369884, w: 0.79720086}
+        inSlope: {x: 0.0018725359, y: -0.009285432, z: -0.014133426, w: 0.0038952753}
+        outSlope: {x: 0.0018725359, y: -0.009285432, z: -0.014133426, w: 0.0038952753}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.0000001383661, y: -0.0000007054604, z: 0.26787323, w: 0.9634542}
+        inSlope: {x: -0.000000024623205, y: 0.00000005109905, z: -0.019264698, w: 0.005347252}
+        outSlope: {x: -0.000000024623205, y: 0.00000005109905, z: -0.019264698, w: 0.005347252}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.5416667
+        value: {x: 0.00000005953552, y: -0.0000005055508, z: 0.19350302, w: 0.9810997}
+        inSlope: {x: -0.000000087064315, y: 0.00000027902504, z: -0.1026857, w: 0.020354034}
+        outSlope: {x: -0.000000087064315, y: 0.00000027902504, z: -0.1026857, w: 0.020354034}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.2083334
+        value: {x: 0.00000010857256, y: -0.000000639645, z: 0.24318092, w: 0.96998096}
+        inSlope: {x: 0.00000011829576, y: -0.00000027980184, z: 0.10447718, w: -0.026179064}
+        outSlope: {x: 0.00000011829576, y: -0.00000027980184, z: 0.10447718, w: -0.026179064}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.0000001383661, y: -0.0000007054604, z: 0.26787323, w: 0.9634542}
+        inSlope: {x: 0.000000009313663, y: -0.000000019302623, z: 0.007277713, w: -0.0020227393}
+        outSlope: {x: 0.000000009313663, y: -0.000000019302623, z: 0.007277713, w: -0.0020227393}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.27545682, y: 0.0024483115, z: 0.008543968, w: 0.96127236}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.27545682, y: 0.0024483115, z: 0.008543968, w: 0.96127236}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.58818465, y: 0.30336487, z: 0.19294186, w: 0.7244184}
+        inSlope: {x: -0.005938053, y: 0.009457827, z: -0.0034611225, w: 0.0017781258}
+        outSlope: {x: -0.005938053, y: 0.009457827, z: -0.0034611225, w: 0.0017781258}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.75
+        value: {x: 0.553349, y: 0.34413284, z: 0.17398417, w: 0.7383136}
+        inSlope: {x: -0.012036318, y: -0.021165479, z: -0.02058219, w: 0.023743618}
+        outSlope: {x: -0.012036318, y: -0.021165479, z: -0.02058219, w: 0.023743618}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.58818465, y: 0.30336487, z: 0.19294186, w: 0.7244184}
+        inSlope: {x: 0.0056562317, y: -0.0050346754, z: 0.0042822277, w: -0.003622048}
+        outSlope: {x: 0.0056562317, y: -0.0050346754, z: 0.0042822277, w: -0.003622048}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.0032414722, y: 0.0023883146, z: 0.45123166, w: 0.89239776}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -0.0032414722, y: 0.0023883146, z: 0.45123166, w: 0.89239776}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist/Main_Character_Rig:Right_Finger
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 5.9669995e-24, y: -3.1652643e-15, z: -0.38956684, w: 0.9209982}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 5.9669995e-24, y: -3.1652643e-15, z: -0.38956684, w: 0.9209982}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist/Main_Character_Rig:Right_Finger/Main_Character_Rig:Right_Finger_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.21110107, y: 0.30894735, z: 0.102541685, w: 0.92166865}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.21110107, y: 0.30894735, z: 0.102541685, w: 0.92166865}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist/Main_Character_Rig:Right_Thumb_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.0424826, y: -0.15699498, z: -0.06796069, w: 0.98434204}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -0.0424826, y: -0.15699498, z: -0.06796069, w: 0.98434204}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist/Main_Character_Rig:Right_Thumb_1/Main_Character_Rig:Right_Thumb_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -5.435351e-24, y: -8.747935e-16, z: -0.30658168, w: 0.95184433}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -5.435351e-24, y: -8.747935e-16, z: -0.30658168, w: 0.95184433}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist/Main_Character_Rig:Right_Thumb_1/Main_Character_Rig:Right_Thumb_2/Main_Character_Rig:Right_Thumb_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.20282961, y: 0.9792141, z: -4.7539837e-17, w: 7.23793e-17}
+        inSlope: {x: -0.0109398365, y: -0.0022687912, z: 8.087841e-19, w: 5.3093084e-19}
+        outSlope: {x: -0.0109398365, y: -0.0022687912, z: 8.087841e-19, w: 5.3093084e-19}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.1250001
+        value: {x: -0.2624267, y: 0.96495193, z: -4.3017263e-17, w: 7.515527e-17}
+        inSlope: {x: 0.1307065, y: 0.035500273, z: -1.0177216e-17, w: -5.8297547e-18}
+        outSlope: {x: 0.1307065, y: 0.035500273, z: -1.0177216e-17, w: -5.8297547e-18}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -0.20282961, y: 0.9792141, z: -4.7539837e-17, w: 7.23793e-17}
+        inSlope: {x: 0.018152082, y: 0.00376796, z: -1.3421741e-18, w: -8.808067e-19}
+        outSlope: {x: 0.018152082, y: 0.00376796, z: -1.3421741e-18, w: -8.808067e-19}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Cape_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 3.2267044e-25, y: -8.4266696e-17, z: 0.1874789, w: 0.98226863}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 3.2267044e-25, y: -8.4266696e-17, z: 0.1874789, w: 0.98226863}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Cape_1/Main_Character_Rig:Cape_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.49619812, y: 0.5037732, z: -0.49619812, w: 0.5037732}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.49619812, y: 0.5037732, z: -0.49619812, w: 0.5037732}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Cape_1/Main_Character_Rig:Cape_2/Main_Character_Rig:Cape_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.13633269, y: 0.98385423, z: -0.09248226, w: 0.06993747}
+        inSlope: {x: -0.036316037, y: -0.0058193207, z: -0.0004028678, w: 0.01012212}
+        outSlope: {x: -0.036316037, y: -0.0058193207, z: -0.0004028678, w: 0.01012212}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.625
+        value: {x: -0.24702664, y: 0.9589272, z: -0.09318642, w: 0.103695475}
+        inSlope: {x: -0.11708373, y: -0.03451322, z: -0.0007078346, w: 0.040288992}
+        outSlope: {x: -0.11708373, y: -0.03451322, z: -0.0007078346, w: 0.040288992}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.4166667
+        value: {x: -0.16271283, y: 0.9792528, z: -0.09273029, w: 0.07739244}
+        inSlope: {x: 0.20391944, y: 0.038737573, z: 0.0015795544, w: -0.058628228}
+        outSlope: {x: 0.20391944, y: 0.038737573, z: 0.0015795544, w: -0.058628228}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -0.13633269, y: 0.98385423, z: -0.09248226, w: 0.06993747}
+        inSlope: {x: 0.03285521, y: 0.005261411, z: 0.0003646009, w: -0.009154362}
+        outSlope: {x: 0.03285521, y: 0.005261411, z: 0.0003646009, w: -0.009154362}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Left_Hip
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.9824318, y: 0.17517786, z: -0.064339414, w: 0.0009665978}
+        inSlope: {x: -0.012366772, y: 0.060760617, z: -0.021963716, w: 0.0025117127}
+        outSlope: {x: -0.012366772, y: 0.060760617, z: -0.021963716, w: 0.0025117127}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.45833334
+        value: {x: 0.9426875, y: 0.3137401, z: -0.11274514, w: 0.013998585}
+        inSlope: {x: -0.11888908, y: 0.3175871, z: -0.106192134, w: 0.04732202}
+        outSlope: {x: -0.11888908, y: 0.3175871, z: -0.106192134, w: 0.04732202}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.9583333
+        value: {x: 0.9246535, y: 0.35824224, z: -0.12734579, w: 0.02148262}
+        inSlope: {x: 0.074325755, y: -0.17085196, z: 0.05497345, w: -0.031878483}
+        outSlope: {x: 0.074325755, y: -0.17085196, z: 0.05497345, w: -0.031878483}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.4583334
+        value: {x: 0.97575414, y: 0.205514, z: -0.07524242, w: 0.0025409132}
+        inSlope: {x: 0.07363412, y: -0.30770326, z: 0.109813616, w: -0.019717757}
+        outSlope: {x: 0.07363412, y: -0.30770326, z: 0.109813616, w: -0.019717757}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.9824318, y: 0.17517786, z: -0.064339414, w: 0.0009665978}
+        inSlope: {x: 0.011180856, y: -0.054974094, z: 0.019872986, w: -0.0022683453}
+        outSlope: {x: 0.011180856, y: -0.054974094, z: 0.019872986, w: -0.0022683453}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Left_Hip/Main_Character_Rig:Left_Knee
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.8911703, y: 0.34659728, z: -0.11014568, w: 0.2712078}
+        inSlope: {x: -0.009253979, y: 0.026018143, z: -0.0001745224, w: -0.0029697418}
+        outSlope: {x: -0.009253979, y: 0.026018143, z: -0.0001745224, w: -0.0029697418}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.6666667
+        value: {x: 0.8633639, y: 0.427264, z: -0.104230046, w: 0.24735458}
+        inSlope: {x: -0.020850424, y: 0.06271113, z: 0.010402055, w: -0.031032091}
+        outSlope: {x: -0.020850424, y: 0.06271113, z: 0.010402055, w: -0.031032091}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.4583334
+        value: {x: 0.88656455, y: 0.3595964, z: -0.11009719, w: 0.26939255}
+        inSlope: {x: 0.046454415, y: -0.13176113, z: -0.0021775067, w: 0.02230703}
+        outSlope: {x: 0.046454415, y: -0.13176113, z: -0.0021775067, w: 0.02230703}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.8911703, y: 0.34659728, z: -0.11014568, w: 0.2712078}
+        inSlope: {x: 0.008374198, y: -0.023541167, z: 0.00015896528, w: 0.0026793429}
+        outSlope: {x: 0.008374198, y: -0.023541167, z: 0.00015896528, w: 0.0026793429}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Left_Hip/Main_Character_Rig:Left_Knee/Main_Character_Rig:Left_Ankle
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.0008046648, y: 0.00023080161, z: -0.27629048, w: 0.9610738}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.0008046648, y: 0.00023080161, z: -0.27629048, w: 0.9610738}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Left_Hip/Main_Character_Rig:Left_Knee/Main_Character_Rig:Left_Ankle/Main_Character_Rig:Left_Ball
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.08437959, y: -0.7020542, z: -0.08437959, w: 0.7020542}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -0.08437959, y: -0.7020542, z: -0.08437959, w: 0.7020542}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Left_Hip/Main_Character_Rig:Left_Knee/Main_Character_Rig:Left_Ankle/Main_Character_Rig:Left_Ball/Main_Character_Rig:Left_Toe_Tip
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.9955247, y: -0.003477677, z: -0.08518858, w: -0.04075968}
+        inSlope: {x: -0.002052784, y: 0.06920741, z: -0.023246527, w: -0.0047412515}
+        outSlope: {x: -0.002052784, y: 0.06920741, z: -0.023246527, w: -0.0047412515}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.45833334
+        value: {x: 0.9855853, y: 0.104921944, z: -0.12431812, w: -0.046455175}
+        inSlope: {x: -0.033412453, y: 0.21103843, z: -0.08440759, w: -0.00842446}
+        outSlope: {x: -0.033412453, y: 0.21103843, z: -0.08440759, w: -0.00842446}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.1250001
+        value: {x: 0.98502845, y: 0.1083778, z: -0.12570766, w: -0.04659204}
+        inSlope: {x: 0.03145121, y: -0.1929929, z: 0.07789758, w: 0.0076121064}
+        outSlope: {x: 0.03145121, y: -0.1929929, z: 0.07789758, w: 0.0076121064}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.5416667
+        value: {x: 0.9952089, y: 0.0059859897, z: -0.08837281, w: -0.041397054}
+        inSlope: {x: 0.007843502, y: -0.19527805, z: 0.065951556, w: 0.012732145}
+        outSlope: {x: 0.007843502, y: -0.19527805, z: 0.065951556, w: 0.012732145}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.9955247, y: -0.003477677, z: -0.08518858, w: -0.04075968}
+        inSlope: {x: 0.0018525089, y: -0.06273868, z: 0.021072645, w: 0.0043032384}
+        outSlope: {x: 0.0018525089, y: -0.06273868, z: 0.021072645, w: 0.0043032384}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Right_Hip
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.9957184, y: 0.08672501, z: -0.03199265, w: 0.00033180224}
+        inSlope: {x: -0.012308121, y: 0.12089056, z: -0.044474512, w: -0.002887861}
+        outSlope: {x: -0.012308121, y: 0.12089056, z: -0.044474512, w: -0.002887861}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.33333334
+        value: {x: 0.9712448, y: 0.22360344, z: -0.08167282, w: 0.0038145513}
+        inSlope: {x: -0.11783694, y: 0.45371026, z: -0.16060083, w: 0.03494254}
+        outSlope: {x: -0.11783694, y: 0.45371026, z: -0.16060083, w: 0.03494254}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.9166667
+        value: {x: 0.93550104, y: 0.3322877, z: -0.118897766, w: 0.01691345}
+        inSlope: {x: 0.05880048, y: -0.14744717, z: 0.04858108, w: -0.024208061}
+        outSlope: {x: 0.05880048, y: -0.14744717, z: 0.04858108, w: -0.024208061}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.4583334
+        value: {x: 0.98906684, y: 0.13838889, z: -0.050944507, w: -0.0000101203}
+        inSlope: {x: 0.073287934, y: -0.45990154, z: 0.16838668, w: -0.006032406}
+        outSlope: {x: 0.073287934, y: -0.45990154, z: 0.16838668, w: -0.006032406}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.9957184, y: 0.08672501, z: -0.03199265, w: 0.00033180224}
+        inSlope: {x: 0.011127927, y: -0.10959253, z: 0.04032005, w: 0.0026361814}
+        outSlope: {x: 0.011127927, y: -0.10959253, z: 0.04032005, w: 0.0026361814}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Right_Hip/Main_Character_Rig:Right_Knee
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.8926653, y: 0.43722126, z: 0.001267862, w: 0.10947401}
+        inSlope: {x: -0.023423195, y: 0.049402714, z: -0.011370339, w: -0.006779194}
+        outSlope: {x: -0.023423195, y: 0.049402714, z: -0.011370339, w: -0.006779194}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.5
+        value: {x: 0.8506442, y: 0.51931286, z: -0.0085922135, w: 0.081515975}
+        inSlope: {x: -0.073346585, y: 0.13199109, z: 0.0010141539, w: -0.07465505}
+        outSlope: {x: -0.073346585, y: 0.13199109, z: 0.0010141539, w: -0.07465505}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.1666667
+        value: {x: 0.85573494, y: 0.5100608, z: -0.008520579, w: 0.08650501}
+        inSlope: {x: 0.07955296, y: -0.1461455, z: 0.0035949235, w: 0.07457174}
+        outSlope: {x: 0.07955296, y: -0.1461455, z: 0.0035949235, w: 0.07457174}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.8926653, y: 0.43722126, z: 0.001267862, w: 0.10947401}
+        inSlope: {x: 0.02123018, y: -0.044786368, z: 0.010318338, w: 0.006124187}
+        outSlope: {x: 0.02123018, y: -0.044786368, z: 0.010318338, w: 0.006124187}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Right_Hip/Main_Character_Rig:Right_Knee/Main_Character_Rig:Right_Ankle
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.0008043988, y: 0.0002312473, z: -0.2762904, w: 0.9610739}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.0008043988, y: 0.0002312473, z: -0.2762904, w: 0.9610739}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Right_Hip/Main_Character_Rig:Right_Knee/Main_Character_Rig:Right_Ankle/Main_Character_Rig:Right_Ball
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.08437959, y: -0.7020542, z: -0.08437959, w: 0.7020542}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -0.08437959, y: -0.7020542, z: -0.08437959, w: 0.7020542}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Right_Hip/Main_Character_Rig:Right_Knee/Main_Character_Rig:Right_Ankle/Main_Character_Rig:Right_Ball/Main_Character_Rig:Right_Toe_Tip
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.09296053, y: 0.0062441677, z: -0.26072544, w: 0.9609067}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.09296053, y: 0.0062441677, z: -0.26072544, w: 0.9609067}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gun_Rig:Gun_root
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -1.5097465e-27, y: 5.742242e-17, z: 0.0053034746, w: 0.99998593}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -1.5097465e-27, y: 5.742242e-17, z: 0.0053034746, w: 0.99998593}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gun_Rig:Gun_root/Gun_Rig:Gun_Joint_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -1.6040063e-24, y: 1.3982347e-16, z: 0.24372804, w: 0.9698436}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: -1.6040063e-24, y: 1.3982347e-16, z: 0.24372804, w: 0.9698436}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gun_Rig:Gun_root/Gun_Rig:Gun_Joint_1/Gun_Rig:Gun_Joint_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 5.805232e-25, y: 9.331096e-17, z: -0.14470045, w: 0.98947555}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 5.805232e-25, y: 9.331096e-17, z: -0.14470045, w: 0.98947555}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gun_Rig:Gun_root/Gun_Rig:Gun_Joint_1/Gun_Rig:Gun_Joint_2/Gun_Rig:Gun_Joint_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.005701918, y: -0.7070838, z: 0.005701918, w: 0.7070838}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 0.005701918, y: -0.7070838, z: 0.005701918, w: 0.7070838}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gun_Rig:Gun_root/Gun_Rig:Gun_Joint_1/Gun_Rig:Gun_Joint_2/Gun_Rig:Gun_Joint_3/Gun_Rig:Gun_Joint_4
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0, y: 0.8949878, z: -0.008930426}
+        inSlope: {x: -0, y: 0.0000010475012, z: -1.6653345e-16}
+        outSlope: {x: -0, y: 0.0000010475012, z: -1.6653345e-16}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.9583333
+        value: {x: -0, y: 0.84956473, z: -0.008930426}
+        inSlope: {x: -0, y: 0.05810055, z: -7.137145e-17}
+        outSlope: {x: -0, y: 0.058098886, z: -1.6653363e-16}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0, y: 0.8949878, z: -0.008930426}
+        inSlope: {x: -0, y: -0.0000059302047, z: -7.137155e-17}
+        outSlope: {x: -0, y: -0.0000059302047, z: -7.137155e-17}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.027174063, y: 1.9984014e-17, z: 6.033854e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.027174063, y: 1.9984014e-17, z: 6.033854e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.03179739, y: 1.7763568e-17, z: -6.6711488e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.03179739, y: 1.7763568e-17, z: -6.6711488e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.045770083, y: -8.881784e-18, z: 9.607509e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.045770083, y: -8.881784e-18, z: 9.607509e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.061854318, y: 6.467049e-16, z: 1.30292684e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.061854318, y: 6.467049e-16, z: 1.30292684e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.06683374, y: -8.8817837e-17, z: 1.3388044e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.06683374, y: -8.8817837e-17, z: 1.3388044e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.05425367, y: 1.6431301e-16, z: 1.1224216e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.05425367, y: 1.6431301e-16, z: 1.1224216e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.069130346, y: 3.1086245e-17, z: -1.4757135e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.069130346, y: 3.1086245e-17, z: -1.4757135e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.018795997, y: 7.105427e-17, z: -5.0135425e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.018795997, y: 7.105427e-17, z: -5.0135425e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7/Main_Character_Rig:Neck
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.051735945, y: 0, z: -1.3381379e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.051735945, y: 0, z: -1.3381379e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7/Main_Character_Rig:Neck/Main_Character_Rig:Head
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.07280931, y: 1.7763568e-17, z: -1.5977278e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.07280931, y: 1.7763568e-17, z: -1.5977278e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7/Main_Character_Rig:Neck/Main_Character_Rig:Head/Main_Character_Rig:Head_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.060828242, y: -3.1086244e-16, z: -1.3536265e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.060828242, y: -3.1086244e-16, z: -1.3536265e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7/Main_Character_Rig:Neck/Main_Character_Rig:Head/Main_Character_Rig:Head_2/Main_Character_Rig:Head_Top
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.051936295, y: -1.3398852e-16, z: 2.872702e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.051936295, y: -1.3398852e-16, z: 2.872702e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7/Main_Character_Rig:Neck/Main_Character_Rig:Head/Main_Character_Rig:Head_2/Main_Character_Rig:Head_Top/Main_Character_Rig:Hat
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.04515273, y: -0.0006433169, z: -0.03523547}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.04515273, y: -0.0006433169, z: -0.03523547}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.077875376, y: 0, z: -2.220446e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.077875376, y: 0, z: -2.220446e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.19093789, y: 1.4210854e-16, z: 4.440892e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.19093789, y: 1.4210854e-16, z: 4.440892e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.15112965, y: 2.842171e-16, z: -2.220446e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.15112965, y: 2.842171e-16, z: -2.220446e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.059770726, y: -5.684342e-16, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.059770726, y: -5.684342e-16, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.06679957, y: 0, z: -2.220446e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.06679957, y: 0, z: -2.220446e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist/Main_Character_Rig:Left_Finger
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.04514621, y: 1.4210854e-16, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.04514621, y: 1.4210854e-16, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist/Main_Character_Rig:Left_Finger/Main_Character_Rig:Left_Finger_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.017295564, y: -0.009611158, z: 0.009929169}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.017295564, y: -0.009611158, z: 0.009929169}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist/Main_Character_Rig:Left_Thumb_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.037078965, y: -1.4210854e-16, z: 7.105427e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.037078965, y: -1.4210854e-16, z: 7.105427e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist/Main_Character_Rig:Left_Thumb_1/Main_Character_Rig:Left_Thumb_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.021904498, y: 1.4210854e-16, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.021904498, y: 1.4210854e-16, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist/Main_Character_Rig:Left_Thumb_1/Main_Character_Rig:Left_Thumb_2/Main_Character_Rig:Left_Thumb_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.045150176, y: -0.00064332923, z: 0.035235498}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.045150176, y: -0.00064332923, z: 0.035235498}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.077875495, y: 0.0000016233595, z: 0.0000000013725797}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.077875495, y: 0.0000016233595, z: 0.0000000013725797}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.19093332, y: -0.0000075797234, z: 0.00000003085476}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.19093332, y: -0.0000075797234, z: 0.00000003085476}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.15113148, y: 0.0000038340663, z: 0.000000018748526}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.15113148, y: 0.0000038340663, z: 0.000000018748526}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.059771203, y: 0.00000057653943, z: 0.000000028993854}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.059771203, y: 0.00000057653943, z: 0.000000028993854}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.06679994, y: -0.00000093107684, z: -0.000000027346285}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.06679994, y: -0.00000093107684, z: -0.000000027346285}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist/Main_Character_Rig:Right_Finger
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.04514592, y: 0.00000022671897, z: -0.000000011269473}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.04514592, y: 0.00000022671897, z: -0.000000011269473}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist/Main_Character_Rig:Right_Finger/Main_Character_Rig:Right_Finger_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.017296242, y: 0.009610577, z: -0.009929197}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.017296242, y: 0.009610577, z: -0.009929197}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist/Main_Character_Rig:Right_Thumb_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.037078224, y: -0.000000070808426, z: -0.00000047040652}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.037078224, y: -0.000000070808426, z: -0.00000047040652}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist/Main_Character_Rig:Right_Thumb_1/Main_Character_Rig:Right_Thumb_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.021904683, y: 0.0000006878693, z: -0.00000021639252}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.021904683, y: 0.0000006878693, z: -0.00000021639252}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist/Main_Character_Rig:Right_Thumb_1/Main_Character_Rig:Right_Thumb_2/Main_Character_Rig:Right_Thumb_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.05149569, y: 0.054040708, z: 2.4899172e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.05149569, y: 0.054040708, z: 2.4899172e-18}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Cape_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.10941426, y: -1.7763568e-17, z: -2.4294845e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.10941426, y: -1.7763568e-17, z: -2.4294845e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Cape_1/Main_Character_Rig:Cape_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.09204698, y: -9.992007e-18, z: -1.5237924e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.09204698, y: -9.992007e-18, z: -1.5237924e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Cape_1/Main_Character_Rig:Cape_2/Main_Character_Rig:Cape_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.0004835293, y: -0.00016875433, z: 0.08202818}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.0004835293, y: -0.00016875433, z: 0.08202818}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Left_Hip
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.34564415, y: 3.5527136e-17, z: 7.105427e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.34564415, y: 3.5527136e-17, z: 7.105427e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Left_Hip/Main_Character_Rig:Left_Knee
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.4511355, y: -3.4194868e-16, z: -1.7763567e-16}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.4511355, y: -3.4194868e-16, z: -1.7763567e-16}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Left_Hip/Main_Character_Rig:Left_Knee/Main_Character_Rig:Left_Ankle
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.096289225, y: 1.5099033e-16, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.096289225, y: 1.5099033e-16, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Left_Hip/Main_Character_Rig:Left_Knee/Main_Character_Rig:Left_Ankle/Main_Character_Rig:Left_Ball
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.07871564, y: 8.881784e-18, z: 7.105427e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.07871564, y: 8.881784e-18, z: 7.105427e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Left_Hip/Main_Character_Rig:Left_Knee/Main_Character_Rig:Left_Ankle/Main_Character_Rig:Left_Ball/Main_Character_Rig:Left_Toe_Tip
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.00048310717, y: -0.00016874142, z: -0.082028195}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.00048310717, y: -0.00016874142, z: -0.082028195}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Right_Hip
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.3456446, y: 0.00000007232858, z: -0.00000010987635}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.3456446, y: 0.00000007232858, z: -0.00000010987635}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Right_Hip/Main_Character_Rig:Right_Knee
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.45113528, y: -0.000000053539924, z: -0.00000041412483}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.45113528, y: -0.000000053539924, z: -0.00000041412483}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Right_Hip/Main_Character_Rig:Right_Knee/Main_Character_Rig:Right_Ankle
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.09628931, y: 0.000000041305288, z: -0.00000054995485}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.09628931, y: 0.000000041305288, z: -0.00000054995485}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Right_Hip/Main_Character_Rig:Right_Knee/Main_Character_Rig:Right_Ankle/Main_Character_Rig:Right_Ball
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.07871542, y: 0.00000014353208, z: -0.00000006997501}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.07871542, y: 0.00000014353208, z: -0.00000006997501}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Right_Hip/Main_Character_Rig:Right_Knee/Main_Character_Rig:Right_Ankle/Main_Character_Rig:Right_Ball/Main_Character_Rig:Right_Toe_Tip
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0.22818327, y: 0.8163095, z: 0.10132395}
+        inSlope: {x: -0, y: 0.0000006987174, z: 8.881784e-16}
+        outSlope: {x: -0, y: 0.0000006987174, z: 8.881784e-16}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.9166666
+        value: {x: 0.22818327, y: 0.7691471, z: 0.10132395}
+        inSlope: {x: -0, y: 0.04579646, z: 3.8064827e-16}
+        outSlope: {x: -0, y: 0.045805983, z: 8.88178e-16}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: 0.22818327, y: 0.8163095, z: 0.10132395}
+        inSlope: {x: -0, y: -0.00000078579774, z: 3.8064827e-16}
+        outSlope: {x: -0, y: -0.00000078579774, z: 3.8064827e-16}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gun_Rig:Gun_root
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.13952132, y: 2.6645352e-17, z: 1.5489978e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.13952132, y: 2.6645352e-17, z: 1.5489978e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gun_Rig:Gun_root/Gun_Rig:Gun_Joint_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.14286761, y: -1.4344082e-15, z: 1.6407379e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.14286761, y: -1.4344082e-15, z: 1.6407379e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gun_Rig:Gun_root/Gun_Rig:Gun_Joint_1/Gun_Rig:Gun_Joint_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.1725346, y: -8.881784e-18, z: 4.6793766e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.1725346, y: -8.881784e-18, z: 4.6793766e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gun_Rig:Gun_root/Gun_Rig:Gun_Joint_1/Gun_Rig:Gun_Joint_2/Gun_Rig:Gun_Joint_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.22291327, y: -2.997602e-17, z: 4.116267e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.625
+        value: {x: -0.22291327, y: -2.997602e-17, z: 4.116267e-17}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gun_Rig:Gun_root/Gun_Rig:Gun_Joint_1/Gun_Rig:Gun_Joint_2/Gun_Rig:Gun_Joint_3/Gun_Rig:Gun_Joint_4
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7/Main_Character_Rig:Neck
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7/Main_Character_Rig:Neck/Main_Character_Rig:Head
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7/Main_Character_Rig:Neck/Main_Character_Rig:Head/Main_Character_Rig:Head_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7/Main_Character_Rig:Neck/Main_Character_Rig:Head/Main_Character_Rig:Head_2/Main_Character_Rig:Head_Top
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Back_7/Main_Character_Rig:Neck/Main_Character_Rig:Head/Main_Character_Rig:Head_2/Main_Character_Rig:Head_Top/Main_Character_Rig:Hat
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist/Main_Character_Rig:Left_Finger
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist/Main_Character_Rig:Left_Finger/Main_Character_Rig:Left_Finger_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist/Main_Character_Rig:Left_Thumb_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist/Main_Character_Rig:Left_Thumb_1/Main_Character_Rig:Left_Thumb_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Left_Clavical/Main_Character_Rig:Left_Shoulder/Main_Character_Rig:Left_Elbow/Main_Character_Rig:Left_Forearm/Main_Character_Rig:Left_Wrist/Main_Character_Rig:Left_Thumb_1/Main_Character_Rig:Left_Thumb_2/Main_Character_Rig:Left_Thumb_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist/Main_Character_Rig:Right_Finger
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist/Main_Character_Rig:Right_Finger/Main_Character_Rig:Right_Finger_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist/Main_Character_Rig:Right_Thumb_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist/Main_Character_Rig:Right_Thumb_1/Main_Character_Rig:Right_Thumb_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Right_Clavical/Main_Character_Rig:Right_Shoulder/Main_Character_Rig:Right_Elbow/Main_Character_Rig:Right_Forearm/Main_Character_Rig:Right_Wrist/Main_Character_Rig:Right_Thumb_1/Main_Character_Rig:Right_Thumb_2/Main_Character_Rig:Right_Thumb_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Cape_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Cape_1/Main_Character_Rig:Cape_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Back_1/Main_Character_Rig:Back_2/Main_Character_Rig:Back_3/Main_Character_Rig:Back_4/Main_Character_Rig:Back_5/Main_Character_Rig:Back_6/Main_Character_Rig:Cape_1/Main_Character_Rig:Cape_2/Main_Character_Rig:Cape_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Left_Hip
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Left_Hip/Main_Character_Rig:Left_Knee
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Left_Hip/Main_Character_Rig:Left_Knee/Main_Character_Rig:Left_Ankle
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Left_Hip/Main_Character_Rig:Left_Knee/Main_Character_Rig:Left_Ankle/Main_Character_Rig:Left_Ball
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Left_Hip/Main_Character_Rig:Left_Knee/Main_Character_Rig:Left_Ankle/Main_Character_Rig:Left_Ball/Main_Character_Rig:Left_Toe_Tip
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Right_Hip
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Right_Hip/Main_Character_Rig:Right_Knee
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Right_Hip/Main_Character_Rig:Right_Knee/Main_Character_Rig:Right_Ankle
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Right_Hip/Main_Character_Rig:Right_Knee/Main_Character_Rig:Right_Ankle/Main_Character_Rig:Right_Ball
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Main_Character_Rig:Skeleton_Group/Main_Character_Rig:Root/Main_Character_Rig:Right_Hip/Main_Character_Rig:Right_Knee/Main_Character_Rig:Right_Ankle/Main_Character_Rig:Right_Ball/Main_Character_Rig:Right_Toe_Tip
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gun_Rig:Gun_root
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gun_Rig:Gun_root/Gun_Rig:Gun_Joint_1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gun_Rig:Gun_root/Gun_Rig:Gun_Joint_1/Gun_Rig:Gun_Joint_2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gun_Rig:Gun_root/Gun_Rig:Gun_Joint_1/Gun_Rig:Gun_Joint_2/Gun_Rig:Gun_Joint_3
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.6250001
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Gun_Rig:Gun_root/Gun_Rig:Gun_Joint_1/Gun_Rig:Gun_Joint_2/Gun_Rig:Gun_Joint_3/Gun_Rig:Gun_Joint_4
+  m_FloatCurves: []
+  m_PPtrCurves: []
+  m_SampleRate: 24
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings: []
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 1.6250001
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events: []
