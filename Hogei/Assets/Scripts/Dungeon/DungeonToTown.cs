@@ -36,7 +36,7 @@ public class DungeonToTown : MonoBehaviour {
     }
 
     //move to dungeon
-    public void MoveToDungeon()
+    public void MoveToTown()
     {
         //change players avalible moves
         canDo.canShoot = false;
